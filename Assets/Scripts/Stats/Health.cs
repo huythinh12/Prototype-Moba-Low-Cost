@@ -7,11 +7,11 @@ using System;
 [Serializable]
 public class Health
 {
-    public static float Min = 0;
+    public static readonly float Min = 0;
 
     private float start;
     private float perLevel;
-    private float now;
+    private float current;
     private float max;
 
 
@@ -48,26 +48,26 @@ public class Health
         }
     }
 
-    public float Now
+    public float Current
     {
         get
         {
-            return now;
+            return current;
         }
 
         set
         {
-            if (value > max)
+            if (value < Min)
             {
-                now = max;
+                current = Min;
             }
-            else if (value < Min)
+            else if (value > max)
             {
-                now = Min;
+                current = max;
             }
             else
             {
-                now = value;
+                current = value;
             }
         }
     }
@@ -90,5 +90,16 @@ public class Health
                 max = value;
             }
         }
+    }
+
+
+    public void SetMax(int level)
+    {
+        Max = Start + PerLevel * level;
+    }
+
+    public void Healing(int amount)
+    {
+        Current += amount;
     }
 }

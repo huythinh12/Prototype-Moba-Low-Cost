@@ -6,10 +6,10 @@ using System;
 [Serializable]
 public class Level
 {
-    const int minLevel = 1;
+    public static readonly int Min = 1;
 
     private int start;
-    private int now;
+    private int current;
     private int max;
 
 
@@ -22,9 +22,9 @@ public class Level
 
         set
         {
-            if (value < minLevel)
+            if (value < Min)
             {
-                start = minLevel;
+                start = Min;
             }
             else if (value > max)
             {
@@ -37,26 +37,26 @@ public class Level
         }
     }
 
-    public int Now
+    public int Current
     {
         get
         {
-            return now;
+            return current;
         }
 
         set
         {
-            if (value < minLevel)
+            if (value < Min)
             {
-                now = minLevel;
+                current = Min;
             }
             else if (value > max)
             {
-                now = max;
+                current = max;
             }
             else
             {
-                now = value;
+                current = value;
             }
         }
     }
@@ -70,13 +70,21 @@ public class Level
 
         set
         {
-            max = value;
+
+            if (value < Min)
+            {
+                max = Min;
+            }
+            else
+            {
+                max = value;
+            }
         }
     }
 
 
     public void LevelUp()
     {
-        Now++;
+        current++;
     }
 }

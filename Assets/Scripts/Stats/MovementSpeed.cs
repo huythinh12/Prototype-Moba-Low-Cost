@@ -5,12 +5,12 @@ using System;
 [Serializable]
 public class MovementSpeed
 {
-    public static float Min = 0;
-    public static float Max = 100;
+    public static readonly float Min = 0;
+    public static readonly float Max = 100;
 
     private float start;
     private float perLevel;
-    private float now;
+    private float current;
     private float temporary;
 
 
@@ -47,26 +47,26 @@ public class MovementSpeed
         }
     }
 
-    public float Now
+    public float Current
     {
         get
         {
-            return now;
+            return current;
         }
 
         set
         {
-            if (value > Max)
+            if (value < Min)
             {
-                now = Max;
+                current = 0;
             }
-            else if (value < 0)
+            else if (value > Max)
             {
-                now = 0;
+                current = Max;
             }
             else
             {
-                now = value;
+                current = value;
             }
         }
     }
@@ -82,5 +82,10 @@ public class MovementSpeed
         {
             temporary = value;
         }
+    }
+
+    public void SetCurrent(int level)
+    {
+        Current = Start + PerLevel * level + Temporary;
     }
 }

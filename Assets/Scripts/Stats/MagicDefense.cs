@@ -7,11 +7,11 @@ using System;
 [Serializable]
 public class MagicDefense
 {
-    public static float Min = 0;
+    public static readonly float Min = 0;
 
     private float start;
     private float perLevel;
-    private float now;
+    private float current;
     private float temporary;
 
 
@@ -48,16 +48,23 @@ public class MagicDefense
         }
     }
 
-    public float Now
+    public float Current
     {
         get
         {
-            return now;
+            return current;
         }
 
         set
         {
-            now = value;
+            if (value < Min)
+            {
+                current = Min;
+            }
+            else
+            {
+                current = value;
+            }
         }
     }
 
@@ -72,5 +79,11 @@ public class MagicDefense
         {
             temporary = value;
         }
+    }
+
+
+    public void SetCurrent(int level)
+    {
+        Current = Start + PerLevel * level + Temporary;
     }
 }
