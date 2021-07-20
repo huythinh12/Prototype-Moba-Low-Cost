@@ -8,10 +8,11 @@ public class PlayerController : MonoBehaviour
     private VariableJoystick variableJoystick;
     [SerializeField]
     private Rigidbody rigidbodyPlayer;
-    [SerializeField]
-    private float rotateSpeedMovement = 0.1f;
+
     private Animator anim;
 
+    bool isDeath = false;
+    
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -19,6 +20,12 @@ public class PlayerController : MonoBehaviour
 
     public void FixedUpdate()
     {
+        //check death
+        if (isDeath) {
+            rigidbodyPlayer.velocity = Vector3.zero;
+            return; 
+        }
+
         Vector3 direction = Vector3.forward * variableJoystick.Vertical + Vector3.right * variableJoystick.Horizontal;
 
         if (variableJoystick.Vertical == 0 && variableJoystick.Horizontal == 0)
@@ -36,6 +43,14 @@ public class PlayerController : MonoBehaviour
 
     private void AnimationWithAction()
     {
+        //test Death with key R 
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            anim.SetTrigger("Death");
+            isDeath = true;
+            return;
+        }
+
         if (rigidbodyPlayer.velocity.x != 0 || rigidbodyPlayer.velocity.y != 0)
         {
             anim.SetBool("isRunning", true);
@@ -54,5 +69,7 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("isAttack", false);
 
         }
+
+       
     }
 }

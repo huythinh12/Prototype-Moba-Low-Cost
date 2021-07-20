@@ -7,17 +7,17 @@ public class SpawnLegion : MonoBehaviour
     private Transform[] legions;
     [SerializeField]
     private Transform[] monsters;
-    private Stopwatch timer;
+    public GameObject[] LegionAlly;
+    public GameObject[] LegionEnemy;
 
     public GameObject Dragon;
-    public GameObject[] LegionEnemy;
-    public GameObject[] LegionAlly;
     public GameObject Red;
     public GameObject Blue;
     public GameObject MinionMonster;
     public GameObject RightMonster;
     public GameObject LeftMonster;
 
+    private Stopwatch timer;
 
   
     // Start is called before the first frame update
