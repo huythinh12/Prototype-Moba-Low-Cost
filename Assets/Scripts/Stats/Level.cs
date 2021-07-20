@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using System;
 
@@ -7,10 +5,10 @@ using System;
 public class Level
 {
     public static readonly int Min = 1;
+    public static readonly int Max = 15;
 
-    private int start;
+    [SerializeField, Min(1)] int start;
     private int current;
-    private int max;
 
 
     public int Start
@@ -26,9 +24,9 @@ public class Level
             {
                 start = Min;
             }
-            else if (value > max)
+            else if (value > Max)
             {
-                start = max;
+                start = Max;
             }
             else
             {
@@ -50,34 +48,13 @@ public class Level
             {
                 current = Min;
             }
-            else if (value > max)
+            else if (value > Max)
             {
-                current = max;
+                current = Max;
             }
             else
             {
                 current = value;
-            }
-        }
-    }
-
-    public int Max
-    {
-        get
-        {
-            return max;
-        }
-
-        set
-        {
-
-            if (value < Min)
-            {
-                max = Min;
-            }
-            else
-            {
-                max = value;
             }
         }
     }

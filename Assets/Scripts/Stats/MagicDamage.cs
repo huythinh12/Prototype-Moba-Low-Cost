@@ -1,16 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-
 [Serializable]
-public class MagicDamage : MonoBehaviour
+public class MagicDamage
 {
     public static readonly float Min = 0;
 
-    private float start;
-    private float perLevel;
+    [SerializeField, Min(0)] float start;
+    [SerializeField, Min(0)] float perLevel;
     private float current;
     private float temporary;
 
