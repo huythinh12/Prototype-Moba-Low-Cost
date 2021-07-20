@@ -6,10 +6,11 @@ public class AgentNavMesh : MonoBehaviour
     [SerializeField]
     private Transform targetTransform;
     private NavMeshAgent navMeshAgent;
+    private Animator anim;
 
-
-    private void Awake()
+    private void Start()
     {
+        anim = GetComponent<Animator>();
         navMeshAgent = GetComponent<NavMeshAgent>();
     }
 

@@ -10,11 +10,13 @@ public class SpawnLegion : MonoBehaviour
     private Stopwatch timer;
 
     public GameObject Dragon;
-    public GameObject Enemy;
-    public GameObject Ally;
+    public GameObject[] LegionEnemy;
+    public GameObject[] LegionAlly;
     public GameObject Red;
     public GameObject Blue;
     public GameObject MinionMonster;
+    public GameObject RightMonster;
+    public GameObject LeftMonster;
 
 
   
@@ -45,11 +47,19 @@ public class SpawnLegion : MonoBehaviour
             {
                 if (legion.transform.name == "SpawnEnemy")
                 {
-                    Instantiate(Enemy, legion.transform.position, Quaternion.identity);
+                    foreach (var item in LegionEnemy)
+                    {
+                    Instantiate(item, legion.transform.position, Quaternion.identity);
+
+                    }
                 }
                 else
                 {
-                    Instantiate(Ally, legion.transform.position, Quaternion.identity);
+                    foreach (var item in LegionAlly)
+                    {
+                        Instantiate(item, legion.transform.position, Quaternion.identity);
+
+                    }
                 }
             }
         }
@@ -71,6 +81,16 @@ public class SpawnLegion : MonoBehaviour
                 else if (monster.name == "Red")
                 {
                     Instantiate(Red, monster.transform.position, Quaternion.identity);
+
+                }
+                else if(monster.name.StartsWith("MinionRight"))
+                {
+                    Instantiate(RightMonster, monster.transform.position, Quaternion.identity);
+
+                }
+                else if (monster.name.StartsWith("MinionLeft"))
+                {
+                    Instantiate(LeftMonster, monster.transform.position, Quaternion.identity);
 
                 }
                 else
