@@ -1,18 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using System;
-
 
 [Serializable]
 public class Health
 {
     public static readonly float Min = 0;
 
-    private float start;
-    private float perLevel;
-    private float current;
-    private float max;
+    [SerializeField, Min(0)] float start;
+    [SerializeField, Min(0)] float perLevel;
+    float current;
+    float max;
 
 
     public float Start
@@ -101,5 +98,11 @@ public class Health
     public void Healing(int amount)
     {
         Current += amount;
+    }
+
+    public void Reset(int level)
+    {
+        SetMax(level);
+        Current = Max;
     }
 }

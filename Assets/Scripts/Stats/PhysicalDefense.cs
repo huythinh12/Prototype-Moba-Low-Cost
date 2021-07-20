@@ -1,18 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using System;
-
 
 [Serializable]
 public class PhysicalDefense
 {
     public static readonly float Min = 0;
 
-    private float start;
-    private float perLevel;
-    private float current;
-    private float temporary;
+    [SerializeField, Min(0)] float start;
+    [SerializeField, Min(0)] float perLevel;
+    float current;
+    float temporary;
 
 
     public float Start

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using System;
 
@@ -8,8 +6,8 @@ public class Mana
 {
     public static readonly float Min = 0;
 
-    private float start;
-    private float perLevel;
+    [SerializeField, Min(0)] float start;
+    [SerializeField, Min(0)] float perLevel;
     private float current;
     private float max;
 
@@ -100,5 +98,11 @@ public class Mana
     public void Healing(int amount)
     {
         Current += amount;
+    }
+
+    public void Reset(int level)
+    {
+        SetMax(level);
+        Current = Max;
     }
 }

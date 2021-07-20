@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: e9146001a0b64a24b973e20f53f4f71f, type: 2}
+  m_NavMeshData: {fileID: 0}
 --- !u!114 &60017494 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3881087803549984439, guid: ec536a7718376554185e4a856d5ae230, type: 3}
@@ -284,17 +284,17 @@ MonoBehaviour:
   - {fileID: 1423531325}
   - {fileID: 1681900782}
   - {fileID: 1896724638}
-  Dragon: {fileID: 2785163860168594022, guid: a25c2b5de6b54c041a871a9b0a5b2485, type: 3}
-  LegionEnemy:
-  - {fileID: 4148160972664773536, guid: f2545f04b575f08429c4a5f22a87fe16, type: 3}
-  - {fileID: 4148160972664773536, guid: f2545f04b575f08429c4a5f22a87fe16, type: 3}
-  - {fileID: 4148160972664773536, guid: f2545f04b575f08429c4a5f22a87fe16, type: 3}
-  - {fileID: 2531138454810436476, guid: 075aadd3c64800b47bac6927e96ca5f4, type: 3}
   LegionAlly:
   - {fileID: 4148160972664773536, guid: f2545f04b575f08429c4a5f22a87fe16, type: 3}
   - {fileID: 4148160972664773536, guid: f2545f04b575f08429c4a5f22a87fe16, type: 3}
   - {fileID: 4148160972664773536, guid: f2545f04b575f08429c4a5f22a87fe16, type: 3}
   - {fileID: 2531138454810436476, guid: 075aadd3c64800b47bac6927e96ca5f4, type: 3}
+  LegionEnemy:
+  - {fileID: 4148160972664773536, guid: f2545f04b575f08429c4a5f22a87fe16, type: 3}
+  - {fileID: 4148160972664773536, guid: f2545f04b575f08429c4a5f22a87fe16, type: 3}
+  - {fileID: 4148160972664773536, guid: f2545f04b575f08429c4a5f22a87fe16, type: 3}
+  - {fileID: 2531138454810436476, guid: 075aadd3c64800b47bac6927e96ca5f4, type: 3}
+  Dragon: {fileID: 2785163860168594022, guid: a25c2b5de6b54c041a871a9b0a5b2485, type: 3}
   Red: {fileID: 1722848116254195102, guid: 3e056734003ad3c4f83eae9f127c845e, type: 3}
   Blue: {fileID: 3708506059594017809, guid: 69e0c88c6aadfa34d88bf88b26e36ab5, type: 3}
   MinionMonster: {fileID: 8683543554149256990, guid: a59d9d88abb3d7f448ec974b16425c4f, type: 3}
