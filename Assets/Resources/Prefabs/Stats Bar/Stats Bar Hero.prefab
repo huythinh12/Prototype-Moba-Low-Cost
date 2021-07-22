@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 2926032715674101824}
   - component: {fileID: 2926032715674101839}
   - component: {fileID: 2926032715674101838}
-  - component: {fileID: 74383876660271200}
+  - component: {fileID: 3563557067670191682}
   m_Layer: 5
   m_Name: Stats Bar Hero
   m_TagString: Untagged
@@ -102,7 +102,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2926032715674101836}
-  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalRotation: {x: 0.43162128, y: 0, z: 0, w: 0.90205497}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.036529683, y: 0.036529683, z: 0.036529683}
   m_Children:
@@ -116,10 +116,10 @@ RectTransform:
   - {fileID: 2926032717226741586}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 51.141, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.14, y: 2.54}
+  m_AnchoredPosition: {x: 0.04199219, y: 2.5399933}
   m_SizeDelta: {x: 65, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &2926032715674101824
@@ -183,7 +183,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &74383876660271200
+--- !u!114 &3563557067670191682
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -192,7 +192,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2926032715674101836}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26d44e19b3739d44b81cf8a5965b55ef, type: 3}
+  m_Script: {fileID: 11500000, guid: 172afa3b9fbf24e4da3b1af40fed00c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
