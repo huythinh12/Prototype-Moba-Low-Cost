@@ -32,18 +32,26 @@ public class StatsBar : MonoBehaviour
     Vector3 distanceToTarget;
     Quaternion startRotate;
 
-    public static void AddFor(Character character, TypeCharacter typeCharacter, Team team)
+    public static void AddFor(Character character, TypeCharacter typeCharacter, TeamCharacter teamCharacter)
     {
         string namePathStastBar = "Prefabs/Stats Bar/Stats Bar " + typeCharacter.ToString();
 
         StatsBar stastsBar = Instantiate(Resources.Load(namePathStastBar) as GameObject, character.transform).GetComponent<StatsBar>();
-        stastsBar.ChangeImageHealthBar(team);
+        stastsBar.ChangeImageHealthBar(teamCharacter);
     }
 
 
     private void Reset()
     {
         character = GetComponentInParent<Character>();
+
+        // Don't change value when reset, #pragma use to hide warning when x = x
+#pragma warning disable CS1717
+        isUseManaBar = isUseManaBar;
+        isUseEffectBar = isUseEffectBar;
+        isUseLevelText = isUseLevelText;
+        isUseNameText = isUseNameText;
+#pragma warning restore CS1717
 
         if (isUseHealthBar)
         {
@@ -79,10 +87,6 @@ public class StatsBar : MonoBehaviour
         rectTransform = GetComponent<RectTransform>();
     }
 
-    private void Awake()
-    {
-        Reset();
-    }
 
     private void Start()
     {
@@ -98,6 +102,8 @@ public class StatsBar : MonoBehaviour
 
     private void OnEnable()
     {
+        Reset();
+
         if (isUseHealthBar)
         {
             character.OnHealthChanged += OnHealthChanged;
@@ -167,17 +173,18 @@ public class StatsBar : MonoBehaviour
         transform.rotation = startRotate;
     }
 
-    void ChangeImageHealthBar(Team team)
+
+    void ChangeImageHealthBar(TeamCharacter teamCharacter)
     {
-        switch (team)
+        switch (teamCharacter)
         {
-            case Team.Blue:
+            case TeamCharacter.Blue:
                 healthBar.sprite = Resources.Load<Sprite>(pathHealthBarGreen);
                 break;
-            case Team.Red:
+            case TeamCharacter.Red:
                 healthBar.sprite = Resources.Load<Sprite>(pathHealthBarRed);
                 break;
-            case Team.Natural:
+            case TeamCharacter.Natural:
                 healthBar.sprite = Resources.Load<Sprite>(pathHealthBarRed);
                 break;
             default:
