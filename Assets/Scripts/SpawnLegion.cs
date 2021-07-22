@@ -1,5 +1,7 @@
 using System.Diagnostics;
 using UnityEngine;
+using System.Collections.Generic;
+
 
 public class SpawnLegion : MonoBehaviour
 {
@@ -7,9 +9,10 @@ public class SpawnLegion : MonoBehaviour
     private Transform[] legions;
     [SerializeField]
     private Transform[] monsters;
-    public GameObject[] LegionAlly;
-    public GameObject[] LegionEnemy;
-
+    [SerializeField]
+    private Transform[] heroPos;
+    public AILegion[] Legion;
+    public List<AIHeroes> Heroes;
     public GameObject Dragon;
     public GameObject Red;
     public GameObject Blue;
@@ -19,13 +22,14 @@ public class SpawnLegion : MonoBehaviour
 
     private Stopwatch timer;
 
-  
+
     // Start is called before the first frame update
     void Start()
     {
         timer = new Stopwatch();
         timer.Start();
-        InvokeRepeating("SpawnBaseOnCondition", 1,1);
+        //InvokeRepeating("SpawnBaseOnCondition", 1, 1);
+        Invoke("SpawnBaseOnCondition", 2);
     }
     // Update is called once per frame
     void Update()
@@ -41,66 +45,98 @@ public class SpawnLegion : MonoBehaviour
 
     private void SpawnBaseOnCondition()
     {
-        if ((int)timer.Elapsed.TotalSeconds % 3 == 0)
+        foreach (var item in heroPos)
         {
-            foreach (var legion in legions)
+            if (item.name.StartsWith("SpawnHeroEnemy"))
             {
-                if (legion.transform.name == "SpawnEnemy")
+                int number = 0;
+                foreach (var hero in Heroes)
                 {
-                    foreach (var item in LegionEnemy)
+                    if (number < 1)
                     {
-                    Instantiate(item, legion.transform.position, Quaternion.identity);
-
+                      var obj =  Instantiate(hero, item.transform.position, Quaternion.identity,item.transform);
+                        obj.tag = "Enemy";
+                        number++;
                     }
-                }
-                else
-                {
-                    foreach (var item in LegionAlly)
-                    {
-                        Instantiate(item, legion.transform.position, Quaternion.identity);
 
-                    }
                 }
             }
-        }
-        else if ((int)timer.Elapsed.TotalSeconds % 4 == 0)
-        {
-            foreach (var monster in monsters)
+            else
             {
-
-                if (monster.name == "Dragon")
+                int number = 0;
+                foreach (var hero in Heroes)
                 {
-
-                    Instantiate(Dragon, monster.transform.position, Quaternion.identity);
-                }
-                else if (monster.name == "Blue")
-                {
-                    Instantiate(Blue, monster.transform.position, Quaternion.identity);
-
-                }
-                else if (monster.name == "Red")
-                {
-                    Instantiate(Red, monster.transform.position, Quaternion.identity);
-
-                }
-                else if(monster.name.StartsWith("MinionRight"))
-                {
-                    Instantiate(RightMonster, monster.transform.position, Quaternion.identity);
-
-                }
-                else if (monster.name.StartsWith("MinionLeft"))
-                {
-                    Instantiate(LeftMonster, monster.transform.position, Quaternion.identity);
-
-                }
-                else
-                {
-                    Instantiate(MinionMonster, monster.transform.position, Quaternion.identity);
-
+                    if (number < 1)
+                    {
+                      var obj =  Instantiate(hero, item.transform.position, Quaternion.identity, item.transform);
+                        obj.tag = "Ally";
+                        number++;
+                    }
                 }
             }
 
         }
+        //if ((int)timer.Elapsed.TotalSeconds % 2 == 0)
+        //{
+        //    foreach (var legion in legions)
+        //    {
+        //        if (legion.transform.CompareTag("PosEnemy"))
+        //        {
+        //            foreach (var item in Legion)
+        //            {
+        //                var obj = Instantiate(item, legion.transform.position, Quaternion.identity, legion.transform);
+        //                obj.tag = "Enemy";
+        //            }
+        //        }
+        //        else
+        //        {
+        //            foreach (var item in Legion)
+        //            {
+        //                var obj = Instantiate(item, legion.transform.position, Quaternion.identity, legion.transform);
+
+        //                obj.tag = "Ally";
+        //            }
+        //        }
+        //    }
+        //}
+        //else if ((int)timer.Elapsed.TotalSeconds % 4 == 0)
+        //{
+        //    foreach (var monster in monsters)
+        //    {
+
+        //        if (monster.name == "Dragon")
+        //        {
+
+        //            Instantiate(Dragon, monster.transform.position, Quaternion.identity);
+        //        }
+        //        else if (monster.name == "Blue")
+        //        {
+        //            Instantiate(Blue, monster.transform.position, Quaternion.identity);
+
+        //        }
+        //        else if (monster.name == "Red")
+        //        {
+        //            Instantiate(Red, monster.transform.position, Quaternion.identity);
+
+        //        }
+        //        else if(monster.name.StartsWith("MinionRight"))
+        //        {
+        //            Instantiate(RightMonster, monster.transform.position, Quaternion.identity);
+
+        //        }
+        //        else if (monster.name.StartsWith("MinionLeft"))
+        //        {
+        //            Instantiate(LeftMonster, monster.transform.position, Quaternion.identity);
+
+        //        }
+        //        else
+        //        {
+        //            Instantiate(MinionMonster, monster.transform.position, Quaternion.identity);
+
+        //        }
+        //    }
+
+        //}
     }
 }
 

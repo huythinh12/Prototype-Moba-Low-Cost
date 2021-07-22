@@ -67,7 +67,6 @@ public class Character : MonoBehaviour
         }
     }
 
-
     public void GenerateID()
     {
         ID = Guid.NewGuid().ToString();

@@ -92,8 +92,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3232715038232251471}
   - component: {fileID: 3267705844584598607}
+  - component: {fileID: 3398946923701050061}
+  - component: {fileID: 1500972179890980614}
   m_Layer: 0
-  m_Name: HM_cannon_1
+  m_Name: CannonTower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -138,6 +140,33 @@ MonoBehaviour:
   shootDelay: 1.2
   anim_2: {fileID: 0}
   TowerHp: {fileID: 0}
+--- !u!65 &3398946923701050061
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3227144145560323119}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5020811, y: 1.2344873, z: 0.42766607}
+  m_Center: {x: 0.0032248208, y: 0.59931386, z: -0.029470822}
+--- !u!136 &1500972179890980614
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3227144145560323119}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2.5326607
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.7663295, z: 0}
 --- !u!1 &3227235924938951835
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,18 +3,32 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Tower
+  - enemyBug
+  - Castle
+  - TowerA
+  - TowerB
+  - PosEnemy
+  - PosAlly
+  - LegionEnemy
+  - LegionAlly
+  - HeroAlly
+  - HeroEnemy
+  - Creep
+  - Enemy
+  - Ally
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Obstacle
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Character
+  - Zone
+  - Tower
+  - Ground
   - 
   - 
   - 

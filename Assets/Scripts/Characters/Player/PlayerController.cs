@@ -53,11 +53,11 @@ public class PlayerController : MonoBehaviour
 
         if (rigidbodyPlayer.velocity.x != 0 || rigidbodyPlayer.velocity.y != 0)
         {
-            anim.SetBool("isRunning", true);
+            anim.SetBool("isMoving", true);
         }
         else
         {
-            anim.SetBool("isRunning", false);
+            anim.SetBool("isMoving", false);
 
         }// hold to attack and release to stop
         if (Input.GetKey(KeyCode.Space))
