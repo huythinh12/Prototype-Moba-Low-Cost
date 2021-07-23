@@ -19,7 +19,6 @@ public class AIHeroes : MonoBehaviour
     private Animator anim;
     private bool isPlayer;
     List<Collider> listCollider = new List<Collider>();
-    private Coroutine chasingInTimeCoroutine;
     // Start is called before the first frame update
     void Start()
     {

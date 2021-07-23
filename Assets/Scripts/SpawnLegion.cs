@@ -11,7 +11,7 @@ public class SpawnLegion : MonoBehaviour
     private Transform[] monsters;
     [SerializeField]
     private Transform[] heroPos;
-    //public AILegion[] Legion;
+    public GameObject[] Legion;
     public List<AIHeroes> Heroes;
     public GameObject Dragon;
     public GameObject Red;
@@ -47,7 +47,7 @@ public class SpawnLegion : MonoBehaviour
     {
         foreach (var item in heroPos)
         {
-            if (item.name.StartsWith("SpawnHeroEnemy"))
+            if (item.name.StartsWith("HeroEnemy"))
             {
                 int number = 0;
                 foreach (var hero in Heroes)
@@ -61,7 +61,7 @@ public class SpawnLegion : MonoBehaviour
 
                 }
             }
-            else
+            else if(item.name.StartsWith("HeroAlly"))
             {
                 int number = 0;
                 foreach (var hero in Heroes)
@@ -76,28 +76,29 @@ public class SpawnLegion : MonoBehaviour
             }
 
         }
-        //if ((int)timer.Elapsed.TotalSeconds % 2 == 0)
-        //{
-        //    foreach (var legion in legions)
-        //    {
-        //        if (legion.transform.CompareTag("PosEnemy"))
-        //        {
-        //            foreach (var item in Legion)
-        //            {
-        //                var obj = Instantiate(item, legion.transform.position, Quaternion.identity, legion.transform);
-        //                obj.tag = "Enemy";
-        //            }
-        //        }
-        //        else
-        //        {
-        //            foreach (var item in Legion)
-        //            {
-        //                var obj = Instantiate(item, legion.transform.position, Quaternion.identity, legion.transform);
 
-        //                obj.tag = "Ally";
-        //            }
-        //        }
-        //    }
+        //if (timer.Elapsed.TotalSeconds % 2 == 0)
+        //{
+            foreach (var legion in legions)
+            {
+                if (legion.transform.name.StartsWith("LegionEnemy"))
+                {
+                    foreach (var item in Legion)
+                    {
+                        var obj = Instantiate(item, legion.transform.position, Quaternion.identity, legion.transform);
+                        obj.tag = "Enemy";
+                    }
+                }
+                else if(legion.transform.name.StartsWith("LegionAlly"))
+                {
+                    foreach (var item in Legion)
+                    {
+                        var obj = Instantiate(item, legion.transform.position, Quaternion.identity, legion.transform);
+
+                        obj.tag = "Ally";
+                    }
+                }
+            }
         //}
         //else if ((int)timer.Elapsed.TotalSeconds % 4 == 0)
         //{

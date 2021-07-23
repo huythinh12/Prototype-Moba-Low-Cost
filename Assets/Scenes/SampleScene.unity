@@ -144,7 +144,7 @@ GameObject:
   m_Component:
   - component: {fileID: 64443023}
   m_Layer: 0
-  m_Name: SpawnAlly
+  m_Name: LegionAlly
   m_TagString: PosAlly
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -323,7 +323,7 @@ GameObject:
   - component: {fileID: 370734268}
   - component: {fileID: 370734269}
   m_Layer: 0
-  m_Name: SpawnLegion
+  m_Name: SpawnCharacters
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -378,8 +378,8 @@ MonoBehaviour:
   - {fileID: 1993733132}
   - {fileID: 826768282}
   Legion:
-  - {fileID: 2050752117, guid: f2545f04b575f08429c4a5f22a87fe16, type: 3}
-  - {fileID: 1946713879, guid: 075aadd3c64800b47bac6927e96ca5f4, type: 3}
+  - {fileID: 4148160972664773536, guid: f2545f04b575f08429c4a5f22a87fe16, type: 3}
+  - {fileID: 2531138454810436476, guid: 075aadd3c64800b47bac6927e96ca5f4, type: 3}
   Heroes:
   - {fileID: -5109664663041848598, guid: a63c4d3f62da25d4dba8ce13e11876c2, type: 3}
   - {fileID: -3341414884438442138, guid: 1c907d5849c3486409f7e03357d52fb9, type: 3}
@@ -591,7 +591,7 @@ GameObject:
   m_Component:
   - component: {fileID: 826768282}
   m_Layer: 0
-  m_Name: SpawnHeroAlly
+  m_Name: HeroAlly
   m_TagString: PosAlly
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -621,7 +621,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1086234770}
   m_Layer: 0
-  m_Name: SpawnEnemy
+  m_Name: LegionEnemy
   m_TagString: PosEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3321,7 +3321,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1993733132}
   m_Layer: 0
-  m_Name: SpawnHeroEnemy
+  m_Name: HeroEnemy
   m_TagString: PosEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

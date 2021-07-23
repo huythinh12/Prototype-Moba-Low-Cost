@@ -487,7 +487,7 @@ GameObject:
   - component: {fileID: 2050752113}
   - component: {fileID: 2050752114}
   - component: {fileID: 2050752115}
-  - component: {fileID: 2050752117}
+  - component: {fileID: -2448699350023805004}
   m_Layer: 6
   m_Name: MeleeLegion
   m_TagString: Untagged
@@ -587,9 +587,9 @@ MonoBehaviour:
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 360
-  slowdownDistance: 4
-  pickNextWaypointDist: 2
-  endReachedDistance: 3
+  slowdownDistance: 2.8
+  pickNextWaypointDist: 3
+  endReachedDistance: 2.5
   alwaysDrawGizmos: 1
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
@@ -622,7 +622,7 @@ MonoBehaviour:
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
     value: -1
---- !u!114 &2050752117
+--- !u!114 &-2448699350023805004
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -631,10 +631,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4148160972664773536}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8076509ce5a9b444d8ad5a1e8e029b09, type: 3}
+  m_Script: {fileID: 11500000, guid: 73de2d3df6eab3d4ea42abc3795f26ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isEnemy: 0
+  radiusCollider: 5
 --- !u!1 &4148160972702773302
 GameObject:
   m_ObjectHideFlags: 0
