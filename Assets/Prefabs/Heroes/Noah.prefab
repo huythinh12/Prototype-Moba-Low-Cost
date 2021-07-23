@@ -6945,11 +6945,11 @@ MonoBehaviour:
   orientation: 0
   enableRotation: 1
   targetCompatibility: {fileID: 0}
-  maxAcceleration: 5
-  rotationSpeed: 360
-  slowdownDistance: 1.5
-  pickNextWaypointDist: 2
-  endReachedDistance: 2
+  maxAcceleration: -2.5
+  rotationSpeed: 1000
+  slowdownDistance: 2.8
+  pickNextWaypointDist: 3
+  endReachedDistance: 2.5
   alwaysDrawGizmos: 1
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0

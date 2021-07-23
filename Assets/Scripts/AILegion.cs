@@ -17,7 +17,6 @@ public class AILegion : MonoBehaviour
     private bool isTowerHere;
     private bool isRunning;
     private bool isTargetHere;
-    private bool isLegion = true;
 
     // Start is called before the first frame update
     void Start()

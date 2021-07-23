@@ -52,7 +52,7 @@ public class SpawnLegion : MonoBehaviour
                 int number = 0;
                 foreach (var hero in Heroes)
                 {
-                    if (number < 1)
+                    if (number < 3)
                     {
                       var obj =  Instantiate(hero, item.transform.position, Quaternion.identity,item.transform);
                         obj.tag = "Enemy";
@@ -66,7 +66,7 @@ public class SpawnLegion : MonoBehaviour
                 int number = 0;
                 foreach (var hero in Heroes)
                 {
-                    if (number < 1)
+                    if (number < 3)
                     {
                       var obj =  Instantiate(hero, item.transform.position, Quaternion.identity, item.transform);
                         obj.tag = "Ally";

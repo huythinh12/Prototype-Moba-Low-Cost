@@ -5,36 +5,46 @@ using Pathfinding;
 using System.Diagnostics;
 public class AIHeroes : MonoBehaviour
 {
+    [SerializeField]
+    private float radiusCollider = 5;
     AIPath aiPath;
-    public bool isEnemy;
-    LayerMask zone;
     AIDestinationSetter aiSetter;
-    private bool isTargetHere;
+    private bool isTargetHere = false;
     private Transform objectTarget;
+    private Transform objectTargetCharacter;
     private bool isTowerHere;
     private bool isRunning;
+    private bool isChasing;
     private List<Transform> listTower = new List<Transform>();
     private Animator anim;
     private bool isPlayer;
     List<Collider> listCollider = new List<Collider>();
-
+    private Coroutine chasingInTimeCoroutine;
     // Start is called before the first frame update
     void Start()
     {
+     
+        //test thu khi chon 1 tuong thi se ko gan AI vao
         if (transform.name.StartsWith("Noah"))
         {
             isPlayer = true;
             return;
         }
+        //set gia tri AI dung' tren map
+        transform.position = new Vector3(transform.position.x, 0, transform.position.z);
         aiSetter = GetComponent<AIDestinationSetter>();
         aiPath = GetComponent<AIPath>();
-        zone = LayerMask.GetMask("Zone");
         anim = GetComponent<Animator>();
 
 
+        //khoi tao chien thuat tu 2 phe khac nhau 
+        StrategyMainTarget();
+    }
+
+    private void StrategyMainTarget()
+    {
         if (transform.parent.CompareTag("PosEnemy"))
         {
-            isEnemy = true;
             var objTower = GameObject.Find("TowerA");
             if (objTower != null)
             {
@@ -47,7 +57,6 @@ public class AIHeroes : MonoBehaviour
         }
         else
         {
-            isEnemy = false;
             var objTower = GameObject.Find("TowerB");
             if (objTower != null)
             {
@@ -63,125 +72,117 @@ public class AIHeroes : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //neu hero da duoc chon se ko chay AI
         if (isPlayer) return;
+        //check dieu kien tower ket thuc thi se ko chay nua 
         if (listTower.Count > 0)
-            CheckAreaToAttack(transform.position, 2.5f);
+            CheckAreaToAttack(transform.position, radiusCollider);
         else
         {
             anim.SetBool("isMoving", false);
             anim.SetBool("isAttack", false);
         }
     }
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position, radiusCollider);
+    }
     void CheckAreaToAttack(Vector3 center, float radius)
     {
-        isTowerHere = false;
         listCollider.Clear();
-        Collider[] hitColliders = Physics.OverlapSphere(center, radius, ~zone);
-        foreach (var collider in hitColliders)
-        {
-            if (collider.CompareTag("Untagged") == false)
-            {
-                listCollider.Add(collider);
-            }
-        }
 
-        foreach (var hitCollider in listCollider)
-        {
-            //check if collide with tower 
-            if (hitCollider.CompareTag("Tower"))
-            {
-                print("co va cham tower");
-                isTowerHere = true;
-                isTargetHere = false;
-                if (isEnemy == false && hitCollider.transform.parent.CompareTag("TowerB"))
-                {
-                    aiPath.isStopped = true;
-                    anim.SetBool("isAttack", true);
-                    anim.SetBool("isMoving", false);
-                    //test bam nut D de destroy tower va huong toi tower tiep theo
-                    if (Input.GetKeyDown(KeyCode.D))
-                    {
-                        Destroy(hitCollider.gameObject);
-                        aiPath.isStopped = false;
-                        listTower.Remove(listTower[0]);
-                        isTowerHere = false;
-                        return;
-                    }
-                   
+        isTowerHere = false;
+        isTargetHere = false;
 
-                }
-                else if (isEnemy == true && hitCollider.transform.parent.CompareTag("TowerA"))
-                {
-                        aiPath.isStopped = true;
-                        anim.SetBool("isAttack", true);
-                        anim.SetBool("isMoving", false);
-                      
-                    //test bam nut D de destroy tower va huong toi tower tiep theo
-                    if (Input.GetKeyDown(KeyCode.D))
-                    {
-                        Destroy(hitCollider.gameObject);
-                        aiPath.isStopped = false;
+        GetListCollider(center, radius);
 
-                        listTower.Remove(listTower[0]);
-                        isTowerHere = false;
-                        return;
-                    }
+        ActionWithColliderBaseOnCondition();
 
-                }
-            }
-            //else if (hitCollider.CompareTag("HeroEnemy") && isEnemy == false)
-            //{
-            //    isTargetHere = true;
-            //    objectTarget = hitCollider.transform;
-            //    aiSetter.target = objectTarget;
-            //    anim.SetBool("isAttack", true);
-            //    anim.SetBool("isMoving", false);
-            //}
-            //else if (hitCollider.CompareTag("HeroAlly") && isEnemy == true)
-            //{
-            //    isTargetHere = true;
-            //    objectTarget = hitCollider.transform;
-            //    aiSetter.target = objectTarget;
-            //    anim.SetBool("isAttack", true);
-            //    anim.SetBool("isMoving", false);
-            //}
-            else if (hitCollider.tag != transform.tag && isTowerHere == false)
-            {
-              
-                isTargetHere = true;
-                objectTarget = hitCollider.transform;
-                transform.LookAt(objectTarget);
-                aiSetter.target = objectTarget;
-                anim.SetBool("isAttack", true);
-                anim.SetBool("isMoving", false);
-            }
-        }
         if (isTargetHere && isRunning == false)
         {
             isRunning = true;
             StartCoroutine(ChasingPlayerInTime());
         }
-        else if (isTowerHere == false && isTargetHere == false)
+        
+        //kiem tra ke dich xa hay gan cho animation
+        AnimationBaseOnConditional();
+
+        aiSetter.target = objectTarget;
+    }
+
+    private void AnimationBaseOnConditional()
+    {
+        if (aiPath.reachedEndOfPath == false)
+        {
+            anim.SetBool("isAttack", false);
+            anim.SetBool("isMoving", true);
+        }
+        else
+        {
+            anim.SetBool("isAttack", true);
+            anim.SetBool("isMoving", false);
+        }
+    }
+
+    private void ActionWithColliderBaseOnCondition()
+    {
+        foreach (var hitCollider in listCollider)
+        {
+            //kiem tra va cham neu khong phai la dong minh 
+            if (hitCollider.tag != transform.tag)
+            {
+                if (hitCollider.transform.name.StartsWith("Tower"))
+                {
+                    isTowerHere = true;
+                }
+                else
+                {
+                    isTargetHere = true;
+                    objectTargetCharacter = hitCollider.transform;
+                    if (isChasing == false)
+                        objectTarget = objectTargetCharacter;
+                }
+
+
+                if (isTowerHere && isTargetHere && isChasing == false)
+                {
+                    isTargetHere = true;
+                    objectTarget = objectTargetCharacter;
+                }
+            }
+        }
+
+        if (isTargetHere == false && isTowerHere == false)
         {
             objectTarget = listTower[0];
-            aiSetter.target = objectTarget;
-            anim.SetBool("isMoving", true);
-            anim.SetBool("isAttack", false);
-            isRunning = false;
+        }
+    }
+    // loc ra cac object va cham chinh' trong battle
+    private void GetListCollider(Vector3 center, float radius)
+    {
+        Collider[] hitColliders = Physics.OverlapSphere(center, radius);
+        foreach (var collider in hitColliders)
+        {
+            if (collider.CompareTag("Tower") || collider.CompareTag("Ally") || collider.CompareTag("Enemy")|| collider.CompareTag("Creep"))
+            {
+                listCollider.Add(collider);
+            }
         }
     }
     IEnumerator ChasingPlayerInTime()
     {
+        isChasing = true;
         Stopwatch timer = new Stopwatch();
-        int countDown = 8;
+        int countDown = 5;
         timer.Start();
-        while ((int)timer.Elapsed.TotalSeconds < countDown && isTargetHere && objectTarget != null && isTowerHere == false)
+
+        while (timer.Elapsed.TotalSeconds < countDown && isTargetHere)
         {
             yield return null;
             if (aiPath.reachedEndOfPath)
             {
                 timer.Restart();
-                isTargetHere = true;
+                aiSetter.target = objectTarget;
                 anim.SetBool("isAttack", true);
                 anim.SetBool("isMoving", false);
             }
@@ -191,9 +192,14 @@ public class AIHeroes : MonoBehaviour
                 anim.SetBool("isMoving", true);
             }
         }
-
         timer.Stop();
-        isTargetHere = false;
+        objectTarget = listTower[0];
+        yield return new WaitForSeconds(3);
+        isChasing = false;
+        isRunning = false;
+
     }
+
+
 
 }
