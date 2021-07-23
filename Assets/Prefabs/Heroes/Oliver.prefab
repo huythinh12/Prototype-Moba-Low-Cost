@@ -11311,6 +11311,8 @@ GameObject:
   - component: {fileID: 4843505004318053019}
   - component: {fileID: -8582418347027007863}
   - component: {fileID: 3526032398724872216}
+  - component: {fileID: 1794931566887937617}
+  - component: {fileID: -3428500450463999730}
   m_Layer: 6
   m_Name: Oliver
   m_TagString: Untagged
@@ -11419,7 +11421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73de2d3df6eab3d4ea42abc3795f26ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isEnemy: 0
+  radiusCollider: 5
 --- !u!114 &999365199170855883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11549,6 +11551,57 @@ MonoBehaviour:
   bezierTangentLength: 0.4
   offset: 0.2
   factor: 0.1
+--- !u!114 &1794931566887937617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2197676694394003678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d926a3df12c1d5478100785565d8640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level:
+    start: 1
+  health:
+    start: 90
+    perLevel: 10
+  mana:
+    start: 90
+    perLevel: 10
+  magicDamage:
+    start: 0
+    perLevel: 0
+  magicDefense:
+    start: 0
+    perLevel: 0
+  physicalDamage:
+    start: 12
+    perLevel: 1
+  physicalDefense:
+    start: 0
+    perLevel: 0
+--- !u!114 &-3428500450463999730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2197676694394003678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4da8d62305aee3b40951af1c16ca7ccf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilities: []
+  rangeAttack: 3
+  name: Noah
+  id: 
+  typeCharacter: 1
+  team: 0
+  matchdata: {fileID: 11400000, guid: 6117ac433949b58429ebba5ee2241ac3, type: 2}
 --- !u!1 &2197682915886934062
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,13 +13,18 @@ MonoBehaviour:
   m_Name: MatchDataData
   m_EditorClassIdentifier: 
   timeToSpawnLegion: 0
-  timeToSpawnCreep: 0
+  timeToSpawnGolem: 0
+  timeToSpawnMonsterDuo: 0
+  timeToSpawnDragon: 0
+  timeToSpawnTreasureChestMonster: 0
   timeToSpawnHero: 0
   timeToActiveTower: 0
-  timeToRevivalHero: 0
   timeToRevivalDragon: 0
-  timeToRevivalBlueandRed: 0
-  timeToRevivalMidCreep: 0
-  timeToRevivalTwoSideCreep: 0
-  timeOff: 0
+  timeToRevivalGolem: 0
+  timeToRevivalTreasureChestMonster: 0
+  timeToRevivalMonsterDuo: 0
+  timeToRevivalHeroMin: 5
+  timeToRevivalHeroMax: 0
+  timeToBetweenMultiKill: 0
   totalTime: 0
+  timeOff: 0

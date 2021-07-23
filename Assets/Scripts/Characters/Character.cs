@@ -23,9 +23,10 @@ public enum TeamCharacter
     Natural,
 }
 
-[RequireComponent(typeof(StatsCharacter), typeof(Rigidbody))]
+[RequireComponent(typeof(StatsCharacter), typeof(Rigidbody), typeof(Collider))]
 public class Character : MonoBehaviour
 {
+
     //Hide in inpestor and add properties
     public List<Ability> abilities = new List<Ability>();
 
@@ -37,7 +38,10 @@ public class Character : MonoBehaviour
     [SerializeField] TypeCharacter typeCharacter;
     [SerializeField] TeamCharacter team;
 
-    public StatsCharacter stats;
+    [SerializeField]
+    private MatchData matchdata;
+    private StatsCharacter stats;
+    private Animator animator;
 
     public event Action<Health> OnHealthChanged;
     public event Action<Mana> OnManaChanged;
@@ -56,12 +60,13 @@ public class Character : MonoBehaviour
 
     private void Start()
     {
-
-
         StatsBar.AddFor(this, typeCharacter, team);
 
+        animator = GetComponent<Animator>();
         stats = GetComponent<StatsCharacter>();
         stats.SetDefault();
+
+        OnHealthChanged += CheckDie;
 
         OnHealthChanged?.Invoke(stats.health);
         OnManaChanged?.Invoke(stats.mana);
@@ -89,6 +94,26 @@ public class Character : MonoBehaviour
     public void GenerateID()
     {
         ID = Guid.NewGuid().ToString();
+    }
+
+    public IEnumerator Revival()
+    {
+        yield return new WaitForSeconds(matchdata.timeToRevivalHeroMin);
+        
+        //ToDo: Switch case TeamCharacter type => position = point revival based on team
+    }
+
+    public void CheckDie(Health health)
+    {
+        if (health.Current <= 0)
+        {
+            animator.SetTrigger("Death");
+            //ToDo:
+            //coroutine
+            //StartCoroutine(Revival());
+            //gameObject.SetActive(false);
+        }
+        
     }
 
     public void Attack()
@@ -121,6 +146,12 @@ public class Character : MonoBehaviour
         OnHealthChanged(stats.health);
     }
 
+
+    /// <summary>
+    /// test skill 
+    /// </summary>
+    /// <param name="direction"></param>
+    /// <param name="duration"></param>
     public void Glide(Vector3 direction, float duration)
     {
         transform.DOLookAt(transform.position + direction, 0.1f);

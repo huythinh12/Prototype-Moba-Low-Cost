@@ -18,11 +18,13 @@ public class AIHeroes : MonoBehaviour
     private List<Transform> listTower = new List<Transform>();
     private Animator anim;
     private bool isPlayer;
+    private Character character;
     List<Collider> listCollider = new List<Collider>();
     // Start is called before the first frame update
     void Start()
     {
-     
+        character = GetComponent<Character>();
+
         //test thu khi chon 1 tuong thi se ko gan AI vao
         if (transform.name.StartsWith("Noah"))
         {
@@ -40,11 +42,11 @@ public class AIHeroes : MonoBehaviour
         StrategyMainTarget();
     }
 
-    private void StrategyMainTarget()
+    private void StrategyMainTarget() // cau truc lai
     {
-        if (transform.parent.CompareTag("PosEnemy"))
+        if (transform.parent.CompareTag("PosEnemy")) // cac string can cau truc lai qua scriptable 
         {
-            var objTower = GameObject.Find("TowerA");
+            var objTower = GameObject.Find("TowerAlpha");
             if (objTower != null)
             {
                 foreach (Transform child in objTower.transform)
@@ -56,7 +58,7 @@ public class AIHeroes : MonoBehaviour
         }
         else
         {
-            var objTower = GameObject.Find("TowerB");
+            var objTower = GameObject.Find("TowerBeta");
             if (objTower != null)
             {
                 foreach (Transform child in objTower.transform)
@@ -118,6 +120,7 @@ public class AIHeroes : MonoBehaviour
         }
         else
         {
+            character.Attack();
             anim.SetBool("isAttack", true);
             anim.SetBool("isMoving", false);
         }
@@ -128,9 +131,9 @@ public class AIHeroes : MonoBehaviour
         foreach (var hitCollider in listCollider)
         {
             //kiem tra va cham neu khong phai la dong minh 
-            if (hitCollider.tag != transform.tag)
+            if (hitCollider.tag != transform.tag) //TeamCharacter
             {
-                if (hitCollider.transform.name.StartsWith("Tower"))
+                if (hitCollider.transform.name.StartsWith("TowerChild"))//TypeCharacter
                 {
                     isTowerHere = true;
                 }
@@ -157,7 +160,7 @@ public class AIHeroes : MonoBehaviour
         }
     }
     // loc ra cac object va cham chinh' trong battle
-    private void GetListCollider(Vector3 center, float radius)
+    private void GetListCollider(Vector3 center, float radius) // cau truc lai 
     {
         Collider[] hitColliders = Physics.OverlapSphere(center, radius);
         foreach (var collider in hitColliders)
@@ -172,7 +175,7 @@ public class AIHeroes : MonoBehaviour
     {
         isChasing = true;
         Stopwatch timer = new Stopwatch();
-        int countDown = 5;
+        int countDown = 3;
         timer.Start();
 
         while (timer.Elapsed.TotalSeconds < countDown && isTargetHere)

@@ -41,6 +41,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1721248483188483798}
   - component: {fileID: 1639231045260373220}
+  - component: {fileID: 681354652}
+  - component: {fileID: 681354654}
+  - component: {fileID: 681354651}
+  - component: {fileID: 681354653}
   m_Layer: 6
   m_Name: GolemRed
   m_TagString: Creep
@@ -57,7 +61,7 @@ Transform:
   m_GameObject: {fileID: 1722848116254195102}
   m_LocalRotation: {x: 0, y: -0.17364825, z: 0, w: 0.9848078}
   m_LocalPosition: {x: -13.51, y: 0, z: 13.52}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children:
   - {fileID: 1720966566044023280}
   - {fileID: 1721117651459147394}
@@ -83,6 +87,86 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!54 &681354652
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722848116254195102}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 4
+  m_CollisionDetection: 0
+--- !u!65 &681354654
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722848116254195102}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.7689738, y: 3.9483805, z: 2.0256374}
+  m_Center: {x: 0.013596789, y: 1.9303253, z: 0.14456421}
+--- !u!114 &681354651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722848116254195102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4da8d62305aee3b40951af1c16ca7ccf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilities: []
+  rangeAttack: 0
+  name: 
+  id: 
+  typeCharacter: 4
+  team: 3
+  matchdata: {fileID: 11400000, guid: 6117ac433949b58429ebba5ee2241ac3, type: 2}
+--- !u!114 &681354653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722848116254195102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d926a3df12c1d5478100785565d8640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level:
+    start: 1
+  health:
+    start: 90
+    perLevel: 10
+  mana:
+    start: 0
+    perLevel: 0
+  magicDamage:
+    start: 0
+    perLevel: 0
+  magicDefense:
+    start: 0
+    perLevel: 0
+  physicalDamage:
+    start: 0
+    perLevel: 0
+  physicalDefense:
+    start: 0
+    perLevel: 0
 --- !u!1 &1722868422165680880
 GameObject:
   m_ObjectHideFlags: 0

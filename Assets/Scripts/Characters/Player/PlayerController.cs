@@ -8,29 +8,40 @@ public class PlayerController : MonoBehaviour
     private VariableJoystick variableJoystick;
     [SerializeField]
     private Rigidbody rigidbodyPlayer;
-
+    private Character character;
     private Animator anim;
 
     bool isDeath = false;
     
     private void Start()
     {
+        character = GetComponent<Character>();
         anim = GetComponent<Animator>();
+    }
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("Attacked!");
+            character.Attack();
+        }
     }
 
     public void FixedUpdate()
     {
         //check death
-        if (isDeath) {
+        if (isDeath)
+        {
             rigidbodyPlayer.velocity = Vector3.zero;
-            return; 
+            return;
         }
 
         Vector3 direction = Vector3.forward * variableJoystick.Vertical + Vector3.right * variableJoystick.Horizontal;
 
         if (variableJoystick.Vertical == 0 && variableJoystick.Horizontal == 0)
         {
-            rigidbodyPlayer.velocity = Vector3.zero;
+            rigidbodyPlayer.velocity = Vector3.zero; // fix 
         }
         else
         {

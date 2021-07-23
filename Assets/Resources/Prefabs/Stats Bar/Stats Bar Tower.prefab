@@ -26,7 +26,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3597647034824358454}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3597647035514142344}
@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 12.9, y: 6.8}
-  m_SizeDelta: {x: -22.998, y: -15.871}
+  m_AnchoredPosition: {x: 22.2, y: 4.6}
+  m_SizeDelta: {x: -35.428, y: -17.093}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &3597647034824358459
 CanvasRenderer:
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 3597647035514142345}
   - component: {fileID: 3597647035514142342}
   - component: {fileID: 3597647035514142343}
-  - component: {fileID: 1764971350222016169}
+  - component: {fileID: 8038027544169992766}
   m_Layer: 5
   m_Name: Stats Bar Tower
   m_TagString: Untagged
@@ -102,7 +102,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3597647035514142341}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: 0.43162128, y: 0, z: 0, w: 0.90205497}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.036529683, y: 0.036529683, z: 0.036529683}
   m_Children:
@@ -110,10 +110,10 @@ RectTransform:
   - {fileID: 3597647034824358457}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 51.141, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.14, y: 2.54}
+  m_AnchoredPosition: {x: 0, y: 2.3099976}
   m_SizeDelta: {x: 65, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &3597647035514142345
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &1764971350222016169
+--- !u!114 &8038027544169992766
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -186,10 +186,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3597647035514142341}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26d44e19b3739d44b81cf8a5965b55ef, type: 3}
+  m_Script: {fileID: 11500000, guid: 172afa3b9fbf24e4da3b1af40fed00c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 3597647034824358456}
   divisionLineHealthBar: {fileID: 0}
   manaBar: {fileID: 0}
   effectDurationBar: {fileID: 0}
@@ -229,7 +229,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3597647035628914558}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3597647035514142344}
@@ -237,8 +237,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.4, y: -1.1399994}
-  m_SizeDelta: {x: 42.496, y: 4.88}
+  m_AnchoredPosition: {x: 4.5, y: -3.9}
+  m_SizeDelta: {x: 29.919, y: 3.436}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3597647035628914531
 CanvasRenderer:

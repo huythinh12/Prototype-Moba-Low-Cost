@@ -37,6 +37,7 @@ public class StatsBar : MonoBehaviour
         string namePathStastBar = "Prefabs/Stats Bar/Stats Bar " + typeCharacter.ToString();
 
         StatsBar stastsBar = Instantiate(Resources.Load(namePathStastBar) as GameObject, character.transform).GetComponent<StatsBar>();
+
         stastsBar.ChangeImageHealthBar(teamCharacter);
     }
 
@@ -45,8 +46,9 @@ public class StatsBar : MonoBehaviour
     {
         character = GetComponentInParent<Character>();
 
+
         // Don't change value when reset, #pragma use to hide warning when x = x
-#pragma warning disable CS1717
+#pragma warning disable CS1717 
         isUseManaBar = isUseManaBar;
         isUseEffectBar = isUseEffectBar;
         isUseLevelText = isUseLevelText;

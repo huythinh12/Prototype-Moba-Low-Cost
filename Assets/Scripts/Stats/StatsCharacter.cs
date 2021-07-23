@@ -30,6 +30,8 @@ public class StatsCharacter : MonoBehaviour
 
         health.Reset(level.Current);
         mana.Reset(level.Current);
+
+        physicalDamage.Current = physicalDamage.Start + physicalDamage.PerLevel * level.Current;
     }
 
     public void ResetHealth()

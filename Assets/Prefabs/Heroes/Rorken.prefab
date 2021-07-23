@@ -1274,6 +1274,8 @@ GameObject:
   - component: {fileID: 3372713626207757988}
   - component: {fileID: 7154191010451159206}
   - component: {fileID: 3970733653248169760}
+  - component: {fileID: 4626465117206546526}
+  - component: {fileID: -4314857063478559763}
   m_Layer: 6
   m_Name: Rorken
   m_TagString: Untagged
@@ -1382,7 +1384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73de2d3df6eab3d4ea42abc3795f26ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isEnemy: 0
+  radiusCollider: 5
 --- !u!114 &6952229862352616609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1512,6 +1514,57 @@ MonoBehaviour:
   bezierTangentLength: 0.4
   offset: 0.2
   factor: 0.1
+--- !u!114 &4626465117206546526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1126593955038754684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d926a3df12c1d5478100785565d8640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level:
+    start: 1
+  health:
+    start: 90
+    perLevel: 10
+  mana:
+    start: 90
+    perLevel: 10
+  magicDamage:
+    start: 0
+    perLevel: 0
+  magicDefense:
+    start: 0
+    perLevel: 0
+  physicalDamage:
+    start: 12
+    perLevel: 1
+  physicalDefense:
+    start: 0
+    perLevel: 0
+--- !u!114 &-4314857063478559763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1126593955038754684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4da8d62305aee3b40951af1c16ca7ccf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilities: []
+  rangeAttack: 3
+  name: Noah
+  id: 
+  typeCharacter: 1
+  team: 0
+  matchdata: {fileID: 11400000, guid: 6117ac433949b58429ebba5ee2241ac3, type: 2}
 --- !u!1 &1127028962082687034
 GameObject:
   m_ObjectHideFlags: 0
