@@ -11,7 +11,7 @@ public class SpawnLegion : MonoBehaviour
     private Transform[] monsters;
     [SerializeField]
     private Transform[] heroPos;
-    public AILegion[] Legion;
+    //public AILegion[] Legion;
     public List<AIHeroes> Heroes;
     public GameObject Dragon;
     public GameObject Red;
