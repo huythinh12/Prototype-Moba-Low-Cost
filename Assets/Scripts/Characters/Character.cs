@@ -27,6 +27,7 @@ public enum TeamCharacter
 public class Character : MonoBehaviour
 {
     //Hide in inpestor and add properties
+    public List<Ability> abilities = new List<Ability>();
 
     public float rangeAttack;
 
@@ -45,8 +46,18 @@ public class Character : MonoBehaviour
     public string Name { get; private set; }
     public string ID { get; private set; }
 
+    private void Awake()
+    {
+        abilities.Add(new NoahAlphaAbility());
+        abilities.Add(new NoahBetaAbility());
+        abilities.Add(new NoahUltimateAbility());
+    }
+
+
     private void Start()
     {
+
+
         StatsBar.AddFor(this, typeCharacter, team);
 
         stats = GetComponent<StatsCharacter>();
@@ -62,6 +73,11 @@ public class Character : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Attack();
+        }
+
+        if (Input.GetKeyDown(KeyCode.KeypadEnter))
+        {
+            TakeDamage(10);
         }
     }
 
@@ -99,9 +115,9 @@ public class Character : MonoBehaviour
         OnHealthChanged(stats.health);
     }
 
-    public void HealingHealth(float factorHealing)
+    public void HealingHealth(float amountHeaing, float factorHealing)
     {
-        stats.health.Healing((int)(stats.health.Max * factorHealing));
+        stats.health.Healing((int)(amountHeaing + stats.health.Max * factorHealing));
         OnHealthChanged(stats.health);
     }
 
@@ -109,8 +125,9 @@ public class Character : MonoBehaviour
     {
         transform.DOLookAt(transform.position + direction, 0.1f);
 
-        Rigidbody rigidbody = GetComponent<Rigidbody>();
-        rigidbody.DOMove(transform.position + direction, duration).SetEase(Ease.InOutCubic).SetLoops(2, LoopType.Yoyo);
+        transform.DOMove(transform.position + direction, duration).SetEase(Ease.InOutCubic);
+        transform.DOMove(transform.position - direction * 0.5f, duration * 0.65f).SetEase(Ease.InOutCubic);
+        //transform.DOMove(transform.position + direction, duration).SetEase(Ease.InOutQuint);
     }
 
     public void RotateCrazy(int loop, float durationForLoop)
