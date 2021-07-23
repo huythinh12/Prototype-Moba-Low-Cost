@@ -158,11 +158,6 @@ public class StatsBar : MonoBehaviour
         levelText.text = level.Current.ToString();
     }
 
-    private void OnTransformParentChanged()
-    {
-        Debug.Log("Hello!");
-    }
-
     void FlowTarget()
     {
         transform.position = character.transform.position + distanceToTarget;
