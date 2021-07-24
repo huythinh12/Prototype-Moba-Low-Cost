@@ -87,6 +87,50 @@ PrefabInstance:
       propertyPath: m_Name
       value: TowerBeta
       objectReference: {fileID: 0}
+    - target: {fileID: 2581453151820395309, guid: e46bf8b5b5d29154cbef658f0ca16943, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5489412858907432532, guid: e46bf8b5b5d29154cbef658f0ca16943, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5489412858907432532, guid: e46bf8b5b5d29154cbef658f0ca16943, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5489412858907432532, guid: e46bf8b5b5d29154cbef658f0ca16943, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5493186869354970664, guid: e46bf8b5b5d29154cbef658f0ca16943, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5493186870187449908, guid: e46bf8b5b5d29154cbef658f0ca16943, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5753870714090127574, guid: e46bf8b5b5d29154cbef658f0ca16943, type: 3}
+      propertyPath: m_Size.x
+      value: 0.8171658
+      objectReference: {fileID: 0}
+    - target: {fileID: 5753870714090127574, guid: e46bf8b5b5d29154cbef658f0ca16943, type: 3}
+      propertyPath: m_Size.z
+      value: 0.65854114
+      objectReference: {fileID: 0}
+    - target: {fileID: 5753870714090127574, guid: e46bf8b5b5d29154cbef658f0ca16943, type: 3}
+      propertyPath: m_Center.x
+      value: -0.018234266
+      objectReference: {fileID: 0}
+    - target: {fileID: 5753870714090127574, guid: e46bf8b5b5d29154cbef658f0ca16943, type: 3}
+      propertyPath: m_Center.y
+      value: 0.9363167
+      objectReference: {fileID: 0}
+    - target: {fileID: 5753870714090127574, guid: e46bf8b5b5d29154cbef658f0ca16943, type: 3}
+      propertyPath: m_Center.z
+      value: -0.018273989
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e46bf8b5b5d29154cbef658f0ca16943, type: 3}
 --- !u!4 &1887232256684148468 stripped
@@ -101,6 +145,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8922410260726797059}
     m_Modifications:
+    - target: {fileID: 2918106698024377596, guid: aa445ad61d759d74189756e8f319f7ee, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2918106698224625362, guid: aa445ad61d759d74189756e8f319f7ee, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2918106698609869520, guid: aa445ad61d759d74189756e8f319f7ee, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3142756228960925744, guid: aa445ad61d759d74189756e8f319f7ee, type: 3}
+      propertyPath: m_Size.x
+      value: 0.78215706
+      objectReference: {fileID: 0}
+    - target: {fileID: 3142756228960925744, guid: aa445ad61d759d74189756e8f319f7ee, type: 3}
+      propertyPath: m_Size.z
+      value: 0.661669
+      objectReference: {fileID: 0}
+    - target: {fileID: 3142756228960925744, guid: aa445ad61d759d74189756e8f319f7ee, type: 3}
+      propertyPath: m_Center.x
+      value: -0.016493056
+      objectReference: {fileID: 0}
+    - target: {fileID: 3142756228960925744, guid: aa445ad61d759d74189756e8f319f7ee, type: 3}
+      propertyPath: m_Center.y
+      value: 0.9363167
+      objectReference: {fileID: 0}
+    - target: {fileID: 3142756228960925744, guid: aa445ad61d759d74189756e8f319f7ee, type: 3}
+      propertyPath: m_Center.z
+      value: -0.03863038
+      objectReference: {fileID: 0}
     - target: {fileID: 7736829809526402340, guid: aa445ad61d759d74189756e8f319f7ee, type: 3}
       propertyPath: m_Name
       value: TowerAlpha
@@ -149,7 +225,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1180693152363865595, guid: aa445ad61d759d74189756e8f319f7ee, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: aa445ad61d759d74189756e8f319f7ee, type: 3}
 --- !u!4 &1887232256984372328 stripped
 Transform:

@@ -29,7 +29,7 @@ public class SpawnLegion : MonoBehaviour
         timer = new Stopwatch();
         timer.Start();
         //InvokeRepeating("SpawnBaseOnCondition", 1, 1);
-        Invoke("SpawnBaseOnCondition", 2);
+        Invoke("SpawnBaseOnCondition", 1);
     }
     // Update is called once per frame
     void Update()
@@ -50,55 +50,58 @@ public class SpawnLegion : MonoBehaviour
             if (item.name.StartsWith("HeroEnemy"))
             {
                 int number = 0;
-                foreach (var hero in Heroes)
+                foreach (Transform posChild in item)
                 {
-                    if (number < 3)
+                    if (number < 1)
                     {
-                      var obj =  Instantiate(hero, item.transform.position, Quaternion.identity,item.transform);
+                        var obj = Instantiate(Heroes[number], posChild.transform.position, Quaternion.identity, posChild.transform);
+                      
+                        obj.GetComponent<Character>().Team = TeamCharacter.Red;
                         obj.tag = "Enemy";
                         number++;
                     }
 
                 }
             }
-            else if(item.name.StartsWith("HeroAlly"))
-            {
-                int number = 0;
-                foreach (var hero in Heroes)
-                {
-                    if (number < 3)
-                    {
-                      var obj =  Instantiate(hero, item.transform.position, Quaternion.identity, item.transform);
-                        obj.tag = "Ally";
-                        number++;
-                    }
-                }
-            }
+            //else if (item.name.StartsWith("HeroAlly"))
+            //{
+            //    int number = 0;
+            //    foreach (Transform posChild in item)
+            //    {
+            //        if (number < 3)
+            //        {
+            //            var obj = Instantiate(Heroes[number], posChild.transform.position, Quaternion.identity, posChild.transform);
+            //            obj.tag = "Ally";
+            //            number++;
+            //        }
+
+            //    }
+            //}
 
         }
 
         //if (timer.Elapsed.TotalSeconds % 2 == 0)
         //{
-            foreach (var legion in legions)
-            {
-                if (legion.transform.name.StartsWith("LegionEnemy"))
-                {
-                    foreach (var item in Legion)
-                    {
-                        var obj = Instantiate(item, legion.transform.position, Quaternion.identity, legion.transform);
-                        obj.tag = "Enemy";
-                    }
-                }
-                else if(legion.transform.name.StartsWith("LegionAlly"))
-                {
-                    foreach (var item in Legion)
-                    {
-                        var obj = Instantiate(item, legion.transform.position, Quaternion.identity, legion.transform);
+        //foreach (var legion in legions)
+        //{
+        //    if (legion.transform.name.StartsWith("LegionEnemy"))
+        //    {
+        //        foreach (var item in Legion)
+        //        {
+        //            var obj = Instantiate(item, legion.transform.position, Quaternion.identity, legion.transform);
+        //            obj.tag = "Enemy";
+        //        }
+        //    }
+        //    else if(legion.transform.name.StartsWith("LegionAlly"))
+        //    {
+        //        foreach (var item in Legion)
+        //        {
+        //            var obj = Instantiate(item, legion.transform.position, Quaternion.identity, legion.transform);
 
-                        obj.tag = "Ally";
-                    }
-                }
-            }
+        //            obj.tag = "Ally";
+        //        }
+        //    }
+        //}
         //}
         //else if ((int)timer.Elapsed.TotalSeconds % 4 == 0)
         //{

@@ -120,7 +120,7 @@ public class AIHeroes : MonoBehaviour
         }
         else
         {
-            character.Attack();
+            //character.Attack();
             anim.SetBool("isAttack", true);
             anim.SetBool("isMoving", false);
         }

@@ -11599,9 +11599,9 @@ MonoBehaviour:
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 1000
-  slowdownDistance: 2.8
-  pickNextWaypointDist: 3
-  endReachedDistance: 2.5
+  slowdownDistance: 3.8
+  pickNextWaypointDist: 4
+  endReachedDistance: 3
   alwaysDrawGizmos: 1
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
@@ -11630,7 +11630,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 810305141894702978}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.7950311, y: 1.8884401, z: 0.89513636}

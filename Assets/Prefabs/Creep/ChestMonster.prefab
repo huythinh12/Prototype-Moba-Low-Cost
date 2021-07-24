@@ -553,6 +553,9 @@ GameObject:
   - component: {fileID: 8683543554149356350}
   - component: {fileID: 8683543554139782362}
   - component: {fileID: 2449544771976221130}
+  - component: {fileID: 15494015}
+  - component: {fileID: 15494014}
+  - component: {fileID: 15494016}
   m_Layer: 6
   m_Name: ChestMonster
   m_TagString: Creep
@@ -609,6 +612,73 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTransformLeft: {fileID: 7262730475974782604, guid: b88ae8a6eeb41c544baa2b4879a48033, type: 3}
   targetTransformRight: {fileID: 3849439334445470959, guid: 92076f0ca14568e4c96613631e0eeeb1, type: 3}
+--- !u!54 &15494015
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8683543554149256990}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 4
+  m_CollisionDetection: 0
+--- !u!114 &15494014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8683543554149256990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4da8d62305aee3b40951af1c16ca7ccf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilities: []
+  rangeAttack: 0
+  name: 
+  id: 
+  typeCharacter: 3
+  team: 3
+  matchdata: {fileID: 11400000, guid: 6117ac433949b58429ebba5ee2241ac3, type: 2}
+--- !u!114 &15494016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8683543554149256990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d926a3df12c1d5478100785565d8640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level:
+    start: 1
+  health:
+    start: 90
+    perLevel: 10
+  mana:
+    start: 0
+    perLevel: 0
+  magicDamage:
+    start: 0
+    perLevel: 0
+  magicDefense:
+    start: 0
+    perLevel: 0
+  physicalDamage:
+    start: 0
+    perLevel: 0
+  physicalDefense:
+    start: 0
+    perLevel: 0
 --- !u!1 &8683543554149257072
 GameObject:
   m_ObjectHideFlags: 0

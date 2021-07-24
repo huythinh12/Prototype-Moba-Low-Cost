@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using DG.Tweening;
-
+//tach ra rieng 
 public enum TypeCharacter
 {
     Unset,
@@ -22,7 +22,7 @@ public enum TeamCharacter
     Red,
     Natural,
 }
-
+// xu ly toan bo hanh vi character 
 [RequireComponent(typeof(StatsCharacter), typeof(Rigidbody), typeof(Collider))]
 public class Character : MonoBehaviour
 {
@@ -49,9 +49,11 @@ public class Character : MonoBehaviour
 
     public string Name { get; private set; }
     public string ID { get; private set; }
+    public TeamCharacter Team { get => team; set => team = value; }
 
     private void Awake()
     {
+
         abilities.Add(new NoahAlphaAbility());
         abilities.Add(new NoahBetaAbility());
         abilities.Add(new NoahUltimateAbility());
@@ -131,7 +133,7 @@ public class Character : MonoBehaviour
             }
         }
     }
-
+  
     public void TakeDamage(int damage)
     {
         Debug.Log(string.Format("{0} take {1} damage", gameObject.name, damage));

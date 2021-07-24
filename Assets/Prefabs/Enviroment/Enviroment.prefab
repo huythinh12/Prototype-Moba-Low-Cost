@@ -1,5 +1,2597 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &13351090
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 13351091}
+  - component: {fileID: 13351093}
+  - component: {fileID: 13351092}
+  m_Layer: 3
+  m_Name: EA04_Trees_Stoolids_01b (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &13351091
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13351090}
+  m_LocalRotation: {x: 0.0000018099951, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.21, y: -1.65, z: 9.07}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5824918347711431408}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &13351093
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13351090}
+  m_Mesh: {fileID: 4300000, guid: 27b41da1c62530644ba1480e74bc4274, type: 3}
+--- !u!23 &13351092
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13351090}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 4294967295
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b6a037f85a603854c9f52e5cfd1d6f81, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &28380551
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 28380552}
+  - component: {fileID: 28380554}
+  - component: {fileID: 28380553}
+  m_Layer: 3
+  m_Name: EA04_Trees_Stoolids_01b (14)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &28380552
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28380551}
+  m_LocalRotation: {x: 0.0000018099951, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 126.46, y: -1.65, z: -9.68}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5824918347711431408}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &28380554
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28380551}
+  m_Mesh: {fileID: 4300000, guid: 27b41da1c62530644ba1480e74bc4274, type: 3}
+--- !u!23 &28380553
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28380551}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 4294967295
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b6a037f85a603854c9f52e5cfd1d6f81, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &30389252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 30389253}
+  - component: {fileID: 30389255}
+  - component: {fileID: 30389254}
+  m_Layer: 3
+  m_Name: EA04_Trees_Stoolids_01b (13)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &30389253
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30389252}
+  m_LocalRotation: {x: 0.0000018099951, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 125.7, y: -1.65, z: -7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5824918347711431408}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &30389255
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30389252}
+  m_Mesh: {fileID: 4300000, guid: 27b41da1c62530644ba1480e74bc4274, type: 3}
+--- !u!23 &30389254
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30389252}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 4294967295
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b6a037f85a603854c9f52e5cfd1d6f81, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &31927626
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 31927627}
+  - component: {fileID: 31927629}
+  - component: {fileID: 31927628}
+  m_Layer: 3
+  m_Name: EA04_Trees_Tire_01d (29)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &31927627
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 31927626}
+  m_LocalRotation: {x: 0.0000018099951, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.41, y: 0, z: 7.62}
+  m_LocalScale: {x: 0.44774, y: 0.44774, z: 0.44774}
+  m_Children: []
+  m_Father: {fileID: 5820905185209751033}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &31927629
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 31927626}
+  m_Mesh: {fileID: 4300000, guid: 3558a1f932a73dc4fabfc06214f0941d, type: 3}
+--- !u!23 &31927628
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 31927626}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 4294967295
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b6a037f85a603854c9f52e5cfd1d6f81, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &54044571
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 54044572}
+  - component: {fileID: 54044574}
+  - component: {fileID: 54044573}
+  m_Layer: 3
+  m_Name: EA04_Trees_Stoolids_01b (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &54044572
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54044571}
+  m_LocalRotation: {x: 0.0000018099951, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 50.5, y: -1.65, z: -1.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5824918347711431408}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &54044574
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54044571}
+  m_Mesh: {fileID: 4300000, guid: 27b41da1c62530644ba1480e74bc4274, type: 3}
+--- !u!23 &54044573
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54044571}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 4294967295
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b6a037f85a603854c9f52e5cfd1d6f81, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &239778201
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 239778202}
+  - component: {fileID: 239778204}
+  - component: {fileID: 239778203}
+  m_Layer: 3
+  m_Name: EA04_Trees_Tire_01d (24)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &239778202
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239778201}
+  m_LocalRotation: {x: 0.0000018099951, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 44.6, y: 0, z: 7}
+  m_LocalScale: {x: 0.44774, y: 0.44774, z: 0.44774}
+  m_Children: []
+  m_Father: {fileID: 5820905185209751033}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &239778204
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239778201}
+  m_Mesh: {fileID: 4300000, guid: 3558a1f932a73dc4fabfc06214f0941d, type: 3}
+--- !u!23 &239778203
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239778201}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 4294967295
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b6a037f85a603854c9f52e5cfd1d6f81, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &268078587
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 268078588}
+  - component: {fileID: 268078590}
+  - component: {fileID: 268078589}
+  m_Layer: 3
+  m_Name: EA04_Trees_Tire_01d (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &268078588
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268078587}
+  m_LocalRotation: {x: 0.0000018099951, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 28.89, y: 0, z: -0.51}
+  m_LocalScale: {x: 0.44774, y: 0.44774, z: 0.44774}
+  m_Children: []
+  m_Father: {fileID: 5820905184755973126}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &268078590
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268078587}
+  m_Mesh: {fileID: 4300000, guid: 3558a1f932a73dc4fabfc06214f0941d, type: 3}
+--- !u!23 &268078589
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268078587}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 4294967295
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b6a037f85a603854c9f52e5cfd1d6f81, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &360775958
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 360775959}
+  - component: {fileID: 360775961}
+  - component: {fileID: 360775960}
+  m_Layer: 3
+  m_Name: EA04_Trees_Tire_01d (26)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &360775959
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360775958}
+  m_LocalRotation: {x: 0.0000018099951, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 30.7, y: 0, z: 14.9}
+  m_LocalScale: {x: 0.44774, y: 0.44774, z: 0.44774}
+  m_Children: []
+  m_Father: {fileID: 5820905185209751033}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &360775961
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360775958}
+  m_Mesh: {fileID: 4300000, guid: 3558a1f932a73dc4fabfc06214f0941d, type: 3}
+--- !u!23 &360775960
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360775958}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 4294967295
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b6a037f85a603854c9f52e5cfd1d6f81, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &426674151
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 426674152}
+  - component: {fileID: 426674154}
+  - component: {fileID: 426674153}
+  m_Layer: 3
+  m_Name: EA04_Trees_Tire_01d (25)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &426674152
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426674151}
+  m_LocalRotation: {x: 0.0000018099951, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 40.6, y: 0, z: 12.3}
+  m_LocalScale: {x: 0.44774, y: 0.44774, z: 0.44774}
+  m_Children: []
+  m_Father: {fileID: 5820905185209751033}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &426674154
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426674151}
+  m_Mesh: {fileID: 4300000, guid: 3558a1f932a73dc4fabfc06214f0941d, type: 3}
+--- !u!23 &426674153
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426674151}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 4294967295
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b6a037f85a603854c9f52e5cfd1d6f81, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &729978833
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 729978834}
+  - component: {fileID: 729978836}
+  - component: {fileID: 729978835}
+  m_Layer: 3
+  m_Name: EA04_Trees_Stoolids_01b (15)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &729978834
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729978833}
+  m_LocalRotation: {x: 0.0000018099951, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 117.53, y: -1.65, z: -32.92}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5824918347711431408}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &729978836
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729978833}
+  m_Mesh: {fileID: 4300000, guid: 27b41da1c62530644ba1480e74bc4274, type: 3}
+--- !u!23 &729978835
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729978833}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 4294967295
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b6a037f85a603854c9f52e5cfd1d6f81, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &733212509
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 733212510}
+  - component: {fileID: 733212512}
+  - component: {fileID: 733212511}
+  m_Layer: 3
+  m_Name: EA04_Trees_Tire_01d (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &733212510
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733212509}
+  m_LocalRotation: {x: 0.0000018099951, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 28.62, y: 0, z: 0.9}
+  m_LocalScale: {x: 0.44774, y: 0.44774, z: 0.44774}
+  m_Children: []
+  m_Father: {fileID: 5820905184755973126}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &733212512
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733212509}
+  m_Mesh: {fileID: 4300000, guid: 3558a1f932a73dc4fabfc06214f0941d, type: 3}
+--- !u!23 &733212511
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733212509}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 4294967295
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b6a037f85a603854c9f52e5cfd1d6f81, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &738544164
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 738544165}
+  - component: {fileID: 738544167}
+  - component: {fileID: 738544166}
+  m_Layer: 3
+  m_Name: EA04_Trees_Tire_01d (28)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &738544165
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738544164}
+  m_LocalRotation: {x: 0.0000018099951, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.03, y: 0, z: 14.8}
+  m_LocalScale: {x: 0.44774, y: 0.44774, z: 0.44774}
+  m_Children: []
+  m_Father: {fileID: 5820905185209751033}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &738544167
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738544164}
+  m_Mesh: {fileID: 4300000, guid: 3558a1f932a73dc4fabfc06214f0941d, type: 3}
+--- !u!23 &738544166
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738544164}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 4294967295
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b6a037f85a603854c9f52e5cfd1d6f81, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &776919040
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 776919041}
+  - component: {fileID: 776919043}
+  - component: {fileID: 776919042}
+  m_Layer: 3
+  m_Name: EA04_Trees_Stoolids_01b (11)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &776919041
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776919040}
+  m_LocalRotation: {x: 0.0000018099951, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 51.74, y: -1.65, z: -3.88}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5824918347711431408}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &776919043
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776919040}
+  m_Mesh: {fileID: 4300000, guid: 27b41da1c62530644ba1480e74bc4274, type: 3}
+--- !u!23 &776919042
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776919040}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 4294967295
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b6a037f85a603854c9f52e5cfd1d6f81, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &988268534
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 988268535}
+  - component: {fileID: 988268537}
+  - component: {fileID: 988268536}
+  m_Layer: 3
+  m_Name: EA04_Trees_Tire_01d (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &988268535
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988268534}
+  m_LocalRotation: {x: 0.0000018099951, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.75, y: 0, z: 1.26}
+  m_LocalScale: {x: 0.44774, y: 0.44774, z: 0.44774}
+  m_Children: []
+  m_Father: {fileID: 5820905184755973126}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &988268537
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988268534}
+  m_Mesh: {fileID: 4300000, guid: 3558a1f932a73dc4fabfc06214f0941d, type: 3}
+--- !u!23 &988268536
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988268534}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 4294967295
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b6a037f85a603854c9f52e5cfd1d6f81, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &991863688
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 991863689}
+  - component: {fileID: 991863691}
+  - component: {fileID: 991863690}
+  m_Layer: 3
+  m_Name: EA04_Trees_Tire_01d (18)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &991863689
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991863688}
+  m_LocalRotation: {x: 0.0000018099951, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 90.05, y: 0, z: -21.2}
+  m_LocalScale: {x: 0.44774, y: 0.44774, z: 0.44774}
+  m_Children: []
+  m_Father: {fileID: 5820905185209751033}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &991863691
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991863688}
+  m_Mesh: {fileID: 4300000, guid: 3558a1f932a73dc4fabfc06214f0941d, type: 3}
+--- !u!23 &991863690
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991863688}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 4294967295
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b6a037f85a603854c9f52e5cfd1d6f81, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &1093865356
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1093865357}
+  - component: {fileID: 1093865359}
+  - component: {fileID: 1093865358}
+  m_Layer: 3
+  m_Name: EA04_Trees_Tire_01d (23)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &1093865357
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1093865356}
+  m_LocalRotation: {x: 0.0000018099951, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 42.8, y: 0, z: 7.8}
+  m_LocalScale: {x: 0.44774, y: 0.44774, z: 0.44774}
+  m_Children: []
+  m_Father: {fileID: 5820905185209751033}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1093865359
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1093865356}
+  m_Mesh: {fileID: 4300000, guid: 3558a1f932a73dc4fabfc06214f0941d, type: 3}
+--- !u!23 &1093865358
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1093865356}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 4294967295
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b6a037f85a603854c9f52e5cfd1d6f81, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &1099245149
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1099245150}
+  - component: {fileID: 1099245152}
+  - component: {fileID: 1099245151}
+  m_Layer: 3
+  m_Name: EA04_Trees_Tire_01d (19)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &1099245150
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1099245149}
+  m_LocalRotation: {x: 0.0000018099951, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -56.2, y: 0, z: -8}
+  m_LocalScale: {x: 0.44774, y: 0.44774, z: 0.44774}
+  m_Children: []
+  m_Father: {fileID: 5820905185209751033}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1099245152
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1099245149}
+  m_Mesh: {fileID: 4300000, guid: 3558a1f932a73dc4fabfc06214f0941d, type: 3}
+--- !u!23 &1099245151
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1099245149}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 4294967295
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b6a037f85a603854c9f52e5cfd1d6f81, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &1129657164
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1129657165}
+  - component: {fileID: 1129657167}
+  - component: {fileID: 1129657166}
+  m_Layer: 3
+  m_Name: EA04_Trees_Stoolids_01b (16)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &1129657165
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129657164}
+  m_LocalRotation: {x: 0.0000018099951, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 56.8, y: -1.65, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5824918347711431408}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1129657167
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129657164}
+  m_Mesh: {fileID: 4300000, guid: 27b41da1c62530644ba1480e74bc4274, type: 3}
+--- !u!23 &1129657166
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129657164}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 4294967295
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b6a037f85a603854c9f52e5cfd1d6f81, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &1156836827
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1156836828}
+  - component: {fileID: 1156836830}
+  - component: {fileID: 1156836829}
+  m_Layer: 3
+  m_Name: EA04_Trees_Tire_01d (30)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &1156836828
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1156836827}
+  m_LocalRotation: {x: 0.0000018099951, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.3, y: 0, z: 5.02}
+  m_LocalScale: {x: 0.44774, y: 0.44774, z: 0.44774}
+  m_Children: []
+  m_Father: {fileID: 5820905185209751033}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1156836830
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1156836827}
+  m_Mesh: {fileID: 4300000, guid: 3558a1f932a73dc4fabfc06214f0941d, type: 3}
+--- !u!23 &1156836829
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1156836827}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 4294967295
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b6a037f85a603854c9f52e5cfd1d6f81, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &1182884757
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1182884758}
+  - component: {fileID: 1182884760}
+  - component: {fileID: 1182884759}
+  m_Layer: 3
+  m_Name: EA04_Trees_Tire_01d (27)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &1182884758
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182884757}
+  m_LocalRotation: {x: 0.0000018099951, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 12.1, y: 0, z: 15.1}
+  m_LocalScale: {x: 0.44774, y: 0.44774, z: 0.44774}
+  m_Children: []
+  m_Father: {fileID: 5820905185209751033}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1182884760
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182884757}
+  m_Mesh: {fileID: 4300000, guid: 3558a1f932a73dc4fabfc06214f0941d, type: 3}
+--- !u!23 &1182884759
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182884757}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 4294967295
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b6a037f85a603854c9f52e5cfd1d6f81, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &1211424947
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1211424948}
+  - component: {fileID: 1211424950}
+  - component: {fileID: 1211424949}
+  m_Layer: 3
+  m_Name: EA04_Trees_Tire_01d (14)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &1211424948
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211424947}
+  m_LocalRotation: {x: 0.0000018099951, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 43.01, y: 0, z: -22.99}
+  m_LocalScale: {x: 0.44774, y: 0.44774, z: 0.44774}
+  m_Children: []
+  m_Father: {fileID: 5820905185209751033}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1211424950
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211424947}
+  m_Mesh: {fileID: 4300000, guid: 3558a1f932a73dc4fabfc06214f0941d, type: 3}
+--- !u!23 &1211424949
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211424947}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 4294967295
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b6a037f85a603854c9f52e5cfd1d6f81, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &1285958175
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1285958176}
+  - component: {fileID: 1285958178}
+  - component: {fileID: 1285958177}
+  m_Layer: 3
+  m_Name: EA04_Trees_Tire_01d (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &1285958176
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285958175}
+  m_LocalRotation: {x: 0.0000018099951, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.28, y: 0, z: 1.69}
+  m_LocalScale: {x: 0.44774, y: 0.44774, z: 0.44774}
+  m_Children: []
+  m_Father: {fileID: 5820905185209751033}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1285958178
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285958175}
+  m_Mesh: {fileID: 4300000, guid: 3558a1f932a73dc4fabfc06214f0941d, type: 3}
+--- !u!23 &1285958177
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285958175}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 4294967295
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b6a037f85a603854c9f52e5cfd1d6f81, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &1294324567
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1294324568}
+  - component: {fileID: 1294324570}
+  - component: {fileID: 1294324569}
+  m_Layer: 3
+  m_Name: EA04_Trees_Tire_01d (21)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &1294324568
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294324567}
+  m_LocalRotation: {x: 0.0000018099951, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -40.1, y: 0, z: 0.79}
+  m_LocalScale: {x: 0.44774, y: 0.44774, z: 0.44774}
+  m_Children: []
+  m_Father: {fileID: 5820905185209751033}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1294324570
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294324567}
+  m_Mesh: {fileID: 4300000, guid: 3558a1f932a73dc4fabfc06214f0941d, type: 3}
+--- !u!23 &1294324569
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294324567}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 4294967295
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b6a037f85a603854c9f52e5cfd1d6f81, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &1390087183
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1390087184}
+  - component: {fileID: 1390087186}
+  - component: {fileID: 1390087185}
+  m_Layer: 3
+  m_Name: EA04_Trees_Tire_01d (12)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &1390087184
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390087183}
+  m_LocalRotation: {x: 0.0000018099951, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 38.91, y: 0, z: -22.4}
+  m_LocalScale: {x: 0.44774, y: 0.44774, z: 0.44774}
+  m_Children: []
+  m_Father: {fileID: 5820905185209751033}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1390087186
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390087183}
+  m_Mesh: {fileID: 4300000, guid: 3558a1f932a73dc4fabfc06214f0941d, type: 3}
+--- !u!23 &1390087185
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390087183}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 4294967295
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b6a037f85a603854c9f52e5cfd1d6f81, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &1528455907
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1528455908}
+  - component: {fileID: 1528455910}
+  - component: {fileID: 1528455909}
+  m_Layer: 3
+  m_Name: EA04_Trees_Stoolids_01b (12)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &1528455908
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528455907}
+  m_LocalRotation: {x: 0.0000018099951, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 91.84, y: -1.65, z: -7.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5824918347711431408}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1528455910
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528455907}
+  m_Mesh: {fileID: 4300000, guid: 27b41da1c62530644ba1480e74bc4274, type: 3}
+--- !u!23 &1528455909
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528455907}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 4294967295
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b6a037f85a603854c9f52e5cfd1d6f81, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &1781096067
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1781096068}
+  - component: {fileID: 1781096070}
+  - component: {fileID: 1781096069}
+  m_Layer: 3
+  m_Name: EA04_Trees_Tire_01d (20)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &1781096068
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781096067}
+  m_LocalRotation: {x: 0.0000018099951, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -57, y: 0, z: -5}
+  m_LocalScale: {x: 0.44774, y: 0.44774, z: 0.44774}
+  m_Children: []
+  m_Father: {fileID: 5820905185209751033}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1781096070
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781096067}
+  m_Mesh: {fileID: 4300000, guid: 3558a1f932a73dc4fabfc06214f0941d, type: 3}
+--- !u!23 &1781096069
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781096067}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 4294967295
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b6a037f85a603854c9f52e5cfd1d6f81, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &1819940557
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1819940558}
+  - component: {fileID: 1819940560}
+  - component: {fileID: 1819940559}
+  m_Layer: 3
+  m_Name: EA04_Trees_Tire_01d (31)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &1819940558
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819940557}
+  m_LocalRotation: {x: 0.0000018099951, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 42.24, y: 0, z: 9.51}
+  m_LocalScale: {x: 0.44774, y: 0.44774, z: 0.44774}
+  m_Children: []
+  m_Father: {fileID: 5820905185209751033}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1819940560
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819940557}
+  m_Mesh: {fileID: 4300000, guid: 3558a1f932a73dc4fabfc06214f0941d, type: 3}
+--- !u!23 &1819940559
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819940557}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 4294967295
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b6a037f85a603854c9f52e5cfd1d6f81, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &1866632497
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1866632498}
+  - component: {fileID: 1866632500}
+  - component: {fileID: 1866632499}
+  m_Layer: 3
+  m_Name: EA04_Trees_Tire_01d (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &1866632498
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866632497}
+  m_LocalRotation: {x: 0.0000018099951, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.59, y: 0, z: -2.9}
+  m_LocalScale: {x: 0.44774, y: 0.44774, z: 0.44774}
+  m_Children: []
+  m_Father: {fileID: 5820905184755973126}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1866632500
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866632497}
+  m_Mesh: {fileID: 4300000, guid: 3558a1f932a73dc4fabfc06214f0941d, type: 3}
+--- !u!23 &1866632499
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866632497}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 4294967295
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b6a037f85a603854c9f52e5cfd1d6f81, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &1943881478
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1943881479}
+  - component: {fileID: 1943881481}
+  - component: {fileID: 1943881480}
+  m_Layer: 3
+  m_Name: EA04_Trees_Tire_01d (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &1943881479
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943881478}
+  m_LocalRotation: {x: 0.0000018099951, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.24, y: 0, z: 2.16}
+  m_LocalScale: {x: 0.44774, y: 0.44774, z: 0.44774}
+  m_Children: []
+  m_Father: {fileID: 5820905185209751033}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1943881481
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943881478}
+  m_Mesh: {fileID: 4300000, guid: 3558a1f932a73dc4fabfc06214f0941d, type: 3}
+--- !u!23 &1943881480
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943881478}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 4294967295
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b6a037f85a603854c9f52e5cfd1d6f81, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &2007318635
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2007318636}
+  - component: {fileID: 2007318638}
+  - component: {fileID: 2007318637}
+  m_Layer: 3
+  m_Name: EA04_Trees_Stoolids_01b (17)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &2007318636
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2007318635}
+  m_LocalRotation: {x: 0.0000018099951, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.6, y: -1.65, z: 13.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5824918347711431408}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &2007318638
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2007318635}
+  m_Mesh: {fileID: 4300000, guid: 27b41da1c62530644ba1480e74bc4274, type: 3}
+--- !u!23 &2007318637
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2007318635}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 4294967295
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b6a037f85a603854c9f52e5cfd1d6f81, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &2100278834
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2100278835}
+  - component: {fileID: 2100278837}
+  - component: {fileID: 2100278836}
+  m_Layer: 3
+  m_Name: EA04_Trees_Tire_01d (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &2100278835
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100278834}
+  m_LocalRotation: {x: 0.0000018099951, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.43, y: 0, z: 1.69}
+  m_LocalScale: {x: 0.44774, y: 0.44774, z: 0.44774}
+  m_Children: []
+  m_Father: {fileID: 5820905185209751033}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &2100278837
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100278834}
+  m_Mesh: {fileID: 4300000, guid: 3558a1f932a73dc4fabfc06214f0941d, type: 3}
+--- !u!23 &2100278836
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100278834}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 4294967295
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b6a037f85a603854c9f52e5cfd1d6f81, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &2141047750
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2141047751}
+  - component: {fileID: 2141047753}
+  - component: {fileID: 2141047752}
+  m_Layer: 3
+  m_Name: EA04_Trees_Tire_01d (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &2141047751
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141047750}
+  m_LocalRotation: {x: 0.0000018099951, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.5, y: 0, z: 5.52}
+  m_LocalScale: {x: 0.44774, y: 0.44774, z: 0.44774}
+  m_Children: []
+  m_Father: {fileID: 5820905185209751033}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &2141047753
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141047750}
+  m_Mesh: {fileID: 4300000, guid: 3558a1f932a73dc4fabfc06214f0941d, type: 3}
+--- !u!23 &2141047752
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141047750}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 4294967295
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b6a037f85a603854c9f52e5cfd1d6f81, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &5825614890029837204
 GameObject:
   m_ObjectHideFlags: 0
@@ -11,12 +2603,12 @@ GameObject:
   - component: {fileID: 5825614890029837207}
   - component: {fileID: 5825614890029837289}
   - component: {fileID: 5825614890029837206}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825614890029837207
 Transform:
@@ -92,12 +2684,12 @@ GameObject:
   - component: {fileID: 5825614890063663169}
   - component: {fileID: 5825614890063663171}
   - component: {fileID: 5825614890063663168}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825614890063663169
 Transform:
@@ -173,12 +2765,12 @@ GameObject:
   - component: {fileID: 5825614890197887109}
   - component: {fileID: 5825614890197887111}
   - component: {fileID: 5825614890197887108}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825614890197887109
 Transform:
@@ -254,12 +2846,12 @@ GameObject:
   - component: {fileID: 5825614890295899759}
   - component: {fileID: 5825614890295899745}
   - component: {fileID: 5825614890295899758}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825614890295899759
 Transform:
@@ -335,12 +2927,12 @@ GameObject:
   - component: {fileID: 5825614890617057367}
   - component: {fileID: 5825614890617057449}
   - component: {fileID: 5825614890617057366}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825614890617057367
 Transform:
@@ -416,12 +3008,12 @@ GameObject:
   - component: {fileID: 5825614890704787775}
   - component: {fileID: 5825614890704787761}
   - component: {fileID: 5825614890704787774}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825614890704787775
 Transform:
@@ -497,12 +3089,12 @@ GameObject:
   - component: {fileID: 5825614890826420258}
   - component: {fileID: 5825614890826420260}
   - component: {fileID: 5825614890826420261}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825614890826420258
 Transform:
@@ -578,12 +3170,12 @@ GameObject:
   - component: {fileID: 5825614890848845787}
   - component: {fileID: 5825614890848845789}
   - component: {fileID: 5825614890848845786}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825614890848845787
 Transform:
@@ -659,12 +3251,12 @@ GameObject:
   - component: {fileID: 5825614891715686626}
   - component: {fileID: 5825614891715686628}
   - component: {fileID: 5825614891715686629}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825614891715686626
 Transform:
@@ -740,12 +3332,12 @@ GameObject:
   - component: {fileID: 5825614891725012067}
   - component: {fileID: 5825614891725012069}
   - component: {fileID: 5825614891725012066}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825614891725012067
 Transform:
@@ -821,12 +3413,12 @@ GameObject:
   - component: {fileID: 5825614891865274938}
   - component: {fileID: 5825614891865274940}
   - component: {fileID: 5825614891865274941}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825614891865274938
 Transform:
@@ -900,12 +3492,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5825614891972202247}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Enviroment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825614891972202247
 Transform:
@@ -1065,12 +3657,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821201322044450246}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d_PRE (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821201322044450246
 Transform:
@@ -1096,12 +3688,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821201321960728984}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d_PRE (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821201321960728984
 Transform:
@@ -1127,12 +3719,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821201322156367422}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d_PRE (32)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821201322156367422
 Transform:
@@ -1159,12 +3751,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821201322152543320}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d_PRE (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821201322152543320
 Transform:
@@ -1190,12 +3782,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821201322270699004}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d_PRE (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821201322270699004
 Transform:
@@ -1221,12 +3813,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821201322364120928}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d_PRE (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821201322364120928
 Transform:
@@ -1252,12 +3844,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821201322357316063}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d_PRE (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821201322357316063
 Transform:
@@ -1283,12 +3875,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821201321491238637}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d_PRE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821201321491238637
 Transform:
@@ -1315,12 +3907,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821201321491471651}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d_PRE (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821201321491471651
 Transform:
@@ -1347,12 +3939,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821201321653198074}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d_PRE (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821201321653198074
 Transform:
@@ -1379,12 +3971,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821201321781128793}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d_PRE (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821201321781128793
 Transform:
@@ -1410,12 +4002,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821201321775429501}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d_PRE (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821201321775429501
 Transform:
@@ -1442,12 +4034,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821201321767051897}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d_PRE (33)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821201321767051897
 Transform:
@@ -1474,12 +4066,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821201321757410449}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d_PRE (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821201321757410449
 Transform:
@@ -1506,12 +4098,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821201321703814611}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d_PRE (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821201321703814611
 Transform:
@@ -1537,12 +4129,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821201321684114343}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d_PRE (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821201321684114343
 Transform:
@@ -1568,12 +4160,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821201321890823551}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d_PRE (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821201321890823551
 Transform:
@@ -1599,12 +4191,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821201321813944343}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d_PRE (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821201321813944343
 Transform:
@@ -1630,12 +4222,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821201323030867756}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d_PRE (31)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821201323030867756
 Transform:
@@ -1662,12 +4254,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821201323250934600}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d_PRE (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821201323250934600
 Transform:
@@ -1693,12 +4285,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821201323241719020}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d_PRE (35)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821201323241719020
 Transform:
@@ -1725,12 +4317,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821201323219388881}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d_PRE (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821201323219388881
 Transform:
@@ -1757,12 +4349,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821201323177074878}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d_PRE (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821201323177074878
 Transform:
@@ -1788,12 +4380,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821201323411066679}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d_PRE (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821201323411066679
 Transform:
@@ -1819,12 +4411,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821201323382272661}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d_PRE (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821201323382272661
 Transform:
@@ -1850,12 +4442,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821201323352154533}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d_PRE (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821201323352154533
 Transform:
@@ -1880,12 +4472,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821201323308866302}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d_PRE (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821201323308866302
 Transform:
@@ -1911,12 +4503,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821201323478102868}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d_PRE (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821201323478102868
 Transform:
@@ -1942,12 +4534,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821201322513444768}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d_PRE (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821201322513444768
 Transform:
@@ -1973,12 +4565,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821201322486637029}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d_PRE (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821201322486637029
 Transform:
@@ -2004,12 +4596,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821201322694471449}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d_PRE (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821201322694471449
 Transform:
@@ -2035,12 +4627,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821201322667782873}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d_PRE (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821201322667782873
 Transform:
@@ -2066,12 +4658,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821201322628519472}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d_PRE (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821201322628519472
 Transform:
@@ -2097,12 +4689,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821201322809385654}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d_PRE (34)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821201322809385654
 Transform:
@@ -2129,12 +4721,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821201322757038190}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d_PRE (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821201322757038190
 Transform:
@@ -2160,12 +4752,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821201322907825431}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d_PRE (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821201322907825431
 Transform:
@@ -2193,12 +4785,12 @@ GameObject:
   - component: {fileID: 5825321928651388580}
   - component: {fileID: 5813937017262912500}
   - component: {fileID: 5804088099381652088}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321928651388580
 Transform:
@@ -2274,12 +4866,12 @@ GameObject:
   - component: {fileID: 5825321928656398172}
   - component: {fileID: 5813937017257959948}
   - component: {fileID: 5804088099384572800}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321928656398172
 Transform:
@@ -2288,13 +4880,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5826551289443404768}
-  m_LocalRotation: {x: 0.0000018099951, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.000001376039, y: 0.64963686, z: 0.0000011758397, w: 0.7602446}
+  m_LocalPosition: {x: -2, y: 0, z: 8.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5821082941839794738}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 81.028, z: 0}
 --- !u!33 &5813937017257959948
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2355,12 +4947,12 @@ GameObject:
   - component: {fileID: 5825321928623903402}
   - component: {fileID: 5813937017290479610}
   - component: {fileID: 5804088099417083510}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321928623903402
 Transform:
@@ -2436,12 +5028,12 @@ GameObject:
   - component: {fileID: 5825321928724919815}
   - component: {fileID: 5813937017189118807}
   - component: {fileID: 5804088099449940699}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321928724919815
 Transform:
@@ -2517,12 +5109,12 @@ GameObject:
   - component: {fileID: 5825321928702746012}
   - component: {fileID: 5813937017211508940}
   - component: {fileID: 5804088099464462656}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321928702746012
 Transform:
@@ -2598,12 +5190,12 @@ GameObject:
   - component: {fileID: 5825321928690199870}
   - component: {fileID: 5813937017224128622}
   - component: {fileID: 5804088099485479394}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321928690199870
 Transform:
@@ -2679,12 +5271,12 @@ GameObject:
   - component: {fileID: 5825321928742378929}
   - component: {fileID: 5813937017440409825}
   - component: {fileID: 5804088099567010157}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321928742378929
 Transform:
@@ -2760,12 +5352,12 @@ GameObject:
   - component: {fileID: 5825321928841688814}
   - component: {fileID: 5813937017341014974}
   - component: {fileID: 5804088099602360882}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321928841688814
 Transform:
@@ -2841,12 +5433,12 @@ GameObject:
   - component: {fileID: 5825321928793544165}
   - component: {fileID: 5813937017388814517}
   - component: {fileID: 5804088099624470841}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321928793544165
 Transform:
@@ -2922,12 +5514,12 @@ GameObject:
   - component: {fileID: 5825321928906183560}
   - component: {fileID: 5813937017544971992}
   - component: {fileID: 5804088099663712084}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321928906183560
 Transform:
@@ -3003,12 +5595,12 @@ GameObject:
   - component: {fileID: 5825321928863171407}
   - component: {fileID: 5813937017587942943}
   - component: {fileID: 5804088099689914259}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321928863171407
 Transform:
@@ -3084,12 +5676,12 @@ GameObject:
   - component: {fileID: 5825321928873563882}
   - component: {fileID: 5813937017577362362}
   - component: {fileID: 5804088099704490550}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321928873563882
 Transform:
@@ -3165,12 +5757,12 @@ GameObject:
   - component: {fileID: 5825321928967541830}
   - component: {fileID: 5813937017483645206}
   - component: {fileID: 5804088099728214170}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321928967541830
 Transform:
@@ -3246,12 +5838,12 @@ GameObject:
   - component: {fileID: 5825321928935735467}
   - component: {fileID: 5813937017515279867}
   - component: {fileID: 5804088099767721079}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321928935735467
 Transform:
@@ -3327,12 +5919,12 @@ GameObject:
   - component: {fileID: 5825321928940973281}
   - component: {fileID: 5813937017510029745}
   - component: {fileID: 5804088099770855485}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321928940973281
 Transform:
@@ -3408,12 +6000,12 @@ GameObject:
   - component: {fileID: 5825321929032813571}
   - component: {fileID: 5813937017686804819}
   - component: {fileID: 5804088099796635871}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321929032813571
 Transform:
@@ -3489,12 +6081,12 @@ GameObject:
   - component: {fileID: 5825321929007279453}
   - component: {fileID: 5813937017712125965}
   - component: {fileID: 5804088099839259009}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321929007279453
 Transform:
@@ -3570,12 +6162,12 @@ GameObject:
   - component: {fileID: 5825321929106925907}
   - component: {fileID: 5813937017612545027}
   - component: {fileID: 5804088099865507215}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321929106925907
 Transform:
@@ -3651,12 +6243,12 @@ GameObject:
   - component: {fileID: 5825321929085711039}
   - component: {fileID: 5813937017633798127}
   - component: {fileID: 5804088099877842531}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321929085711039
 Transform:
@@ -3665,13 +6257,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5826551289939992067}
-  m_LocalRotation: {x: 0.0000018099951, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.0000017803873, y: -0.1801348, z: -0.00000032604316, w: 0.983642}
+  m_LocalPosition: {x: -8.6, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5821082941410490321}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -20.755, z: 0}
 --- !u!33 &5813937017633798127
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3732,12 +6324,12 @@ GameObject:
   - component: {fileID: 5825321928108393982}
   - component: {fileID: 5813937016731975854}
   - component: {fileID: 5804088099907164450}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321928108393982
 Transform:
@@ -3813,12 +6405,12 @@ GameObject:
   - component: {fileID: 5825321928117399743}
   - component: {fileID: 5813937016723158511}
   - component: {fileID: 5804088099915115619}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321928117399743
 Transform:
@@ -3894,12 +6486,12 @@ GameObject:
   - component: {fileID: 5825321928094364391}
   - component: {fileID: 5813937016746260407}
   - component: {fileID: 5804088099929828923}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321928094364391
 Transform:
@@ -3975,12 +6567,12 @@ GameObject:
   - component: {fileID: 5825321928103548174}
   - component: {fileID: 5813937016737091678}
   - component: {fileID: 5804088099937962450}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321928103548174
 Transform:
@@ -4056,12 +6648,12 @@ GameObject:
   - component: {fileID: 5825321928077861088}
   - component: {fileID: 5813937016762787248}
   - component: {fileID: 5804088099946888252}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321928077861088
 Transform:
@@ -4137,12 +6729,12 @@ GameObject:
   - component: {fileID: 5825321928080303085}
   - component: {fileID: 5813937016759985853}
   - component: {fileID: 5804088099952475953}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321928080303085
 Transform:
@@ -4218,12 +6810,12 @@ GameObject:
   - component: {fileID: 5825321928056193807}
   - component: {fileID: 5813937016784111199}
   - component: {fileID: 5804088099959824339}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321928056193807
 Transform:
@@ -4299,12 +6891,12 @@ GameObject:
   - component: {fileID: 5825321928066403185}
   - component: {fileID: 5813937016773873185}
   - component: {fileID: 5804088099965835181}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321928066403185
 Transform:
@@ -4380,12 +6972,12 @@ GameObject:
   - component: {fileID: 5825321928224042263}
   - component: {fileID: 5813937016884848711}
   - component: {fileID: 5804088100060557771}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321928224042263
 Transform:
@@ -4461,12 +7053,12 @@ GameObject:
   - component: {fileID: 5825321928207722210}
   - component: {fileID: 5813937016901034930}
   - component: {fileID: 5804088100076747326}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321928207722210
 Transform:
@@ -4542,12 +7134,12 @@ GameObject:
   - component: {fileID: 5825321928222556978}
   - component: {fileID: 5813937016886511202}
   - component: {fileID: 5804088100087390190}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321928222556978
 Transform:
@@ -4623,12 +7215,12 @@ GameObject:
   - component: {fileID: 5825321928319755305}
   - component: {fileID: 5813937016789197177}
   - component: {fileID: 5804088100123769077}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321928319755305
 Transform:
@@ -4704,12 +7296,12 @@ GameObject:
   - component: {fileID: 5825321928263270828}
   - component: {fileID: 5813937016845436156}
   - component: {fileID: 5804088100163755376}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321928263270828
 Transform:
@@ -4785,12 +7377,12 @@ GameObject:
   - component: {fileID: 5825321928495497655}
   - component: {fileID: 5813937017150014695}
   - component: {fileID: 5804088100334116203}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321928495497655
 Transform:
@@ -4866,12 +7458,12 @@ GameObject:
   - component: {fileID: 5825321928467200870}
   - component: {fileID: 5813937017178340918}
   - component: {fileID: 5804088100370819002}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321928467200870
 Transform:
@@ -4947,12 +7539,12 @@ GameObject:
   - component: {fileID: 5825321928467537545}
   - component: {fileID: 5813937017178151897}
   - component: {fileID: 5804088100370104917}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321928467537545
 Transform:
@@ -5028,12 +7620,12 @@ GameObject:
   - component: {fileID: 5825321928586075044}
   - component: {fileID: 5813937017059712756}
   - component: {fileID: 5804088100385884024}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321928586075044
 Transform:
@@ -5109,12 +7701,12 @@ GameObject:
   - component: {fileID: 5825321928551108081}
   - component: {fileID: 5813937017094473889}
   - component: {fileID: 5804088100421177645}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321928551108081
 Transform:
@@ -5190,12 +7782,12 @@ GameObject:
   - component: {fileID: 5825321929708633762}
   - component: {fileID: 5813937016205704178}
   - component: {fileID: 5804088100471399038}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321929708633762
 Transform:
@@ -5271,12 +7863,12 @@ GameObject:
   - component: {fileID: 5825321929772669340}
   - component: {fileID: 5813937016141290700}
   - component: {fileID: 5804088100533339456}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321929772669340
 Transform:
@@ -5352,12 +7944,12 @@ GameObject:
   - component: {fileID: 5825321929773023419}
   - component: {fileID: 5813937016141121003}
   - component: {fileID: 5804088100532657255}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321929773023419
 Transform:
@@ -5433,12 +8025,12 @@ GameObject:
   - component: {fileID: 5825321929860558677}
   - component: {fileID: 5813937016321976837}
   - component: {fileID: 5804088100587680649}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321929860558677
 Transform:
@@ -5514,12 +8106,12 @@ GameObject:
   - component: {fileID: 5825321929911040290}
   - component: {fileID: 5813937016271797362}
   - component: {fileID: 5804088100671710718}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321929911040290
 Transform:
@@ -5595,12 +8187,12 @@ GameObject:
   - component: {fileID: 5825321929887240944}
   - component: {fileID: 5813937016295184288}
   - component: {fileID: 5804088100678323756}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321929887240944
 Transform:
@@ -5676,12 +8268,12 @@ GameObject:
   - component: {fileID: 5825321929875428645}
   - component: {fileID: 5813937016306962549}
   - component: {fileID: 5804088100707404281}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321929875428645
 Transform:
@@ -5757,12 +8349,12 @@ GameObject:
   - component: {fileID: 5825321929989217599}
   - component: {fileID: 5813937016461645935}
   - component: {fileID: 5804088100719477219}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321929989217599
 Transform:
@@ -5838,12 +8430,12 @@ GameObject:
   - component: {fileID: 5825321929972157440}
   - component: {fileID: 5813937016478665040}
   - component: {fileID: 5804088100735979740}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321929972157440
 Transform:
@@ -5919,12 +8511,12 @@ GameObject:
   - component: {fileID: 5825321929943582405}
   - component: {fileID: 5813937016507237269}
   - component: {fileID: 5804088100773468697}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321929943582405
 Transform:
@@ -6000,12 +8592,12 @@ GameObject:
   - component: {fileID: 5825321930042391061}
   - component: {fileID: 5813937016408391493}
   - component: {fileID: 5804088100799915721}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321930042391061
 Transform:
@@ -6081,12 +8673,12 @@ GameObject:
   - component: {fileID: 5825321930017923406}
   - component: {fileID: 5813937016433206302}
   - component: {fileID: 5804088100816354706}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321930017923406
 Transform:
@@ -6162,12 +8754,12 @@ GameObject:
   - component: {fileID: 5825321930013724386}
   - component: {fileID: 5813937016437394354}
   - component: {fileID: 5804088100845703742}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321930013724386
 Transform:
@@ -6243,12 +8835,12 @@ GameObject:
   - component: {fileID: 5825321930108186749}
   - component: {fileID: 5813937016611026221}
   - component: {fileID: 5804088100868861089}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321930108186749
 Transform:
@@ -6324,12 +8916,12 @@ GameObject:
   - component: {fileID: 5825321930069035864}
   - component: {fileID: 5813937016650518024}
   - component: {fileID: 5804088100899968900}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321930069035864
 Transform:
@@ -6405,12 +8997,12 @@ GameObject:
   - component: {fileID: 5825321930080231774}
   - component: {fileID: 5813937016639169550}
   - component: {fileID: 5804088100904877442}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321930080231774
 Transform:
@@ -6486,12 +9078,12 @@ GameObject:
   - component: {fileID: 5825321930163629492}
   - component: {fileID: 5813937016555841764}
   - component: {fileID: 5804088100955763048}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321930163629492
 Transform:
@@ -6567,12 +9159,12 @@ GameObject:
   - component: {fileID: 5825321930138172947}
   - component: {fileID: 5813937016581241667}
   - component: {fileID: 5804088100964901583}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321930138172947
 Transform:
@@ -6648,12 +9240,12 @@ GameObject:
   - component: {fileID: 5825321930143495558}
   - component: {fileID: 5813937016576078038}
   - component: {fileID: 5804088100968130906}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321930143495558
 Transform:
@@ -6729,12 +9321,12 @@ GameObject:
   - component: {fileID: 5825321930150249970}
   - component: {fileID: 5813937016569200802}
   - component: {fileID: 5804088100978039086}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321930150249970
 Transform:
@@ -6810,12 +9402,12 @@ GameObject:
   - component: {fileID: 5825321929169438268}
   - component: {fileID: 5813937015670702956}
   - component: {fileID: 5804088101001763552}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321929169438268
 Transform:
@@ -6891,12 +9483,12 @@ GameObject:
   - component: {fileID: 5825321929149856236}
   - component: {fileID: 5813937015690443964}
   - component: {fileID: 5804088101022016816}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321929149856236
 Transform:
@@ -6972,12 +9564,12 @@ GameObject:
   - component: {fileID: 5825321929149949207}
   - component: {fileID: 5813937015690534983}
   - component: {fileID: 5804088101022120395}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321929149949207
 Transform:
@@ -7053,12 +9645,12 @@ GameObject:
   - component: {fileID: 5825321929154014083}
   - component: {fileID: 5813937015686213331}
   - component: {fileID: 5804088101026183007}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321929154014083
 Transform:
@@ -7068,7 +9660,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5826551291081475903}
   m_LocalRotation: {x: 0.0000018099951, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.3, y: -0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5821082943479443181}
@@ -7134,12 +9726,12 @@ GameObject:
   - component: {fileID: 5825321929250446895}
   - component: {fileID: 5813937015589706623}
   - component: {fileID: 5804088101055496947}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321929250446895
 Transform:
@@ -7215,12 +9807,12 @@ GameObject:
   - component: {fileID: 5825321929255796080}
   - component: {fileID: 5813937015584569376}
   - component: {fileID: 5804088101058748844}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321929255796080
 Transform:
@@ -7296,12 +9888,12 @@ GameObject:
   - component: {fileID: 5825321929256654702}
   - component: {fileID: 5813937015583855166}
   - component: {fileID: 5804088101057514418}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321929256654702
 Transform:
@@ -7377,12 +9969,12 @@ GameObject:
   - component: {fileID: 5825321929260112839}
   - component: {fileID: 5813937015580499607}
   - component: {fileID: 5804088101063067419}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321929260112839
 Transform:
@@ -7458,12 +10050,12 @@ GameObject:
   - component: {fileID: 5825321929221779949}
   - component: {fileID: 5813937015618712765}
   - component: {fileID: 5804088101092896049}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321929221779949
 Transform:
@@ -7539,12 +10131,12 @@ GameObject:
   - component: {fileID: 5825321929196844549}
   - component: {fileID: 5813937015643583317}
   - component: {fileID: 5804088101100464857}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321929196844549
 Transform:
@@ -7620,12 +10212,12 @@ GameObject:
   - component: {fileID: 5825321929204247208}
   - component: {fileID: 5813937015636307960}
   - component: {fileID: 5804088101109970548}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321929204247208
 Transform:
@@ -7701,12 +10293,12 @@ GameObject:
   - component: {fileID: 5825321929320210551}
   - component: {fileID: 5813937015788447015}
   - component: {fileID: 5804088101120031915}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321929320210551
 Transform:
@@ -7782,12 +10374,12 @@ GameObject:
   - component: {fileID: 5825321929267540261}
   - component: {fileID: 5813937015841158261}
   - component: {fileID: 5804088101172211193}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321929267540261
 Transform:
@@ -7863,12 +10455,12 @@ GameObject:
   - component: {fileID: 5825321929275437665}
   - component: {fileID: 5813937015833327409}
   - component: {fileID: 5804088101181157053}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321929275437665
 Transform:
@@ -7944,12 +10536,12 @@ GameObject:
   - component: {fileID: 5825321929383833388}
   - component: {fileID: 5813937015725189756}
   - component: {fileID: 5804088101182600176}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321929383833388
 Transform:
@@ -8025,12 +10617,12 @@ GameObject:
   - component: {fileID: 5825321929354761751}
   - component: {fileID: 5813937015754314567}
   - component: {fileID: 5804088101219584715}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321929354761751
 Transform:
@@ -8106,12 +10698,12 @@ GameObject:
   - component: {fileID: 5825321929345425788}
   - component: {fileID: 5813937015763330092}
   - component: {fileID: 5804088101245910432}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321929345425788
 Transform:
@@ -8121,7 +10713,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5826551291306347968}
   m_LocalRotation: {x: 0.0000018099951, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -3.4, y: -0, z: 2.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5821082943296414738}
@@ -8187,12 +10779,12 @@ GameObject:
   - component: {fileID: 5825321929398732113}
   - component: {fileID: 5813937015978639361}
   - component: {fileID: 5804088101301311885}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321929398732113
 Transform:
@@ -8268,12 +10860,12 @@ GameObject:
   - component: {fileID: 5825321929503262226}
   - component: {fileID: 5813937015873979202}
   - component: {fileID: 5804088101339781838}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321929503262226
 Transform:
@@ -8349,12 +10941,12 @@ GameObject:
   - component: {fileID: 5825321929506592265}
   - component: {fileID: 5813937015870493529}
   - component: {fileID: 5804088101344152277}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321929506592265
 Transform:
@@ -8430,12 +11022,12 @@ GameObject:
   - component: {fileID: 5825321929507586371}
   - component: {fileID: 5813937015869916179}
   - component: {fileID: 5804088101344107935}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321929507586371
 Transform:
@@ -8511,12 +11103,12 @@ GameObject:
   - component: {fileID: 5825321929583385195}
   - component: {fileID: 5813937016062107451}
   - component: {fileID: 5804088101385291447}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321929583385195
 Transform:
@@ -8592,12 +11184,12 @@ GameObject:
   - component: {fileID: 5825321929579549233}
   - component: {fileID: 5813937016066135905}
   - component: {fileID: 5804088101413965549}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321929579549233
 Transform:
@@ -8673,12 +11265,12 @@ GameObject:
   - component: {fileID: 5825321929655359077}
   - component: {fileID: 5813937015990424373}
   - component: {fileID: 5804088101456218809}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321929655359077
 Transform:
@@ -8754,12 +11346,12 @@ GameObject:
   - component: {fileID: 5825321929656645010}
   - component: {fileID: 5813937015989088450}
   - component: {fileID: 5804088101454358862}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321929656645010
 Transform:
@@ -8835,12 +11427,12 @@ GameObject:
   - component: {fileID: 5825321929659025824}
   - component: {fileID: 5813937015986752752}
   - component: {fileID: 5804088101460940156}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321929659025824
 Transform:
@@ -8916,12 +11508,12 @@ GameObject:
   - component: {fileID: 5825321929616753781}
   - component: {fileID: 5813937016028889381}
   - component: {fileID: 5804088101485779113}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321929616753781
 Transform:
@@ -8997,12 +11589,12 @@ GameObject:
   - component: {fileID: 5825321929629435330}
   - component: {fileID: 5813937016016404626}
   - component: {fileID: 5804088101498460446}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321929629435330
 Transform:
@@ -9078,12 +11670,12 @@ GameObject:
   - component: {fileID: 5825321929614129976}
   - component: {fileID: 5813937016031510120}
   - component: {fileID: 5804088101513553892}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825321929614129976
 Transform:
@@ -9159,12 +11751,12 @@ GameObject:
   - component: {fileID: 5824856088816693996}
   - component: {fileID: 5813791644263277702}
   - component: {fileID: 5803299753255616216}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Trees_Tire_01d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5824856088816693996
 Transform:
@@ -9174,7 +11766,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5826891774548238008}
   m_LocalRotation: {x: 0.0000018099951, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.36, y: 0, z: 2.71}
   m_LocalScale: {x: 0.44774, y: 0.44774, z: 0.44774}
   m_Children: []
   m_Father: {fileID: 5820905184755973126}
@@ -9240,12 +11832,12 @@ GameObject:
   - component: {fileID: 5824856088964717331}
   - component: {fileID: 5813791644377517433}
   - component: {fileID: 5803299753405601575}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Trees_Tire_01d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5824856088964717331
 Transform:
@@ -9255,7 +11847,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5826891774666487623}
   m_LocalRotation: {x: 0.0000018099951, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.45, y: 0, z: 2.82}
   m_LocalScale: {x: 0.44774, y: 0.44774, z: 0.44774}
   m_Children: []
   m_Father: {fileID: 5820905185209751033}
@@ -9321,12 +11913,12 @@ GameObject:
   - component: {fileID: 5824856089269496484}
   - component: {fileID: 5813791644749610190}
   - component: {fileID: 5803299753575114384}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Trees_Tire_01d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5824856089269496484
 Transform:
@@ -9336,7 +11928,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5826891774899685104}
   m_LocalRotation: {x: 0.0000018099951, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.18, y: 0, z: 4.44}
   m_LocalScale: {x: 0.44774, y: 0.44774, z: 0.44774}
   m_Children: []
   m_Father: {fileID: 5820905185509549134}
@@ -9402,12 +11994,12 @@ GameObject:
   - component: {fileID: 5821118939155908164}
   - component: {fileID: 5813364518604897964}
   - component: {fileID: 5803938747464902248}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Trees_Stoolids_01b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821118939155908164
 Transform:
@@ -9481,12 +12073,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5825225237368800899}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Snot_01a_PRE (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825225237368800899
 Transform:
@@ -9512,12 +12104,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5825225237252219491}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Snot_01a_PRE (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825225237252219491
 Transform:
@@ -9543,12 +12135,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5825225235586422778}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Snot_01a_PRE (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825225235586422778
 Transform:
@@ -9574,12 +12166,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5825225236398176803}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Snot_01a_PRE (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825225236398176803
 Transform:
@@ -9605,12 +12197,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5825225236127435290}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Snot_01a_PRE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5825225236127435290
 Transform:
@@ -9636,12 +12228,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082941899628234}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082941899628234
 Transform:
@@ -9667,12 +12259,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082941936945311}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (32)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082941936945311
 Transform:
@@ -9698,12 +12290,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082941998843097}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (38)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082941998843097
 Transform:
@@ -9729,12 +12321,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082942020877832}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (48)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082942020877832
 Transform:
@@ -9760,12 +12352,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082942020000743}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082942020000743
 Transform:
@@ -9791,12 +12383,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082942174339399}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082942174339399
 Transform:
@@ -9822,12 +12414,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082942231069890}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (56)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082942231069890
 Transform:
@@ -9853,12 +12445,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082942264289401}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (61)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082942264289401
 Transform:
@@ -9884,12 +12476,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082942274143836}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (45)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082942274143836
 Transform:
@@ -9915,12 +12507,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082942280344460}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (52)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082942280344460
 Transform:
@@ -9946,12 +12538,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082942391062624}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (62)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082942391062624
 Transform:
@@ -9977,12 +12569,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082942401836937}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082942401836937
 Transform:
@@ -10008,12 +12600,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082942370411985}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (42)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082942370411985
 Transform:
@@ -10039,12 +12631,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082942379131024}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (60)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082942379131024
 Transform:
@@ -10070,12 +12662,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082942421126687}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (44)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082942421126687
 Transform:
@@ -10101,12 +12693,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082942431856225}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082942431856225
 Transform:
@@ -10132,12 +12724,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082942405666435}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (77)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082942405666435
 Transform:
@@ -10163,12 +12755,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082942418855310}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082942418855310
 Transform:
@@ -10194,12 +12786,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082941381405757}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082941381405757
 Transform:
@@ -10225,12 +12817,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082941410490321}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082941410490321
 Transform:
@@ -10256,12 +12848,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082941461268845}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082941461268845
 Transform:
@@ -10286,12 +12878,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082941487081523}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (33)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082941487081523
 Transform:
@@ -10317,12 +12909,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082941527068968}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (84)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082941527068968
 Transform:
@@ -10348,12 +12940,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082941549954501}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082941549954501
 Transform:
@@ -10379,12 +12971,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082941554960783}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082941554960783
 Transform:
@@ -10410,12 +13002,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082941582137062}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (49)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082941582137062
 Transform:
@@ -10441,12 +13033,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082941620786052}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (39)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082941620786052
 Transform:
@@ -10472,12 +13064,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082941623043617}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (74)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082941623043617
 Transform:
@@ -10503,12 +13095,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082941652939648}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (34)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082941652939648
 Transform:
@@ -10534,12 +13126,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082941691891851}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (67)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082941691891851
 Transform:
@@ -10565,12 +13157,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082941753809119}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082941753809119
 Transform:
@@ -10596,12 +13188,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082941785577714}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082941785577714
 Transform:
@@ -10627,12 +13219,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082941771019113}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082941771019113
 Transform:
@@ -10658,12 +13250,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082941806520400}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (71)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082941806520400
 Transform:
@@ -10689,12 +13281,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082941834851274}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082941834851274
 Transform:
@@ -10720,12 +13312,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082941839794738}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082941839794738
 Transform:
@@ -10751,12 +13343,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082941870184388}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (36)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082941870184388
 Transform:
@@ -10782,12 +13374,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082942976773326}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (69)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082942976773326
 Transform:
@@ -10813,12 +13405,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082942987038972}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (73)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082942987038972
 Transform:
@@ -10844,12 +13436,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082942986736395}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (46)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082942986736395
 Transform:
@@ -10875,12 +13467,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082943029296726}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082943029296726
 Transform:
@@ -10906,12 +13498,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082943014224044}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (72)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082943014224044
 Transform:
@@ -10937,12 +13529,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082943018254619}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082943018254619
 Transform:
@@ -10968,12 +13560,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082943061759839}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (63)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082943061759839
 Transform:
@@ -10999,12 +13591,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082943052160773}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (58)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082943052160773
 Transform:
@@ -11030,12 +13622,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082943128208429}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (76)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082943128208429
 Transform:
@@ -11061,12 +13653,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082943126328167}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (43)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082943126328167
 Transform:
@@ -11091,12 +13683,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082943140660092}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (50)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082943140660092
 Transform:
@@ -11122,12 +13714,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082943236538431}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (85)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082943236538431
 Transform:
@@ -11153,12 +13745,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082943251982914}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (78)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082943251982914
 Transform:
@@ -11184,12 +13776,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082943296414738}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082943296414738
 Transform:
@@ -11215,12 +13807,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082943288906617}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (51)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082943288906617
 Transform:
@@ -11246,12 +13838,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082943321629977}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082943321629977
 Transform:
@@ -11277,12 +13869,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082943365887759}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (75)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082943365887759
 Transform:
@@ -11308,12 +13900,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082943373784139}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082943373784139
 Transform:
@@ -11339,12 +13931,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082943376527872}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082943376527872
 Transform:
@@ -11370,12 +13962,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082943379765278}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (31)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082943379765278
 Transform:
@@ -11401,12 +13993,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082943384084137}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (53)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082943384084137
 Transform:
@@ -11432,12 +14024,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082943391390529}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (68)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082943391390529
 Transform:
@@ -11463,12 +14055,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082943428947910}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (47)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082943428947910
 Transform:
@@ -11494,12 +14086,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082943438451563}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082943438451563
 Transform:
@@ -11525,12 +14117,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082943411942531}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (57)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082943411942531
 Transform:
@@ -11556,12 +14148,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082943473959762}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (40)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082943473959762
 Transform:
@@ -11587,12 +14179,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082943479443181}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082943479443181
 Transform:
@@ -11618,12 +14210,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082943491996802}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082943491996802
 Transform:
@@ -11649,12 +14241,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082943492153465}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (79)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082943492153465
 Transform:
@@ -11680,12 +14272,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082942491836572}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082942491836572
 Transform:
@@ -11710,12 +14302,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082942495292285}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (65)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082942495292285
 Transform:
@@ -11741,12 +14333,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082942500712680}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (59)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082942500712680
 Transform:
@@ -11772,12 +14364,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082942471661786}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082942471661786
 Transform:
@@ -11803,12 +14395,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082942533661971}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (66)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082942533661971
 Transform:
@@ -11834,12 +14426,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082942554793008}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (80)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082942554793008
 Transform:
@@ -11865,12 +14457,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082942564666934}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (64)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082942564666934
 Transform:
@@ -11896,12 +14488,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082942601035643}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (55)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082942601035643
 Transform:
@@ -11927,12 +14519,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082942627842956}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (37)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082942627842956
 Transform:
@@ -11958,12 +14550,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082942615266336}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082942615266336
 Transform:
@@ -11989,12 +14581,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082942669146478}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (35)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082942669146478
 Transform:
@@ -12020,12 +14612,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082942652618833}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (54)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082942652618833
 Transform:
@@ -12051,12 +14643,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082942691951531}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (41)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082942691951531
 Transform:
@@ -12082,12 +14674,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082942722161740}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (70)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082942722161740
 Transform:
@@ -12113,12 +14705,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082942758015051}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082942758015051
 Transform:
@@ -12144,12 +14736,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082942747776926}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (81)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082942747776926
 Transform:
@@ -12175,12 +14767,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082942772374075}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082942772374075
 Transform:
@@ -12206,12 +14798,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082942869167346}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (82)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082942869167346
 Transform:
@@ -12237,12 +14829,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082942868538837}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082942868538837
 Transform:
@@ -12268,12 +14860,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821082942926666700}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Cuboids_01b_PRE (83)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821082942926666700
 Transform:
@@ -12299,12 +14891,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5824918347711431408}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Trees_Stoolids_01b_PRE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5824918347711431408
 Transform:
@@ -12318,6 +14910,15 @@ Transform:
   m_LocalScale: {x: 0.78807, y: 0.78807, z: 0.78807}
   m_Children:
   - {fileID: 5821118939155908164}
+  - {fileID: 54044572}
+  - {fileID: 13351091}
+  - {fileID: 776919041}
+  - {fileID: 1528455908}
+  - {fileID: 30389253}
+  - {fileID: 28380552}
+  - {fileID: 729978834}
+  - {fileID: 1129657165}
+  - {fileID: 2007318636}
   m_Father: {fileID: 5825614891972202247}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12330,12 +14931,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5820905185509549134}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Trees_Tire_01d_PRE (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5820905185509549134
 Transform:
@@ -12361,12 +14962,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5820905185209751033}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Trees_Tire_01d_PRE (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5820905185209751033
 Transform:
@@ -12380,6 +14981,25 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5824856088964717331}
+  - {fileID: 2141047751}
+  - {fileID: 1943881479}
+  - {fileID: 2100278835}
+  - {fileID: 1285958176}
+  - {fileID: 1390087184}
+  - {fileID: 1211424948}
+  - {fileID: 991863689}
+  - {fileID: 1099245150}
+  - {fileID: 1781096068}
+  - {fileID: 1294324568}
+  - {fileID: 1093865357}
+  - {fileID: 239778202}
+  - {fileID: 426674152}
+  - {fileID: 360775959}
+  - {fileID: 1182884758}
+  - {fileID: 738544165}
+  - {fileID: 31927627}
+  - {fileID: 1156836828}
+  - {fileID: 1819940558}
   m_Father: {fileID: 5825614891972202247}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12392,12 +15012,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5820905184755973126}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Trees_Tire_01d_PRE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5820905184755973126
 Transform:
@@ -12411,6 +15031,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5824856088816693996}
+  - {fileID: 988268535}
+  - {fileID: 1866632498}
+  - {fileID: 733212510}
+  - {fileID: 268078588}
   m_Father: {fileID: 5825614891972202247}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12425,12 +15049,12 @@ GameObject:
   - component: {fileID: 5820974714004987143}
   - component: {fileID: 5814018537419345847}
   - component: {fileID: 5804174272428042983}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5820974714004987143
 Transform:
@@ -12506,12 +15130,12 @@ GameObject:
   - component: {fileID: 5820974713991132019}
   - component: {fileID: 5814018537468862915}
   - component: {fileID: 5804174272414631059}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5820974713991132019
 Transform:
@@ -12587,12 +15211,12 @@ GameObject:
   - component: {fileID: 5820974714062759129}
   - component: {fileID: 5814018537489643113}
   - component: {fileID: 5804174272494129977}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5820974714062759129
 Transform:
@@ -12668,12 +15292,12 @@ GameObject:
   - component: {fileID: 5820974714069893681}
   - component: {fileID: 5814018537480261761}
   - component: {fileID: 5804174272501806545}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5820974714069893681
 Transform:
@@ -12749,12 +15373,12 @@ GameObject:
   - component: {fileID: 5820974714042198265}
   - component: {fileID: 5814018537540483657}
   - component: {fileID: 5804174272473636633}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5820974714042198265
 Transform:
@@ -12830,12 +15454,12 @@ GameObject:
   - component: {fileID: 5820974714054324701}
   - component: {fileID: 5814018537531630445}
   - component: {fileID: 5804174272485754429}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5820974714054324701
 Transform:
@@ -12911,12 +15535,12 @@ GameObject:
   - component: {fileID: 5820974713874771639}
   - component: {fileID: 5814018537306438663}
   - component: {fileID: 5804174272306731351}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5820974713874771639
 Transform:
@@ -12992,12 +15616,12 @@ GameObject:
   - component: {fileID: 5820974713934871519}
   - component: {fileID: 5814018537348966767}
   - component: {fileID: 5804174272366300223}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5820974713934871519
 Transform:
@@ -13073,12 +15697,12 @@ GameObject:
   - component: {fileID: 5820974713794517891}
   - component: {fileID: 5814018537762982195}
   - component: {fileID: 5804174272218033251}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5820974713794517891
 Transform:
@@ -13154,12 +15778,12 @@ GameObject:
   - component: {fileID: 5820974713795332173}
   - component: {fileID: 5814018537763347197}
   - component: {fileID: 5804174272218398637}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5820974713795332173
 Transform:
@@ -13235,12 +15859,12 @@ GameObject:
   - component: {fileID: 5820974713637444186}
   - component: {fileID: 5814018537651620074}
   - component: {fileID: 5804174272060501434}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5820974713637444186
 Transform:
@@ -13316,12 +15940,12 @@ GameObject:
   - component: {fileID: 5820974714498247516}
   - component: {fileID: 5814018537992501740}
   - component: {fileID: 5804174271856401596}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5820974714498247516
 Transform:
@@ -13397,12 +16021,12 @@ GameObject:
   - component: {fileID: 5820974714398730688}
   - component: {fileID: 5814018537829874544}
   - component: {fileID: 5804174271748038176}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5820974714398730688
 Transform:
@@ -13478,12 +16102,12 @@ GameObject:
   - component: {fileID: 5820974714409721727}
   - component: {fileID: 5814018537819917775}
   - component: {fileID: 5804174271759034527}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5820974714409721727
 Transform:
@@ -13559,12 +16183,12 @@ GameObject:
   - component: {fileID: 5820974714264792888}
   - component: {fileID: 5814018538233298312}
   - component: {fileID: 5804174271614556376}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5820974714264792888
 Transform:
@@ -13640,12 +16264,12 @@ GameObject:
   - component: {fileID: 5820974714322297702}
   - component: {fileID: 5814018538336219606}
   - component: {fileID: 5804174271679992966}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5820974714322297702
 Transform:
@@ -13721,12 +16345,12 @@ GameObject:
   - component: {fileID: 5820974714212287224}
   - component: {fileID: 5814018538175811656}
   - component: {fileID: 5804174271569933592}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5820974714212287224
 Transform:
@@ -13736,7 +16360,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5827203605773574706}
   m_LocalRotation: {x: 0.0000018099951, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.79, y: -0, z: 2.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5821201322152543320}
@@ -13802,12 +16426,12 @@ GameObject:
   - component: {fileID: 5820974714207754398}
   - component: {fileID: 5814018538155051566}
   - component: {fileID: 5804174271557595006}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5820974714207754398
 Transform:
@@ -13883,12 +16507,12 @@ GameObject:
   - component: {fileID: 5820974712938817230}
   - component: {fileID: 5814018536365438078}
   - component: {fileID: 5804174273517670702}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5820974712938817230
 Transform:
@@ -13964,12 +16588,12 @@ GameObject:
   - component: {fileID: 5820974713016296470}
   - component: {fileID: 5814018536430433958}
   - component: {fileID: 5804174273586828278}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5820974713016296470
 Transform:
@@ -14045,12 +16669,12 @@ GameObject:
   - component: {fileID: 5820974712787579831}
   - component: {fileID: 5814018536214552839}
   - component: {fileID: 5804174273366492247}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5820974712787579831
 Transform:
@@ -14126,12 +16750,12 @@ GameObject:
   - component: {fileID: 5820974712667367237}
   - component: {fileID: 5814018536635839989}
   - component: {fileID: 5804174273246744741}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5820974712667367237
 Transform:
@@ -14207,12 +16831,12 @@ GameObject:
   - component: {fileID: 5820974712644888832}
   - component: {fileID: 5814018536659237808}
   - component: {fileID: 5804174273224269536}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5820974712644888832
 Transform:
@@ -14288,12 +16912,12 @@ GameObject:
   - component: {fileID: 5820974712524034192}
   - component: {fileID: 5814018536474935840}
   - component: {fileID: 5804174273102899056}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5820974712524034192
 Transform:
@@ -14369,12 +16993,12 @@ GameObject:
   - component: {fileID: 5820974712488850553}
   - component: {fileID: 5814018536519706313}
   - component: {fileID: 5804174273059308441}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5820974712488850553
 Transform:
@@ -14450,12 +17074,12 @@ GameObject:
   - component: {fileID: 5820974712598342073}
   - component: {fileID: 5814018536545352457}
   - component: {fileID: 5804174273168809561}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5820974712598342073
 Transform:
@@ -14531,12 +17155,12 @@ GameObject:
   - component: {fileID: 5820974713456008286}
   - component: {fileID: 5814018536887373550}
   - component: {fileID: 5804174272961653694}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5820974713456008286
 Transform:
@@ -14612,12 +17236,12 @@ GameObject:
   - component: {fileID: 5820974713550677765}
   - component: {fileID: 5814018536961406389}
   - component: {fileID: 5804174273056379109}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5820974713550677765
 Transform:
@@ -14693,12 +17317,12 @@ GameObject:
   - component: {fileID: 5820974713521026101}
   - component: {fileID: 5814018536998528645}
   - component: {fileID: 5804174273018266581}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5820974713521026101
 Transform:
@@ -14774,12 +17398,12 @@ GameObject:
   - component: {fileID: 5820974713492146583}
   - component: {fileID: 5814018536986499879}
   - component: {fileID: 5804174272997867127}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5820974713492146583
 Transform:
@@ -14855,12 +17479,12 @@ GameObject:
   - component: {fileID: 5820974713290782196}
   - component: {fileID: 5814018536785094468}
   - component: {fileID: 5804174272796475924}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5820974713290782196
 Transform:
@@ -14936,12 +17560,12 @@ GameObject:
   - component: {fileID: 5820974713194785164}
   - component: {fileID: 5814018537146514236}
   - component: {fileID: 5804174272700423788}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5820974713194785164
 Transform:
@@ -15017,12 +17641,12 @@ GameObject:
   - component: {fileID: 5820974713048442398}
   - component: {fileID: 5814018537067279534}
   - component: {fileID: 5804174272545690110}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5820974713048442398
 Transform:
@@ -15098,12 +17722,12 @@ GameObject:
   - component: {fileID: 5820974713141120881}
   - component: {fileID: 5814018537108807105}
   - component: {fileID: 5804174272637859985}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5820974713141120881
 Transform:
@@ -15179,12 +17803,12 @@ GameObject:
   - component: {fileID: 5820974713120424524}
   - component: {fileID: 5814018537088733436}
   - component: {fileID: 5804174272626144684}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5820974713120424524
 Transform:
@@ -15260,12 +17884,12 @@ GameObject:
   - component: {fileID: 5820974713113912808}
   - component: {fileID: 5814018537127769944}
   - component: {fileID: 5804174272619024904}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Stoolids_01d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5820974713113912808
 Transform:
@@ -15341,12 +17965,12 @@ GameObject:
   - component: {fileID: 5821108560854146113}
   - component: {fileID: 5813599701956862265}
   - component: {fileID: 5804221761869358983}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Snot_01a
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821108560854146113
 Transform:
@@ -15422,12 +18046,12 @@ GameObject:
   - component: {fileID: 5821108561274435745}
   - component: {fileID: 5813599702074623449}
   - component: {fileID: 5804221761450771303}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Snot_01a
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821108561274435745
 Transform:
@@ -15503,12 +18127,12 @@ GameObject:
   - component: {fileID: 5821108562813078840}
   - component: {fileID: 5813599703756156992}
   - component: {fileID: 5804221762176005886}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Snot_01a
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821108562813078840
 Transform:
@@ -15584,12 +18208,12 @@ GameObject:
   - component: {fileID: 5821108562093875425}
   - component: {fileID: 5813599702927662489}
   - component: {fileID: 5804221762844875559}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Snot_01a
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821108562093875425
 Transform:
@@ -15665,12 +18289,12 @@ GameObject:
   - component: {fileID: 5821108562364207320}
   - component: {fileID: 5813599703198264736}
   - component: {fileID: 5804221762574412574}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EA04_Rocks_Snot_01a
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5821108562364207320
 Transform:

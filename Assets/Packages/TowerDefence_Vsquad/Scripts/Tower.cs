@@ -77,7 +77,7 @@ public class Tower : MonoBehaviour {
 
             }
 
-        
+        //neu chet hoac khong co target thi khong tan cong nua
         if (Catcher == true)
         {
             if (!target || target.CompareTag("Dead"))
