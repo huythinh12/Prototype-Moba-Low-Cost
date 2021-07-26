@@ -54,12 +54,22 @@ public class AbilityIndicatorUI : MonoBehaviour
         ShowRangeIndicator(ability);
         SetShapeIndicatorHandlingUI(ability);
 
-        if (ability.castRangeMaxCurrent >= 30f)
+        if (ability.Stats.CastRangeMax.Value >= 30f)
         {
-            float factorView = ability.castRangeMaxCurrent / 28f;
+            float factorView = ability.Stats.CastRangeMax.Value / 28f;
 
             Camera.main.DOFieldOfView(Camera.main.fieldOfView * factorView, 1f).SetEase(Ease.InOutSine);
         }
+    }
+
+    public void ShowRangeAttack(Character character)
+    {
+        transform.SetParent(character.gameObject.transform, false);
+        gameObject.SetActive(true);
+
+        shapeIndicatorUI.gameObject.SetActive(false);
+        rangeIndicatorUI.gameObject.SetActive(true);
+        rangeIndicatorUI.sizeDelta = new Vector2(character.Stats.RangeAttack.Value * 2, character.Stats.RangeAttack.Value * 2);
 
     }
 
@@ -75,7 +85,7 @@ public class AbilityIndicatorUI : MonoBehaviour
             case IndicatorAbilityType.Circle:
                 {
                     shapeIndicatorImage.sprite = Resources.Load<Sprite>(pathResourceCircleIndicator);
-                    shapeIndicatorImage.rectTransform.sizeDelta = new Vector2(ability.widthAreaOfEffectCurrent, ability.heightAreaOfEffectCurrent);
+                    shapeIndicatorImage.rectTransform.sizeDelta = new Vector2(ability.Stats.WidthAreaOfEffect.Value, ability.Stats.WidthAreaOfEffect.Value);
 
                     isChangePositionWhenHandle = true;
                     isChangeRotationWhenHandle = false;
@@ -84,8 +94,8 @@ public class AbilityIndicatorUI : MonoBehaviour
             case IndicatorAbilityType.Rectangle:
                 {
                     shapeIndicatorImage.sprite = Resources.Load<Sprite>(pathResourceLinearIndicator);
-                    shapeIndicatorImage.rectTransform.sizeDelta = new Vector2(ability.widthAreaOfEffectCurrent, ability.castRangeMaxCurrent / 2);
-                    shapeIndicatorImage.rectTransform.localPosition = new Vector3(0, ability.castRangeMaxCurrent / 4);
+                    shapeIndicatorImage.rectTransform.sizeDelta = new Vector2(ability.Stats.WidthAreaOfEffect.Value, ability.Stats.CastRangeMax.Value / 2);
+                    shapeIndicatorImage.rectTransform.localPosition = new Vector3(0, ability.Stats.CastRangeMax.Value / 4);
 
                     isChangePositionWhenHandle = false;
                     isChangeRotationWhenHandle = true;
@@ -94,8 +104,8 @@ public class AbilityIndicatorUI : MonoBehaviour
             case IndicatorAbilityType.Line:
                 {
                     shapeIndicatorImage.sprite = Resources.Load<Sprite>(pathResourceLineIndicator);
-                    shapeIndicatorImage.rectTransform.sizeDelta = new Vector2(0.05f, ability.castRangeMaxCurrent / 2);
-                    shapeIndicatorImage.rectTransform.localPosition = new Vector3(0, ability.castRangeMaxCurrent / 4);
+                    shapeIndicatorImage.rectTransform.sizeDelta = new Vector2(0.05f, ability.Stats.CastRangeMax.Value / 2);
+                    shapeIndicatorImage.rectTransform.localPosition = new Vector3(0, ability.Stats.CastRangeMax.Value / 4);
 
 
                     isChangePositionWhenHandle = false;
@@ -122,7 +132,7 @@ public class AbilityIndicatorUI : MonoBehaviour
                 rangeIndicatorUI.sizeDelta = new Vector2(1.5f, 1.5f);
                 break;
             default:
-                rangeIndicatorUI.sizeDelta = new Vector2(ability.castRangeMaxCurrent, ability.castRangeMaxCurrent);
+                rangeIndicatorUI.sizeDelta = new Vector2(ability.Stats.CastRangeMax.Value, ability.Stats.CastRangeMax.Value);
                 break;
         }
 

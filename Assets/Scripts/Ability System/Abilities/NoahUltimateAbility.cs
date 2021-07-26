@@ -1,25 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class NoahUltimateAbility : Ability
 {
+    AbilityStat percentLostHealth = new AbilityStat(0.24f);
+
+
     public NoahUltimateAbility()
     {
         this.indicatorAbilityType = IndicatorAbilityType.Self;
         this.classifyAbility = ClassifyAbility.Ultimate;
 
-        this.cooldownTimeCurrent = 5f;
-        this.castRangeMaxCurrent = 0f;
-        this.castRangeMinCurrent = 0f;
-        this.castDelayTimeCurrent = 0f;
-        this.widthAreaOfEffectCurrent = 0f;
-        this.heightAreaOfEffectCurrent = 0f;
+        Stats.CooldownTime = new AbilityStat(5.0f);
+        Stats.CastRangeMax = new AbilityStat(0f);
+        Stats.CastDelayTime = new AbilityStat(0f);
+        Stats.ManaCost = new AbilityStat(75);
 
     }
 
-    public override void UseAblity(Character self, Vector3 indicator)
+    public override void PerformBahaviors(Character self, Vector3 indicatorXZ)
     {
-        self.HealingHealth(0, 0.15f);
+        self.HealingHealth(percentLostHealth.Value, StatPercentType.Lost);
     }
 }

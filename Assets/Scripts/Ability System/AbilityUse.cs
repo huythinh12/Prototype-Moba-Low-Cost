@@ -9,6 +9,8 @@ public class AbilityUse : MonoBehaviour
 {
     public static readonly Color ColorWhenDisabled = new Color(0.58f, 0.58f, 0.58f);
     public static readonly Color ColorWhenIndicatorHandle = new Color(0.3f, 0.3f, 0.3f);
+    public static readonly Color ColorWhenCanNotUse = new Color(0.18f, 0.18f, 0.18f);
+
     public static readonly float ScaleFactorWhenIndicatorHandle = 0.85f;
 
     public Ability ability;
@@ -30,7 +32,7 @@ public class AbilityUse : MonoBehaviour
 
     public void Reset()
     {
-        self = GameObject.Find("Noah").GetComponent<Character>();
+        self = GameObject.FindObjectOfType<PlayerController>().GetComponent<Character>();
         SkillUI = transform.Find("Skill UI").GetComponent<RectTransform>() as RectTransform;
         skillImage = SkillUI.transform.Find("Skill Image").GetComponent<Image>();
         cooldownImage = SkillUI.transform.Find("Cooldown Image").GetComponent<Image>();
@@ -52,6 +54,8 @@ public class AbilityUse : MonoBehaviour
         abilityIndicatorJoystick.OnIndicationStart += ShowIndicatorUI;
         abilityIndicatorJoystick.OnIndicationDrag += abilityIndicatorUI.ChangeBasedOnIndicator;
         abilityIndicatorJoystick.OnIndicationDone += UseAbility;
+
+        self.OnManaChanged += UpdateCanUse;
     }
 
     public void Start()
@@ -67,25 +71,41 @@ public class AbilityUse : MonoBehaviour
                 this.ability = ability;
             }
         }
+
+        skillImage.sprite = Resources.Load<Sprite>(string.Format("Images/Icons/Ability/{0}{1}", self.name, classifyAbility.ToString()));
+    }
+
+    public void UpdateCanUse(CharacterStats stats)
+    {
+        if (stats.ManaCurrent < ability.Stats.ManaCost.Value)
+        {
+            abilityIndicatorJoystick.gameObject.SetActive(false);
+            skillImage.color = ColorWhenCanNotUse;
+        }
+        else
+        {
+            abilityIndicatorJoystick.gameObject.SetActive(true);
+            skillImage.color = Color.white;
+        }
     }
 
     public void UseAbility(Vector3 indicatorXY)
     {
         Camera.main.DOFieldOfView(40, 1.85f).SetEase(Ease.InOutSine);
-
         abilityIndicatorJoystick.gameObject.SetActive(false);
-
         SetScaleImage(false);
-
         Vector3 indicatorXZ = JoystickMath.ConvertToOxzIndicator(indicatorXY);
-        ability.UseAblity(self, indicatorXZ);
+        abilityIndicatorUI.gameObject.SetActive(false);
 
-        StartCoroutine(StartCooldown());
+
+        if (ability.UseAblity(self, indicatorXZ))
+        {
+            StartCoroutine(StartCooldown());
+        }
     }
 
     public IEnumerator StartCooldown()
     {
-        abilityIndicatorUI.gameObject.SetActive(false);
 
         skillImage.color = ColorWhenDisabled;
         cooldownImage.gameObject.SetActive(true);
@@ -93,9 +113,9 @@ public class AbilityUse : MonoBehaviour
         Stopwatch cooldownTimer = new Stopwatch();
         cooldownTimer.Start();
 
-        while (cooldownTimer.Elapsed.TotalSeconds < ability.cooldownTimeCurrent)
+        while (cooldownTimer.Elapsed.TotalSeconds < ability.Stats.CooldownTime.Value)
         {
-            cooldownImage.fillAmount = (float)(1 - cooldownTimer.Elapsed.TotalSeconds / ability.cooldownTimeCurrent);
+            cooldownImage.fillAmount = (float)(1 - cooldownTimer.Elapsed.TotalSeconds / ability.Stats.CooldownTime.Value);
             yield return false;
         }
 
@@ -103,6 +123,8 @@ public class AbilityUse : MonoBehaviour
 
         skillImage.color = Color.white;
         cooldownImage.gameObject.SetActive(false);
+
+        UpdateCanUse(self.Stats);
     }
 
     public void ShowIndicatorUI(int n)

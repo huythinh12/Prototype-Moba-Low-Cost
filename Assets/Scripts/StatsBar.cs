@@ -32,20 +32,21 @@ public class StatsBar : MonoBehaviour
     Vector3 distanceToTarget;
     Quaternion startRotate;
 
-    public static void AddFor(Character character, TypeCharacter typeCharacter, TeamCharacter teamCharacter)
+    public static StatsBar AddFor(Character character, TypeCharacter typeCharacter, TeamCharacter teamCharacter)
     {
         string namePathStastBar = "Prefabs/Stats Bar/Stats Bar " + typeCharacter.ToString();
 
         StatsBar stastsBar = Instantiate(Resources.Load(namePathStastBar) as GameObject, character.transform).GetComponent<StatsBar>();
 
         stastsBar.ChangeImageHealthBar(teamCharacter);
+
+        return stastsBar;
     }
 
 
     private void Reset()
     {
         character = GetComponentInParent<Character>();
-
 
         // Don't change value when reset, #pragma use to hide warning when x = x
 #pragma warning disable CS1717 
@@ -143,21 +144,21 @@ public class StatsBar : MonoBehaviour
 
     }
 
-    void OnHealthChanged(Health health)
+    void OnHealthChanged(CharacterStats stats)
     {
-        float currentHealthPercentage = health.Current / health.Max;
-        healthBar.fillAmount = currentHealthPercentage;
+        float currentPercentage = stats.HealthCurrent / stats.HealthMax.Value;
+        healthBar.fillAmount = currentPercentage;
     }
 
-    void OnManaChanged(Mana mana)
+    void OnManaChanged(CharacterStats stats)
     {
-        float currentManaPercentage = mana.Current / mana.Max;
-        manaBar.fillAmount = currentManaPercentage;
+        float currentPercentage = stats.ManaCurrent / stats.ManaMax.Value;
+        manaBar.fillAmount = currentPercentage;
     }
 
-    void OnLevelChanged(Level level)
+    void OnLevelChanged(int level)
     {
-        levelText.text = level.Current.ToString();
+        levelText.text = level.ToString();
     }
 
     void FlowTarget()
