@@ -1,25 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class NoahAlphaAbility : Ability
 {
+    float speedUp = 0.3f;
+
     public NoahAlphaAbility()
     {
-        this.indicatorAbilityType = IndicatorAbilityType.Line;
+        this.indicatorAbilityType = IndicatorAbilityType.Self;
         this.classifyAbility = ClassifyAbility.Alpha;
 
-        this.cooldownTimeCurrent = 5f;
-        this.castRangeMaxCurrent = 35f;
-        this.castRangeMinCurrent = 0f;
-        this.castDelayTimeCurrent = 0f;
-        this.widthAreaOfEffectCurrent = 3f;
-        this.heightAreaOfEffectCurrent = 3f;
+        Stats.CooldownTime = new AbilityStat(0.1f);
+        Stats.CastRangeMax = new AbilityStat(0f);
+        Stats.CastDelayTime = new AbilityStat(0f);
+        Stats.EffectDuartion = new AbilityStat(2f);
+        Stats.ManaCost = new AbilityStat(10f);
 
     }
 
-    public override void UseAblity(Character self, Vector3 indicator)
+    public override void PerformBahaviors(Character self, Vector3 indicatorXZ)
     {
-        self.HealingHealth(0, 0.15f);
+        self.StartCoroutine(self.Stats.MovementSpeed.AddModifierInTimeUnit(new StatModifier(speedUp, StatModifyType.PercentAdd), Stats.EffectDuartion.Value));
     }
 }

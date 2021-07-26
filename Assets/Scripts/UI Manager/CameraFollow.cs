@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    [SerializeField]
     private Transform player;
     private Vector3 cameraOffset;
     [Range(0.01f, 1.0f)]
@@ -12,6 +11,7 @@ public class CameraFollow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = FindObjectOfType<PlayerController>().GetComponent<Transform>();
         cameraOffset = transform.position - player.transform.position;
     }
 
