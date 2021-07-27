@@ -64,15 +64,23 @@ public class AbilityUse : MonoBehaviour
         abilityIndicatorUI.gameObject.SetActive(false);
         //abilityIndicatorUI.gameObject.SetActive(false);
 
-        foreach (var ability in self.abilities)
+        if (classifyAbility == ClassifyAbility.Recall)
         {
-            if (ability.classifyAbility == this.classifyAbility)
-            {
-                this.ability = ability;
-            }
+            ability = new RecallAbility();
+            //skillImage.sprite = Resources.Load<Sprite>(string.Format("Images/Icons/Ability/GeneralRecall"));
         }
+        else
+        {
+            foreach (var ability in self.abilities)
+            {
+                if (ability.classifyAbility == this.classifyAbility)
+                {
+                    this.ability = ability;
+                }
+            }
 
-        skillImage.sprite = Resources.Load<Sprite>(string.Format("Images/Icons/Ability/{0}{1}", self.name, classifyAbility.ToString()));
+            skillImage.sprite = Resources.Load<Sprite>(string.Format("Images/Icons/Ability/{0}{1}", self.name, classifyAbility.ToString()));
+        }
     }
 
     public void UpdateCanUse(CharacterStats stats)

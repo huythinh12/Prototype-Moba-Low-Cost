@@ -245,8 +245,11 @@ public class Character : MonoBehaviour
 
     public void JumpTo(Vector3 direction, float duration)
     {
+        StopMove();
+
         transform.DOLookAt(transform.position + direction, 0f);
         rigidbody.DOJump(transform.position + direction, 10f, 1, duration).SetEase(Ease.InOutExpo);
+
         StopMove();
     }
 
