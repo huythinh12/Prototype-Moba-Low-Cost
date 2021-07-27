@@ -12,12 +12,12 @@ public class AbilityStats
     [SerializeField] int level = 1;
 
     AbilityStat manaCost = new AbilityStat();
-    AbilityStat cooldownTime;
+    AbilityStat cooldownTime = new AbilityStat();
     AbilityStat effectDuartion;
-    AbilityStat castRangeMax;
+    AbilityStat castRangeMax = new AbilityStat();
     AbilityStat castRangeMin;
     AbilityStat castDelayTime;
-    AbilityStat widthAreaOfEffect;
+    AbilityStat widthAreaOfEffect = new AbilityStat();
     AbilityStat heightAreaOfEffect;
     AbilityStat physicalDamageBase;
     AbilityStat physicalDamageFactor;

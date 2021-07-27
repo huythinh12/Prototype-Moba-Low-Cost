@@ -48,7 +48,8 @@ public class CharacterStats : MonoBehaviour
 
         set
         {
-            level = value;
+            // Edit: Gioi han Min - Max
+            level = Mathf.Clamp(value, MinLevel, MaxLevel);
         }
     }
     public float HealthCurrent
@@ -60,18 +61,8 @@ public class CharacterStats : MonoBehaviour
 
         set
         {
-            if (value > HealthMax.Value)
-            {
-                healthCurrent = HealthMax.Value;
-            }
-            else if (value < 0)
-            {
-                healthCurrent = 0;
-            }
-            else
-            {
-                healthCurrent = value;
-            }
+            // Edit: Rut gon code
+            healthCurrent = Mathf.Clamp(value, 0, HealthMax.Value);
         }
     }
     public float ManaCurrent
@@ -83,18 +74,8 @@ public class CharacterStats : MonoBehaviour
 
         set
         {
-            if (value > ManaMax.Value)
-            {
-                manaCurrent = ManaMax.Value;
-            }
-            else if (value < 0)
-            {
-                manaCurrent = 0;
-            }
-            else
-            {
-                manaCurrent = value;
-            }
+            // Edit: Rut gon code
+            manaCurrent = Mathf.Clamp(value, 0, ManaMax.Value);
         }
     }
 

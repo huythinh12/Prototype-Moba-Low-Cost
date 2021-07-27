@@ -22,6 +22,4 @@ public class ArgonAlphaAbility : Ability
         Vector3 direction = indicatorXZ * Stats.CastRangeMax.Value / 2;
         self.JumpTo(direction, jumpDuration);
     }
-
-
 }
