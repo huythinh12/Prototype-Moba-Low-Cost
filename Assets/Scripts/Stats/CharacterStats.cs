@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 
 [Serializable]
-public class CharacterStats : MonoBehaviour
+public class CharacterStats
 {
     public static float DefenseConstant = 600f;
     public static float MinDefenseAffterPierce = 0f;
@@ -19,18 +19,18 @@ public class CharacterStats : MonoBehaviour
     float healthCurrent = 1;
     float manaCurrent = 1;
 
-    [SerializeField] CharacterStat healthMax = new CharacterStat(100f);
-    [SerializeField] CharacterStat manaMax = new CharacterStat(100f);
-    [SerializeField] CharacterStat physicalDamage = new CharacterStat();
+    [SerializeField] CharacterStat healthMax = new CharacterStat(3000f);
+    [SerializeField] CharacterStat manaMax = new CharacterStat(1000f);
+    [SerializeField] CharacterStat physicalDamage = new CharacterStat(500f);
     [SerializeField] CharacterStat magicDamage = new CharacterStat();
     [SerializeField] CharacterStat physicalDefense = new CharacterStat();
-    [SerializeField] CharacterStat magicDefense = new CharacterStat();
+    [SerializeField] CharacterStat magicDefense = new CharacterStat(50f, 8.5f);
     [SerializeField] CharacterStat physicalPierce = new CharacterStat();
     [SerializeField] CharacterStat magicPierce = new CharacterStat();
     [SerializeField] CharacterStat cooldownAttackk = new CharacterStat();
     [SerializeField] CharacterStat cooldownAbility = new CharacterStat();
     [SerializeField] CharacterStat criticalRate = new CharacterStat();
-    [SerializeField] CharacterStat criticalDamage = new CharacterStat();
+    [SerializeField] CharacterStat criticalDamage = new CharacterStat(2f);
     [SerializeField] CharacterStat movementSpeed = new CharacterStat(3f);
     [SerializeField] CharacterStat effectResistance = new CharacterStat();
     [SerializeField] CharacterStat damageDealFactor = new CharacterStat(1f);
@@ -98,10 +98,10 @@ public class CharacterStats : MonoBehaviour
     public CharacterStat HeaingFactor { get => heaingFactor; set => heaingFactor = value; }
     public CharacterStat RangeAttack { get => rangeAttack; set => rangeAttack = value; }
 
-    public void Start()
-    {
-        SubscribeOnLevelChange(GetComponent<Character>());
-    }
+    //public void Start()
+    //{
+    //    //SubscribeOnLevelChange(GetComponent<Character>());
+    //}
 
     public void ResetHealthCurrent()
     {
@@ -113,27 +113,27 @@ public class CharacterStats : MonoBehaviour
         ManaCurrent = ManaMax.Value;
     }
 
-    public void SubscribeOnLevelChange(Character character)
-    {
-        HealthMax.SubscribeOnLevelChange(character);
-        ManaMax.SubscribeOnLevelChange(character);
-        physicalDamage.SubscribeOnLevelChange(character);
-        magicDamage.SubscribeOnLevelChange(character);
-        physicalDefense.SubscribeOnLevelChange(character);
-        magicDefense.SubscribeOnLevelChange(character);
-        physicalPierce.SubscribeOnLevelChange(character);
-        magicPierce.SubscribeOnLevelChange(character);
-        cooldownAttackk.SubscribeOnLevelChange(character);
-        cooldownAbility.SubscribeOnLevelChange(character);
-        criticalRate.SubscribeOnLevelChange(character);
-        criticalDamage.SubscribeOnLevelChange(character);
-        movementSpeed.SubscribeOnLevelChange(character);
-        effectResistance.SubscribeOnLevelChange(character);
-        damageDealFactor.SubscribeOnLevelChange(character);
-        damageTakenFactor.SubscribeOnLevelChange(character);
-        heaingFactor.SubscribeOnLevelChange(character);
-        rangeAttack.SubscribeOnLevelChange(character);
-    }
+    //public void SubscribeOnLevelChange(Character character)
+    //{
+    //    HealthMax.SubscribeOnLevelChange(character);
+    //    ManaMax.SubscribeOnLevelChange(character);
+    //    physicalDamage.SubscribeOnLevelChange(character);
+    //    magicDamage.SubscribeOnLevelChange(character);
+    //    physicalDefense.SubscribeOnLevelChange(character);
+    //    magicDefense.SubscribeOnLevelChange(character);
+    //    physicalPierce.SubscribeOnLevelChange(character);
+    //    magicPierce.SubscribeOnLevelChange(character);
+    //    cooldownAttackk.SubscribeOnLevelChange(character);
+    //    cooldownAbility.SubscribeOnLevelChange(character);
+    //    criticalRate.SubscribeOnLevelChange(character);
+    //    criticalDamage.SubscribeOnLevelChange(character);
+    //    movementSpeed.SubscribeOnLevelChange(character);
+    //    effectResistance.SubscribeOnLevelChange(character);
+    //    damageDealFactor.SubscribeOnLevelChange(character);
+    //    damageTakenFactor.SubscribeOnLevelChange(character);
+    //    heaingFactor.SubscribeOnLevelChange(character);
+    //    rangeAttack.SubscribeOnLevelChange(character);
+    //}
 
     public static float GetFinalPercentDamageTaken(DamageType damageType, Character characterDealDamage, Character characterTakeDamage)
     {
@@ -144,18 +144,18 @@ public class CharacterStats : MonoBehaviour
 
         switch (damageType)
         {
-            case DamageType.Physical:
-                {
-                    defense = characterTakeDamage.Stats.PhysicalDefense.Value;
-                    pierce = characterDealDamage.Stats.PhysicalPierce.Value;
-                    break;
-                }
-            case DamageType.Magic:
-                {
-                    defense = characterTakeDamage.Stats.MagicDefense.Value;
-                    pierce = characterDealDamage.Stats.MagicPierce.Value;
-                    break;
-                }
+            //case DamageType.Physical:
+            //    {
+            //        defense = characterTakeDamage.Stats.PhysicalDefense.Value;
+            //        pierce = characterDealDamage.Stats.PhysicalPierce.Value;
+            //        break;
+            //    }
+            //case DamageType.Magic:
+            //    {
+            //        defense = characterTakeDamage.Stats.MagicDefense.Value;
+            //        pierce = characterDealDamage.Stats.MagicPierce.Value;
+            //        break;
+            //    }
         }
 
         float defenseAffterPierce = defense - pierce;

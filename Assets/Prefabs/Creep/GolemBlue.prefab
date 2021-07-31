@@ -640,9 +640,7 @@ GameObject:
   - component: {fileID: 3708506059594017811}
   - component: {fileID: 3708506059594017808}
   - component: {fileID: 788391070}
-  - component: {fileID: 788391069}
   - component: {fileID: 788391068}
-  - component: {fileID: 788391067}
   m_Layer: 6
   m_Name: GolemBlue
   m_TagString: Creep
@@ -698,38 +696,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.7689738, y: 3.9483805, z: 2.0256374}
   m_Center: {x: 0.013596789, y: 1.9303253, z: 0.14456421}
---- !u!114 &788391069
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3708506059594017809}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d926a3df12c1d5478100785565d8640, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  level:
-    start: 1
-  health:
-    start: 90
-    perLevel: 10
-  mana:
-    start: 0
-    perLevel: 0
-  magicDamage:
-    start: 0
-    perLevel: 0
-  magicDefense:
-    start: 0
-    perLevel: 0
-  physicalDamage:
-    start: 0
-    perLevel: 0
-  physicalDefense:
-    start: 0
-    perLevel: 0
 --- !u!54 &788391068
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -746,25 +712,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &788391067
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3708506059594017809}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4da8d62305aee3b40951af1c16ca7ccf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  abilities: []
-  rangeAttack: 0
-  name: 
-  id: 
-  typeCharacter: 4
-  team: 3
-  matchdata: {fileID: 11400000, guid: 6117ac433949b58429ebba5ee2241ac3, type: 2}
 --- !u!1 &3708506059701647447
 GameObject:
   m_ObjectHideFlags: 0

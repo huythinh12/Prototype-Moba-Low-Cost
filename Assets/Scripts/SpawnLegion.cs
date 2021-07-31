@@ -56,7 +56,7 @@ public class SpawnLegion : MonoBehaviour
                     {
                         var obj = Instantiate(Heroes[number], posChild.transform.position, Quaternion.identity, posChild.transform);
                       
-                        obj.GetComponent<Character>().Team = TeamCharacter.Red;
+                        obj.GetComponent<Character>().team = TeamCharacter.Red;
                         obj.tag = "Enemy";
                         number++;
                     }

@@ -23,7 +23,6 @@ public class AbilityIndicatorUI : MonoBehaviour
     public void Start()
     {
         startRotate = transform.rotation;
-
     }
 
     public void LateUpdate()
@@ -54,9 +53,9 @@ public class AbilityIndicatorUI : MonoBehaviour
         ShowRangeIndicator(ability);
         SetShapeIndicatorHandlingUI(ability);
 
-        if (ability.Stats.CastRangeMax.Value >= 30f)
+        if (ability.abilityData.RangeCast.Value >= 30f)
         {
-            float factorView = ability.Stats.CastRangeMax.Value / 28f;
+            float factorView = ability.abilityData.RangeCast.Value / 28f;
 
             Camera.main.DOFieldOfView(Camera.main.fieldOfView * factorView, 1f).SetEase(Ease.InOutSine);
         }
@@ -77,15 +76,17 @@ public class AbilityIndicatorUI : MonoBehaviour
     private void SetShapeIndicatorHandlingUI(Ability ability)
     {
         shapeIndicatorUI.localPosition = Vector3.zero;
+
+        shapeIndicatorUI.rotation = new Quaternion(0, 0, 0, 0);
         shapeIndicatorImage.rectTransform.localPosition = Vector3.zero;
         shapeIndicatorUI.gameObject.SetActive(true);
 
-        switch (ability.indicatorAbilityType)
+        switch (ability.abilityData.indicatorAbilityType)
         {
             case IndicatorAbilityType.Circle:
                 {
                     shapeIndicatorImage.sprite = Resources.Load<Sprite>(pathResourceCircleIndicator);
-                    shapeIndicatorImage.rectTransform.sizeDelta = new Vector2(ability.Stats.WidthAreaOfEffect.Value, ability.Stats.WidthAreaOfEffect.Value);
+                    shapeIndicatorImage.rectTransform.sizeDelta = new Vector2(ability.abilityData.Radius.Value, ability.abilityData.Radius.Value);
 
                     isChangePositionWhenHandle = true;
                     isChangeRotationWhenHandle = false;
@@ -94,8 +95,8 @@ public class AbilityIndicatorUI : MonoBehaviour
             case IndicatorAbilityType.Rectangle:
                 {
                     shapeIndicatorImage.sprite = Resources.Load<Sprite>(pathResourceLinearIndicator);
-                    shapeIndicatorImage.rectTransform.sizeDelta = new Vector2(ability.Stats.WidthAreaOfEffect.Value, ability.Stats.CastRangeMax.Value / 2);
-                    shapeIndicatorImage.rectTransform.localPosition = new Vector3(0, ability.Stats.CastRangeMax.Value / 4);
+                    shapeIndicatorImage.rectTransform.sizeDelta = new Vector2(ability.abilityData.WidthAreaOfEffect.Value, ability.abilityData.RangeCast.Value / 2);
+                    shapeIndicatorImage.rectTransform.localPosition = new Vector3(0, ability.abilityData.RangeCast.Value / 4);
 
                     isChangePositionWhenHandle = false;
                     isChangeRotationWhenHandle = true;
@@ -104,8 +105,8 @@ public class AbilityIndicatorUI : MonoBehaviour
             case IndicatorAbilityType.Line:
                 {
                     shapeIndicatorImage.sprite = Resources.Load<Sprite>(pathResourceLineIndicator);
-                    shapeIndicatorImage.rectTransform.sizeDelta = new Vector2(0.05f, ability.Stats.CastRangeMax.Value / 2);
-                    shapeIndicatorImage.rectTransform.localPosition = new Vector3(0, ability.Stats.CastRangeMax.Value / 4);
+                    shapeIndicatorImage.rectTransform.sizeDelta = new Vector2(0.05f, ability.abilityData.RangeCast.Value / 2);
+                    shapeIndicatorImage.rectTransform.localPosition = new Vector3(0, ability.abilityData.RangeCast.Value / 4);
 
 
                     isChangePositionWhenHandle = false;
@@ -126,13 +127,13 @@ public class AbilityIndicatorUI : MonoBehaviour
     {
         rangeIndicatorUI.gameObject.SetActive(true);
 
-        switch (ability.indicatorAbilityType)
+        switch (ability.abilityData.indicatorAbilityType)
         {
             case IndicatorAbilityType.Self:
                 rangeIndicatorUI.sizeDelta = new Vector2(1.5f, 1.5f);
                 break;
             default:
-                rangeIndicatorUI.sizeDelta = new Vector2(ability.Stats.CastRangeMax.Value, ability.Stats.CastRangeMax.Value);
+                rangeIndicatorUI.sizeDelta = new Vector2(ability.abilityData.RangeCast.Value, ability.abilityData.RangeCast.Value);
                 break;
         }
 
@@ -142,6 +143,6 @@ public class AbilityIndicatorUI : MonoBehaviour
 
     void DontRotate()
     {
-        transform.rotation = startRotate;
+        transform.rotation = Quaternion.Euler(90, 0, 0);
     }
 }

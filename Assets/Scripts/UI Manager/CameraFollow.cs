@@ -2,20 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[DefaultExecutionOrder(1000)]
 public class CameraFollow : MonoBehaviour
 {
     private Transform player;
     private Vector3 cameraOffset;
     [Range(0.01f, 1.0f)]
     private float smoothness = 0.5f;
-    // Start is called before the first frame update
+
     void Start()
     {
         player = FindObjectOfType<PlayerController>().GetComponent<Transform>();
         cameraOffset = transform.position - player.transform.position;
     }
 
-    // Update is called once per frame
     void Update()
     {
         Vector3 newPos = player.position + cameraOffset;

@@ -9,7 +9,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: isMoving
+    m_ConditionEvent: isMove
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: isAttack
@@ -37,7 +37,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: isMoving
+    m_ConditionEvent: isMove
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102763252340281912}
@@ -61,8 +61,8 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 2
-    m_ConditionEvent: isDeath
+  - m_ConditionMode: 1
+    m_ConditionEvent: isAlive
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102763252340281912}
@@ -93,19 +93,19 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: isMoving
+  - m_Name: isMove
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: Death
+  - m_Name: Die
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: isDeath
+  - m_Name: isAlive
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -135,10 +135,10 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1102763252340281912}
-    m_Position: {x: 0, y: 50, z: 0}
+    m_Position: {x: -390, y: -10, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102944015335087792}
-    m_Position: {x: 130, y: 220, z: 0}
+    m_Position: {x: -90, y: -10, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102621772561775536}
     m_Position: {x: 300, y: -220, z: 0}
@@ -180,7 +180,7 @@ AnimatorStateMachine:
     m_Position: {x: 660, y: -96, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102200105025770420}
-    m_Position: {x: -150, y: 220, z: 0}
+    m_Position: {x: -390, y: 130, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102485166753911818}
     m_Position: {x: 912, y: -24, z: 0}
@@ -246,7 +246,7 @@ AnimatorStateMachine:
     m_Position: {x: 672, y: 420, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102826502693603630}
-    m_Position: {x: 50, y: -50, z: 0}
+    m_Position: {x: -670, y: -10, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102794917505314252}
     m_Position: {x: 408, y: 288, z: 0}
@@ -265,9 +265,9 @@ AnimatorStateMachine:
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: -210, y: -40, z: 0}
-  m_EntryPosition: {x: -250, y: 50, z: 0}
-  m_ExitPosition: {x: -490, y: 170, z: 0}
+  m_AnyStatePosition: {x: -650, y: -110, z: 0}
+  m_EntryPosition: {x: -370, y: -110, z: 0}
+  m_ExitPosition: {x: -760, y: 170, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 1102763252340281912}
 --- !u!1101 &1101047106026329340
@@ -1212,7 +1212,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Run_DoubleSword
+  m_Name: Move
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -1779,7 +1779,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Idle_DoubleSword
+  m_Name: Idle
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -1941,7 +1941,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Die_DoubleSword
+  m_Name: Die
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -2022,7 +2022,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: NormalAttack01_DoubleSword
+  m_Name: Attack
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -2163,7 +2163,7 @@ AnimatorStateTransition:
     m_ConditionEvent: isAttack
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: isMoving
+    m_ConditionEvent: isMove
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102944015335087792}
@@ -2238,7 +2238,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: isMoving
+    m_ConditionEvent: isMove
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102200105025770420}
@@ -2263,7 +2263,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Death
+    m_ConditionEvent: Die
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102826502693603630}

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class ButtonAttack : MonoBehaviour, IPointerDownHandler
+public class ButtonAttack : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     Character character;
     AbilityIndicatorUI abilityIndicatorUI;
@@ -18,5 +18,10 @@ public class ButtonAttack : MonoBehaviour, IPointerDownHandler
     {
         abilityIndicatorUI.ShowRangeAttack(character);
         character.Attack();
+    }
+
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        abilityIndicatorUI.gameObject.SetActive(false);
     }
 }
