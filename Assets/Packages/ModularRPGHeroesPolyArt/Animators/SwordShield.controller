@@ -33,8 +33,8 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 2
-    m_ConditionEvent: isDeath
+  - m_ConditionMode: 1
+    m_ConditionEvent: isAlive
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102546107316971094}
@@ -59,7 +59,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: isMoving
+    m_ConditionEvent: isMove
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102004963046306614}
@@ -84,30 +84,30 @@ AnimatorController:
   m_Name: SwordShield
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: isMoving
+  - m_Name: isMove
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: isAttack
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
-  - m_Name: Death
+    m_Controller: {fileID: 9100000}
+  - m_Name: Die
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
-  - m_Name: isDeath
+    m_Controller: {fileID: 9100000}
+  - m_Name: isAlive
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -135,7 +135,7 @@ AnimatorStateMachine:
     m_Position: {x: -10, y: -270, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102021199167387756}
-    m_Position: {x: 310, y: -190, z: 0}
+    m_Position: {x: 270, y: -270, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102310016679798226}
     m_Position: {x: 290, y: 170, z: 0}
@@ -174,7 +174,7 @@ AnimatorStateMachine:
     m_Position: {x: 1050, y: 80, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102004963046306614}
-    m_Position: {x: -30, y: -50, z: 0}
+    m_Position: {x: -10, y: -100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102181557897205446}
     m_Position: {x: 1056, y: 312, z: 0}
@@ -237,7 +237,7 @@ AnimatorStateMachine:
     m_Position: {x: 1332, y: 648, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102155937052890522}
-    m_Position: {x: -290, y: -180, z: 0}
+    m_Position: {x: -300, y: -270, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102026818570802572}
     m_Position: {x: 816, y: -276, z: 0}
@@ -256,8 +256,8 @@ AnimatorStateMachine:
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: -530, y: -120, z: 0}
-  m_EntryPosition: {x: -330, y: -340, z: 0}
+  m_AnyStatePosition: {x: -280, y: -390, z: 0}
+  m_EntryPosition: {x: 10, y: -380, z: 0}
   m_ExitPosition: {x: -120, y: 180, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 1102546107316971094}
@@ -999,7 +999,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Run_SwordShield 0
+  m_Name: Move
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -1107,7 +1107,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: NormalAttack01_SwordShield
+  m_Name: Attack
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -1122,7 +1122,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: e160663af1b56d44e94a7ceb3007c110, type: 3}
+  m_Motion: {fileID: 7400000, guid: dfbba31277e926e44b3def7cde351a13, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1350,7 +1350,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Die_SwordShield
+  m_Name: Die
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -1753,7 +1753,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Idle_SwordShield
+  m_Name: Idle
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -2078,7 +2078,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Death
+    m_ConditionEvent: Die
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102155937052890522}
@@ -2106,7 +2106,7 @@ AnimatorStateTransition:
     m_ConditionEvent: isAttack
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: isMoving
+    m_ConditionEvent: isMove
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102021199167387756}
@@ -2131,7 +2131,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: isMoving
+    m_ConditionEvent: isMove
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102546107316971094}
@@ -2156,7 +2156,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: isMoving
+    m_ConditionEvent: isMove
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: isAttack

@@ -554,8 +554,8 @@ GameObject:
   - component: {fileID: 8683543554139782362}
   - component: {fileID: 2449544771976221130}
   - component: {fileID: 15494015}
-  - component: {fileID: 15494014}
-  - component: {fileID: 15494016}
+  - component: {fileID: 5901969661039592980}
+  - component: {fileID: 5086095377437772652}
   m_Layer: 6
   m_Name: ChestMonster
   m_TagString: Creep
@@ -628,7 +628,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &15494014
+--- !u!65 &5901969661039592980
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8683543554149256990}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.4104853, z: 1}
+  m_Center: {x: 0, y: 0.7097702, z: 0}
+--- !u!114 &5086095377437772652
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -637,48 +650,88 @@ MonoBehaviour:
   m_GameObject: {fileID: 8683543554149256990}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4da8d62305aee3b40951af1c16ca7ccf, type: 3}
+  m_Script: {fileID: 11500000, guid: 039381eb0bfe9e9438fb65c887271b16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilities: []
-  rangeAttack: 0
-  name: 
-  id: 
-  typeCharacter: 3
-  team: 3
-  matchdata: {fileID: 11400000, guid: 6117ac433949b58429ebba5ee2241ac3, type: 2}
---- !u!114 &15494016
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8683543554149256990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d926a3df12c1d5478100785565d8640, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  level:
-    start: 1
-  health:
-    start: 90
-    perLevel: 10
-  mana:
-    start: 0
-    perLevel: 0
-  magicDamage:
-    start: 0
-    perLevel: 0
-  magicDefense:
-    start: 0
-    perLevel: 0
-  physicalDamage:
-    start: 0
-    perLevel: 0
-  physicalDefense:
-    start: 0
-    perLevel: 0
+  typeCharacter: 2
+  team: 0
+  information:
+    name: 
+    description: 
+    id: 
+    mainClass: 0
+    subClass: 0
+    icon: {fileID: 0}
+    AlphaAbilityName: 
+    BetaAbilityName: 
+    UltimateAbilityName: 
+  Stats:
+    level: 1
+    healthMax:
+      baseValue: 3000
+      perLevel: 0
+    manaMax:
+      baseValue: 1000
+      perLevel: 0
+    physicalDamage:
+      baseValue: 500
+      perLevel: 0
+    magicDamage:
+      baseValue: 0
+      perLevel: 0
+    physicalDefense:
+      baseValue: 0
+      perLevel: 0
+    magicDefense:
+      baseValue: 0
+      perLevel: 0
+    physicalPierce:
+      baseValue: 0
+      perLevel: 0
+    magicPierce:
+      baseValue: 0
+      perLevel: 0
+    cooldownAttackk:
+      baseValue: 0
+      perLevel: 0
+    cooldownAbility:
+      baseValue: 0
+      perLevel: 0
+    criticalRate:
+      baseValue: 0
+      perLevel: 0
+    criticalDamage:
+      baseValue: 0
+      perLevel: 0
+    movementSpeed:
+      baseValue: 3
+      perLevel: 0
+    effectResistance:
+      baseValue: 0
+      perLevel: 0
+    damageDealFactor:
+      baseValue: 1
+      perLevel: 0
+    damageTakenFactor:
+      baseValue: 1
+      perLevel: 0
+    heaingFactor:
+      baseValue: 1
+      perLevel: 0
+    rangeAttack:
+      baseValue: 2
+      perLevel: 0
+  AttachPoint:
+    Overhead: {fileID: 0}
+    Head: {fileID: 0}
+    Chest: {fileID: 0}
+    LeftHand: {fileID: 0}
+    RightHand: {fileID: 0}
+    LeftLeg: {fileID: 0}
+    RightLeg: {fileID: 0}
+    UnderFoot: {fileID: 0}
+    Weapon: {fileID: 0}
+  rigidbody: {fileID: 0}
 --- !u!1 &8683543554149257072
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,8 +11,6 @@ GameObject:
   - component: {fileID: 4938951392129453504}
   - component: {fileID: 5028508752234557442}
   - component: {fileID: 196855117}
-  - component: {fileID: 196855116}
-  - component: {fileID: 196855118}
   m_Layer: 6
   m_Name: MonsterDuoRed
   m_TagString: Creep
@@ -71,57 +69,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &196855116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4942748315938939884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4da8d62305aee3b40951af1c16ca7ccf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  abilities: []
-  rangeAttack: 0
-  name: 
-  id: 
-  typeCharacter: 3
-  team: 3
-  matchdata: {fileID: 11400000, guid: 6117ac433949b58429ebba5ee2241ac3, type: 2}
---- !u!114 &196855118
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4942748315938939884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d926a3df12c1d5478100785565d8640, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  level:
-    start: 1
-  health:
-    start: 90
-    perLevel: 10
-  mana:
-    start: 0
-    perLevel: 0
-  magicDamage:
-    start: 0
-    perLevel: 0
-  magicDefense:
-    start: 0
-    perLevel: 0
-  physicalDamage:
-    start: 0
-    perLevel: 0
-  physicalDefense:
-    start: 0
-    perLevel: 0
 --- !u!1 &4942819302466833402
 GameObject:
   m_ObjectHideFlags: 0

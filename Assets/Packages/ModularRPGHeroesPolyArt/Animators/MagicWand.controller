@@ -34,7 +34,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: isMoving
+    m_ConditionEvent: isMove
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: isAttack
@@ -61,8 +61,8 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 2
-    m_ConditionEvent: isDeath
+  - m_ConditionMode: 1
+    m_ConditionEvent: isAlive
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102138883658628258}
@@ -87,7 +87,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: isMoving
+    m_ConditionEvent: isMove
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102194554231081146}
@@ -112,7 +112,7 @@ AnimatorController:
   m_Name: MagicWand
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: Death
+  - m_Name: Die
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -124,13 +124,13 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: isMoving
+  - m_Name: isMove
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: isDeath
+  - m_Name: isAlive
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -160,10 +160,10 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1102138883658628258}
-    m_Position: {x: -80, y: 160, z: 0}
+    m_Position: {x: -80, y: 100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102036580687679564}
-    m_Position: {x: 30, y: 290, z: 0}
+    m_Position: {x: 190, y: 100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102356192013144682}
     m_Position: {x: 252, y: 0, z: 0}
@@ -187,7 +187,7 @@ AnimatorStateMachine:
     m_Position: {x: 600, y: 120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102194554231081146}
-    m_Position: {x: -260, y: 290, z: 0}
+    m_Position: {x: -80, y: 210, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102321135243527376}
     m_Position: {x: 876, y: 60, z: 0}
@@ -253,7 +253,7 @@ AnimatorStateMachine:
     m_Position: {x: 372, y: 468, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102379794581396106}
-    m_Position: {x: -30, y: 40, z: 0}
+    m_Position: {x: -380, y: 100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102571365633570370}
     m_Position: {x: 300, y: 170, z: 0}
@@ -275,8 +275,8 @@ AnimatorStateMachine:
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: -330, y: 50, z: 0}
-  m_EntryPosition: {x: -340, y: 170, z: 0}
+  m_AnyStatePosition: {x: -360, y: 20, z: 0}
+  m_EntryPosition: {x: -60, y: 20, z: 0}
   m_ExitPosition: {x: -290, y: 410, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 1102138883658628258}
@@ -999,7 +999,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Attack01_MagicWand
+  m_Name: Attack
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -1081,7 +1081,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Idle_MagicWand
+  m_Name: Idle
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -1136,7 +1136,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Run_MagicWand
+  m_Name: Move
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -1272,7 +1272,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Die_MagicWand
+  m_Name: Die
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -1973,7 +1973,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Death
+    m_ConditionEvent: Die
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102379794581396106}
@@ -2001,7 +2001,7 @@ AnimatorStateTransition:
     m_ConditionEvent: isAttack
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: isMoving
+    m_ConditionEvent: isMove
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102036580687679564}
@@ -2026,7 +2026,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: isMoving
+    m_ConditionEvent: isMove
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102138883658628258}

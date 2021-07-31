@@ -138,8 +138,6 @@ GameObject:
   - component: {fileID: 4666834891761132989}
   - component: {fileID: 8879998483540277366}
   - component: {fileID: 8063855302108425383}
-  - component: {fileID: 8063855302108425380}
-  - component: {fileID: 8063855302108425382}
   m_Layer: 8
   m_Name: TowerChild
   m_TagString: Enemy
@@ -205,57 +203,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!114 &8063855302108425380
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4837304897174207327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4da8d62305aee3b40951af1c16ca7ccf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  abilities: []
-  rangeAttack: 0
-  name: 
-  id: 
-  typeCharacter: 6
-  team: 1
-  matchdata: {fileID: 11400000, guid: 6117ac433949b58429ebba5ee2241ac3, type: 2}
---- !u!114 &8063855302108425382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4837304897174207327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d926a3df12c1d5478100785565d8640, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  level:
-    start: 10
-  health:
-    start: 90
-    perLevel: 10
-  mana:
-    start: 0
-    perLevel: 0
-  magicDamage:
-    start: 0
-    perLevel: 0
-  magicDefense:
-    start: 0
-    perLevel: 0
-  physicalDamage:
-    start: 0
-    perLevel: 0
-  physicalDefense:
-    start: 0
-    perLevel: 0
 --- !u!1 &4837394134494098411
 GameObject:
   m_ObjectHideFlags: 0

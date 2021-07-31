@@ -20,8 +20,10 @@ public class CharacterStat
     public float PerLevel { get => perLevel; set => perLevel = value; }
 
 
+
     public virtual float Value
     {
+
         get
         {
             if (isModified)

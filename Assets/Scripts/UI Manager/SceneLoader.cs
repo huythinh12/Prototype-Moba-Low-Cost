@@ -30,6 +30,18 @@ public class SceneLoader : MonoBehaviour
 
         float percentLoaded = 0;
 
+        while (loadTimer.Elapsed.TotalSeconds <= 11)
+        {
+            percentLoaded = (float)(loadTimer.Elapsed.TotalSeconds / minimumLoadTime);
+
+            loadingBar.fillAmount = percentLoaded;
+            loadingText.text = string.Format("{0:P0}", percentLoaded);
+
+            yield return null;
+        }
+
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneLoadName);
+
         while (loadTimer.Elapsed.TotalSeconds <= minimumLoadTime)
         {
             percentLoaded = (float)(loadTimer.Elapsed.TotalSeconds / minimumLoadTime);
@@ -40,7 +52,8 @@ public class SceneLoader : MonoBehaviour
             yield return null;
         }
 
+
         loadTimer.Stop();
-        //AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneLoadName);
+
     }
 }

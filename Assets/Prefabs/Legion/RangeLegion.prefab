@@ -203,8 +203,6 @@ GameObject:
   - component: {fileID: 1946713878}
   - component: {fileID: 6429968865681290105}
   - component: {fileID: 815042975}
-  - component: {fileID: 815042974}
-  - component: {fileID: 815042976}
   m_Layer: 6
   m_Name: RangeLegion
   m_TagString: Untagged
@@ -368,57 +366,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &815042974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2531138454810436476}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4da8d62305aee3b40951af1c16ca7ccf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  abilities: []
-  rangeAttack: 0
-  name: 
-  id: 
-  typeCharacter: 2
-  team: 2
-  matchdata: {fileID: 11400000, guid: 6117ac433949b58429ebba5ee2241ac3, type: 2}
---- !u!114 &815042976
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2531138454810436476}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d926a3df12c1d5478100785565d8640, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  level:
-    start: 10
-  health:
-    start: 40
-    perLevel: 5
-  mana:
-    start: 0
-    perLevel: 0
-  magicDamage:
-    start: 0
-    perLevel: 0
-  magicDefense:
-    start: 0
-    perLevel: 0
-  physicalDamage:
-    start: 0
-    perLevel: 0
-  physicalDefense:
-    start: 0
-    perLevel: 0
 --- !u!1 &2555548453493872904
 GameObject:
   m_ObjectHideFlags: 0
