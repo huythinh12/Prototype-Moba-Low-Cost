@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI BattleTimeText;
     [SerializeField] TextMeshProUGUI ScoreBlueText;
     [SerializeField] TextMeshProUGUI ScoreRedText;
+    [HideInInspector] public KDAUI kdaPlayerUI;
 
     void Awake()
     {
@@ -63,7 +64,11 @@ public class GameManager : MonoBehaviour
                 ScoreBlue++;
                 ScoreBlueText.text = ScoreBlue.ToString();
             }
+
+            kdaPlayerUI.UpdateKDAText();
         }
+
+
     }
 
 

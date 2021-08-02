@@ -22,6 +22,7 @@ MonoBehaviour:
     Animation: Spell1
     AnimationCastPoint: 0
     Icon: {fileID: 21300000, guid: 62b4809b13f9ffa4c9b02d892deb1b0e, type: 3}
+    canCritical: 0
     AoeData:
       Center: 0
       Shape: 0
@@ -40,26 +41,4 @@ MonoBehaviour:
     WidthAreaOfEffect:
       baseValue: 0
       perLevel: 0
-  events:
-  - Type: 1
-    showInEditor: 0
-    showActionsInEditor: 0
-    showModifiersInEditor: 0
-    tobeRemoved: 0
-    Modifiers: []
-    Actions:
-    - Type: 0
-      Target: 0
-      MultipleTargets: 0
-      IntFields: []
-      FloatFields: []
-      Vector3Fields: []
-      Vector2Fields: []
-      StringFields:
-      - Name: PathSound
-        Value: Sounds/Background Sound
-        tobeRemoved: 0
-      BoolFields: []
-      showInEditor: 1
-      tobeRemoved: 0
-      showCustomAttributes: 0
+  events: []

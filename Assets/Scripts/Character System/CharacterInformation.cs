@@ -20,4 +20,12 @@ public class CharacterInformation
     public string AlphaAbilityName;
     public string BetaAbilityName;
     public string UltimateAbilityName;
+
+    public object Clone()
+    {
+        var characterInformation = new CharacterInformation();
+        characterInformation = this;
+        return characterInformation;
+
+    }
 }

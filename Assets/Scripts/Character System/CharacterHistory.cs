@@ -17,6 +17,7 @@ struct InformationCharacterHit
     }
 }
 
+[System.Serializable]
 public class CharacterHistory
 {
     static readonly float KillFactor = 1.75f;
@@ -29,7 +30,7 @@ public class CharacterHistory
     public int Death = 0;
     public int Assist = 0;
 
-    private int amountHeroKilledDiscontinuity = 0;
+    public int amountHeroKilledDiscontinuity = 0;
     private int amountHeroKilledContinual = 0;
     private TimeSpan LastTimeKillHero;
 
@@ -44,8 +45,7 @@ public class CharacterHistory
             }
             else
             {
-                amountHeroKilledContinual = 0;
-                return amountHeroKilledContinual;
+                return 0;
             }
         }
     }

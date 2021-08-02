@@ -32,7 +32,7 @@ MonoBehaviour:
       baseValue: 490
       perLevel: 109
     physicalDamage:
-      baseValue: 1700
+      baseValue: 170
       perLevel: 20.5
     magicDamage:
       baseValue: 0

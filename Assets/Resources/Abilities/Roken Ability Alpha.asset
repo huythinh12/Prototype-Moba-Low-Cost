@@ -17,11 +17,12 @@ MonoBehaviour:
     TargetFlags: 0
     Name: Roken Ability Alpha
     Description: 'Physical Damage '
-    Cooldown: 5
+    Cooldown: 2
     ManaCost: 15
     Animation: Spell1
     AnimationCastPoint: 0
     Icon: {fileID: 21300000, guid: 2285786089d664c40887be3a1d7a565c, type: 3}
+    canCritical: 0
     AoeData:
       Center: 0
       Shape: 0
@@ -32,7 +33,7 @@ MonoBehaviour:
     Duration: 0
     indicatorAbilityType: 4
     RangeCast:
-      baseValue: 8
+      baseValue: 10
       perLevel: 0
     Radius:
       baseValue: 0
@@ -40,4 +41,86 @@ MonoBehaviour:
     WidthAreaOfEffect:
       baseValue: 1
       perLevel: 0
-  events: []
+  events:
+  - Type: 1
+    showInEditor: 0
+    showActionsInEditor: 0
+    showModifiersInEditor: 0
+    tobeRemoved: 0
+    Modifiers: []
+    Actions:
+    - Type: 5
+      Target: 0
+      MultipleTargets: 0
+      TypeStats: 0
+      IntFields: []
+      FloatFields:
+      - Name: duration
+        Value: 0.4
+        tobeRemoved: 0
+      Vector3Fields: []
+      Vector2Fields: []
+      StringFields: []
+      BoolFields:
+      - Name: isDirectionNormalized
+        Value: 1
+        tobeRemoved: 0
+      showInEditor: 0
+      tobeRemoved: 0
+      showCustomAttributes: 0
+    - Type: 3
+      Target: 0
+      MultipleTargets: 0
+      TypeStats: 1
+      IntFields: []
+      FloatFields:
+      - Name: duration
+        Value: 0.75
+        tobeRemoved: 0
+      - Name: delay
+        Value: 0.4
+        tobeRemoved: 0
+      - Name: percentageIncrease
+        Value: 0.85
+        tobeRemoved: 0
+      - Name: amountIncrease
+        Value: 0
+        tobeRemoved: 0
+      Vector3Fields: []
+      Vector2Fields: []
+      StringFields: []
+      BoolFields:
+      - Name: isDirectionNormalized
+        Value: 1
+        tobeRemoved: 0
+      showInEditor: 0
+      tobeRemoved: 0
+      showCustomAttributes: 0
+    - Type: 0
+      Target: 0
+      MultipleTargets: 0
+      TypeStats: 1
+      IntFields: []
+      FloatFields:
+      - Name: delay
+        Value: 0
+        tobeRemoved: 0
+      Vector3Fields: []
+      Vector2Fields: []
+      StringFields:
+      - Name: pathSound1
+        Value: Sounds/Abilities/Roken Ability Alpha (1)
+        tobeRemoved: 0
+      - Name: pathSound2
+        Value: Sounds/Abilities/Roken Ability Alpha (2)
+        tobeRemoved: 0
+      - Name: pathSound3
+        Value: Sounds/Abilities/Roken Ability Alpha (3)
+        tobeRemoved: 0
+      - Name: pathSound4
+        Value: Sounds/Abilities/Roken Ability Alpha (4)
+        tobeRemoved: 0
+      BoolFields: []
+      showInEditor: 0
+      tobeRemoved: 0
+      showCustomAttributes: 0

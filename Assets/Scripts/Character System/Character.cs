@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 using DG.Tweening;
 
-[DefaultExecutionOrder(200)]
+[DefaultExecutionOrder(200), RequireComponent(typeof(Rigidbody), typeof(AudioSource), typeof(BoxCollider))]
 public class Character : MonoBehaviour
 {
     public static readonly Vector3 revivalPositionBlue = new Vector3(5.7f, 0, -8.2f); // Vector3(-70f, 0f, 4f)
@@ -17,19 +17,22 @@ public class Character : MonoBehaviour
     public CharacterInformation information;
     public CharacterStats Stats;
     public CharacterHistory History;
-    public CharacterCombatController CombatController;
-    public CharacterMovementController MovementController;
+    [HideInInspector] public CharacterCombatController CombatController;
+    [HideInInspector] public CharacterMovementController MovementController;
+    [HideInInspector] public CharacterSound sound;
 
     [Space()]
     public CharacterAttachPoint AttachPoint;
 
     [HideInInspector] public new Rigidbody rigidbody;
+    [HideInInspector] public AudioSource audioSource;
     private new Collider collider;
-    private Animator animator;
+    [HideInInspector] public Animator animator;
     private AnimationClip[] animationClips;
     private StatsBar statsBar;
 
     public bool isAlive = true;
+    public bool isCanMove = true;
 
     public event Action<int> OnLevelChanged;
     public event Action<CharacterStats> OnHealthChanged;
@@ -38,11 +41,20 @@ public class Character : MonoBehaviour
     public event Action<float> OnHealingHealth;
     public event Action<Character> OnDie;
 
+    private AIHeroes aiHeroes;
 
-    public Character(CharacterInformation characterInformation, CharacterStats characterStats)
+
+    public Character(CharacterInformation characterInformation, CharacterStats characterStats, CharacterSound characterSound)
     {
+
+        this.information = new CharacterInformation();
         this.information = characterInformation;
+
+        this.Stats = new CharacterStats();
         this.Stats = characterStats;
+
+        this.sound = characterSound;
+
     }
 
 
@@ -73,15 +85,39 @@ public class Character : MonoBehaviour
 
 
         OnDie += GameManager.Instance.battleDiaglog.ShowKillDialog;
+
+        isAlive = true;
+        isCanMove = true;
+
+        StartCoroutine(PlaySoundMovement());
     }
 
+    private void Update()
+    {
+
+    }
 
 
     void LoadDataFromDataBase()
     {
         Character rawCharacter = CharacterDatabase.Instance.GetCharacter(NameID);
-        information = rawCharacter.information;
+        //Character rawCharacterClone = new Character(rawCharacter.information, rawCharacter.Stats, rawCharacter.sound);
+
+        //this.information = new CharacterInformation();
+        //this.Stats = new CharacterStats();
+        //this.sound = new CharacterSound();
+        //new Character(rawCharacterClone.information, rawCharacterClone.Stats, rawCharacterClone.sound);
+
+        this.information = new CharacterInformation();
+        information = rawCharacter.information.Clone() as CharacterInformation;
+
+        this.Stats = new CharacterStats();
         Stats = rawCharacter.Stats;
+
+        sound = rawCharacter.sound;
+
+        this.information.name += UnityEngine.Random.Range(1000, 9999).ToString();
+
     }
 
     void SetLayer(string layer)
@@ -92,9 +128,12 @@ public class Character : MonoBehaviour
 
     void GetComponentsDefault()
     {
+        aiHeroes = GetComponent<AIHeroes>();
+
         animator = GetComponent<Animator>();
         rigidbody = GetComponent<Rigidbody>();
         collider = GetComponent<Collider>();
+        audioSource = GetComponent<AudioSource>();
 
         if (information.typeCharacter != TypeCharacter.Tower)
         {
@@ -202,24 +241,24 @@ public class Character : MonoBehaviour
         }
     }
 
-    public void Glide(Vector3 direction, float duration, Ease easeGlide = Ease.InOutCubic)
-    {
-        if (isAlive)
-        {
-            transform.DOLookAt(transform.position + direction, 0f);
-            rigidbody.DOMove(transform.position + direction, duration).SetEase(easeGlide);
-        }
-    }
+    //public void Glide(Vector3 direction, float duration, Ease easeGlide = Ease.InOutCubic)
+    //{
+    //    if (isAlive)
+    //    {
+    //        transform.DOLookAt(transform.position + direction, 0f);
+    //        rigidbody.DOMove(transform.position + direction, duration).SetEase(easeGlide);
+    //    }
+    //}
 
-    public void JumpTo(Vector3 direction, float duration)
-    {
-        MovementController.StopMove();
+    //public void JumpTo(Vector3 direction, float duration)
+    //{
+    //    MovementController.StopMove();
 
-        transform.DOLookAt(transform.position + direction, 0f);
-        transform.DOJump(transform.position + direction, 10f, 1, duration).SetEase(Ease.InOutExpo);
+    //    transform.DOLookAt(transform.position + direction, 0f);
+    //    transform.DOJump(transform.position + direction, 10f, 1, duration).SetEase(Ease.InOutExpo);
 
-        MovementController.StopMove();
-    }
+    //    MovementController.StopMove();
+    //}
 
     public IEnumerator Revival()
     {
@@ -238,6 +277,11 @@ public class Character : MonoBehaviour
         animator.SetBool("isAlive", isAlive);
 
         History.Reset();
+
+        if (aiHeroes)
+        {
+            aiHeroes.enabled = true;
+        }
     }
 
     public void CheckDie()
@@ -260,13 +304,31 @@ public class Character : MonoBehaviour
 
             HandleEventDie();
 
+            if (aiHeroes)
+            {
+                aiHeroes.enabled = false;
+            }
+
         }
     }
     //End
 
     public object Clone()
     {
-        var character = new Character(this.information, this.Stats);
+        //var character = new Character(this.information, this.Stats, this.sound);
+
+        //throw new NotImplementedException();
+        var character = new Character(this.information, this.Stats, this.sound)
+        {
+            //            information = new CharacterInformation();
+            //Stats = new CharacterStats();
+            //sound = new CharacterSound();
+
+            //character.information = this.information;
+        };
+
+
+
         return character;
     }
 
@@ -333,7 +395,8 @@ public class Character : MonoBehaviour
     {
         animator.SetBool("is" + animationType.ToString(), true);
 
-        yield return new WaitForSeconds(GetLengthAnimation(animationType));
+        //yield return new WaitForSeconds(GetLengthAnimation(animationType));
+        yield return new WaitForSeconds(0.375f);
         animator.SetBool("is" + animationType.ToString(), false);
     }
 
@@ -376,4 +439,16 @@ public class Character : MonoBehaviour
             return percent * (ValueTimeRevialHeroMax - ValueTimeRevialHeroMin) + ValueTimeRevialHeroMin;
         }
     }
+
+    public IEnumerator PlaySoundMovement()
+    {
+        yield return new WaitForSeconds(UnityEngine.Random.Range(15f, 25f));
+
+        if (NameID == "Roken")
+        {
+            audioSource.PlayOneShot(sound.GetRandomSound(CharacterSound.TypeSound.Movement));
+            StartCoroutine(PlaySoundMovement());
+        }
+    }
+
 }

@@ -25,7 +25,7 @@ public class CharacterMovementController
 
     public void Move(Vector3 direction)
     {
-        if (true)//self.IsAlive)
+        if (self.isAlive && self.isCanMove)
         {
             self.StartCoroutine(self.MovementController.LookAtPosition(self.transform.position + direction));
             self.rigidbody.velocity = direction * self.Stats.MovementSpeed.Value;

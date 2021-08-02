@@ -21,18 +21,19 @@ public enum Action
 
     ImpactWithStat,
     ImpactWithCamera,
+    Roll,
 
-    [Description("Takes maxDistance:Int, effectPath:Str")]
-    Blink,
-    [Description("Takes force:Int")]
-    Knockback,
-    [Description("Takes effectPath:Str, speed:Int, origin:Str(cast_point||target_point)")]
-    LinearProjectile,
-    [Description("Takes effectPath:Str, speed:Int")]
-    TrackingProjectile,
-    [Description("Takes duration:Float")]
-    Stun,
-    Move,
+    //[Description("Takes maxDistance:Int, effectPath:Str")]
+    //Blink,
+    //[Description("Takes force:Int")]
+    //Knockback,
+    //[Description("Takes effectPath:Str, speed:Int, origin:Str(cast_point||target_point)")]
+    //LinearProjectile,
+    //[Description("Takes effectPath:Str, speed:Int")]
+    //TrackingProjectile,
+    //[Description("Takes duration:Float")]
+    //Stun,
+
 
 }
 
