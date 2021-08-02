@@ -79,3 +79,6 @@ MonoBehaviour:
     rangeAttack:
       baseValue: 7.5
       perLevel: 0
+  characterSound:
+    soundPathsMovement: []
+    soundPathsDie: []

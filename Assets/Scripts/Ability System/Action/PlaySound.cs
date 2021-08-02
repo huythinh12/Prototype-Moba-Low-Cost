@@ -1,18 +1,25 @@
-using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class PlaySound : BaseAction
 {
-    private string pathSound;
+    private float delay;
+    private List<StringField> soundPaths;
 
     public PlaySound(AbilityActionData data) : base(data)
     {
-        pathSound = this.data.StringFields.Find((a) => a.Name == "PathSound").Value;
+        soundPaths = this.data.StringFields;
+        delay = this.data.FloatFields.Find((a) => a.Name == "delay").Value;
     }
 
     public override IEnumerator Excecute(Ability owner, Vector3 indicator, Character selfCharacter, Character targetCharacter)
     {
-        selfCharacter.GetComponent<AudioSource>().PlayOneShot(Resources.Load<AudioClip>(pathSound));
+        yield return new WaitForSeconds(delay);
+
+        string soundPathRandom = soundPaths[Random.Range(0, soundPaths.Count)].Value;
+        selfCharacter.GetComponent<AudioSource>().PlayOneShot(Resources.Load<AudioClip>(soundPathRandom));
+
         yield return null;
     }
 

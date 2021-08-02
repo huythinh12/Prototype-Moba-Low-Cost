@@ -32,7 +32,7 @@ MonoBehaviour:
       baseValue: 450
       perLevel: 97
     physicalDamage:
-      baseValue: 178
+      baseValue: 1780
       perLevel: 10.9
     magicDamage:
       baseValue: 0
@@ -79,3 +79,9 @@ MonoBehaviour:
     rangeAttack:
       baseValue: 2
       perLevel: 0
+  characterSound:
+    soundPathsMovement:
+    - Sounds/Characters/Roken Movement (1)
+    - Sounds/Characters/Roken Movement (2)
+    - Sounds/Characters/Roken Movement (3)
+    soundPathsDie: []

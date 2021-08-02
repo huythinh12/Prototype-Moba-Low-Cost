@@ -22,6 +22,7 @@ MonoBehaviour:
     Animation: Spell1
     AnimationCastPoint: 0
     Icon: {fileID: 21300000, guid: 1a61fb70bd6402f429a7ccc8976c98d6, type: 3}
+    canCritical: 0
     AoeData:
       Center: 0
       Shape: 0
@@ -40,4 +41,46 @@ MonoBehaviour:
     WidthAreaOfEffect:
       baseValue: 0
       perLevel: 0
-  events: []
+  events:
+  - Type: 1
+    showInEditor: 0
+    showActionsInEditor: 0
+    showModifiersInEditor: 0
+    tobeRemoved: 0
+    Modifiers:
+    - showInEditor: 0
+      tobeRemoved: 0
+      Type: 0
+      Target: 0
+      IntFields: []
+      FloatFields: []
+      Vec3Fields: []
+      Vec2Fields: []
+      StrFields: []
+      BoolFields: []
+    Actions:
+    - Type: 0
+      Target: 0
+      MultipleTargets: 0
+      TypeStats: 0
+      IntFields: []
+      FloatFields:
+      - Name: delay
+        Value: 0
+        tobeRemoved: 0
+      Vector3Fields: []
+      Vector2Fields: []
+      StringFields:
+      - Name: soundPath1
+        Value: Sounds/Abilities/Roken Ability Ultimate (1)
+        tobeRemoved: 0
+      - Name: soundPath2
+        Value: Sounds/Abilities/Roken Ability Ultimate (2)
+        tobeRemoved: 0
+      - Name: soundPath3
+        Value: Sounds/Abilities/Roken Ability Ultimate (3)
+        tobeRemoved: 0
+      BoolFields: []
+      showInEditor: 0
+      tobeRemoved: 0
+      showCustomAttributes: 0

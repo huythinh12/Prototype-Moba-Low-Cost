@@ -9,6 +9,7 @@ public class ImpactWithStat : BaseAction
     private float amountIncrease;
     private float percentageIncrease;
 
+    private float delay;
     private float duration;
 
     public ImpactWithStat(AbilityActionData data) : base(data)
@@ -18,11 +19,14 @@ public class ImpactWithStat : BaseAction
         amountIncrease = this.data.FloatFields.Find((a) => a.Name == "amountIncrease").Value;
         percentageIncrease = this.data.FloatFields.Find((a) => a.Name == "percentageIncrease").Value;
 
+        delay = this.data.FloatFields.Find((a) => a.Name == "delay").Value;
         duration = this.data.FloatFields.Find((a) => a.Name == "duration").Value;
     }
 
     public override IEnumerator Excecute(Ability owner, Vector3 indicator, Character selfCharacter, Character targetCharacter)
     {
+        //yield return new WaitForSeconds(delay);
+
         StatModifier amountStatModifier = new StatModifier(amountIncrease, StatModifyType.Flat);
         StatModifier percentageStatModifier = new StatModifier(percentageIncrease, StatModifyType.PercentAdd);
 

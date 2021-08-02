@@ -121,62 +121,67 @@ public class Ability
     public IEnumerator Excecute(Character casterCharacter, Vector3 indicator)
     {
         this.selfCharacter = casterCharacter;
-        this.indicator = indicator;
-        //this.targetCharacters = ?
 
-        isRunning = true;
 
-        // Extract Target Point/Unit
-        Vector3 castPoint = casterCharacter.transform.position;
-        //Vector3 targetPoint = targetCharacter[0].transform.position;
-        //GameObject targetUnit = (GameObject)targetCharacter[1];
-
-        if (EventRegister[EventAbility.OnAbilityStart] != null)
+        if (selfCharacter.isAlive)
         {
-            Debug.Log("On Ability Start!");
-            yield return PerformActions(EventRegister[EventAbility.OnAbilityStart]);
+            this.indicator = indicator;
+            //this.targetCharacters = ?
+
+            isRunning = true;
+
+            // Extract Target Point/Unit
+            Vector3 castPoint = casterCharacter.transform.position;
+            //Vector3 targetPoint = targetCharacter[0].transform.position;
+            //GameObject targetUnit = (GameObject)targetCharacter[1];
+
+            if (EventRegister[EventAbility.OnAbilityStart] != null)
+            {
+                Debug.Log("On Ability Start!");
+                yield return PerformActions(EventRegister[EventAbility.OnAbilityStart]);
+            }
+
+            // Turn first
+            //if (!DontCancelMovement)
+            //{
+            //    // restrict movement
+            //    //casterCharacter.navAgent.isStopped = true;
+            //    //casterCharacter.fsm.SetBool("Moving", false);
+
+            //    yield return casterCharacter.MovementController.LookAtPosition(targetPoint);
+            //}
+            //else
+            //{
+            //    casterCharacter.StartCoroutine(casterCharacter.MovementController.LookAtPosition(targetPoint));
+            //}
+
+            // Play Animation and wait for Cast Point
+            // TODO: refactor
+            //if (string.IsNullOrEmpty(abilityData.Animation)==false)
+            //{
+            //    yield return new WaitForEndOfFrame();  // Buffer for sync
+            //    ownerProfile.fsm.SetTrigger(abilityData.Animation);
+            //    yield return new WaitForSeconds(abilityData.AnimCastPoint);
+            //}
+
+            //if (Channelled)
+            //{
+            //    int channelTimer = 0;
+            //    yield return OnSpellStart();
+            //    while (channelTimer < abilityData.Duration)
+            //    {
+            //        yield return OnChannelSucceed();
+            //        yield return new WaitForSeconds(1);
+            //        channelTimer += 1;
+            //    }
+            //}
+            //else
+            //{
+            //    yield return OnSpellStart();
+            //}
+
+            yield return End();
         }
-
-        // Turn first
-        if (!DontCancelMovement)
-        {
-            // restrict movement
-            //casterCharacter.navAgent.isStopped = true;
-            //casterCharacter.fsm.SetBool("Moving", false);
-
-            yield return casterCharacter.MovementController.LookAtPosition(targetPoint);
-        }
-        else
-        {
-            casterCharacter.StartCoroutine(casterCharacter.MovementController.LookAtPosition(targetPoint));
-        }
-
-        // Play Animation and wait for Cast Point
-        // TODO: refactor
-        //if (string.IsNullOrEmpty(abilityData.Animation)==false)
-        //{
-        //    yield return new WaitForEndOfFrame();  // Buffer for sync
-        //    ownerProfile.fsm.SetTrigger(abilityData.Animation);
-        //    yield return new WaitForSeconds(abilityData.AnimCastPoint);
-        //}
-
-        //if (Channelled)
-        //{
-        //    int channelTimer = 0;
-        //    yield return OnSpellStart();
-        //    while (channelTimer < abilityData.Duration)
-        //    {
-        //        yield return OnChannelSucceed();
-        //        yield return new WaitForSeconds(1);
-        //        channelTimer += 1;
-        //    }
-        //}
-        //else
-        //{
-        //    yield return OnSpellStart();
-        //}
-
-        yield return End();
     }
 
 

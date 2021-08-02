@@ -17,8 +17,8 @@ MonoBehaviour:
     TargetFlags: 0
     Name: Oliver Ability Alpha
     Description: Increases attack range by 40% and ATK by 15%.
-    Cooldown: 0
-    ManaCost: 0
+    Cooldown: 6
+    ManaCost: 15
     Animation: Spell1
     AnimationCastPoint: 0
     Icon: {fileID: 21300000, guid: 83f719ed46fd2a54ba4913b512161cef, type: 3}
@@ -64,6 +64,9 @@ MonoBehaviour:
       - Name: duration
         Value: 4
         tobeRemoved: 0
+      - Name: delay
+        Value: 0.1
+        tobeRemoved: 0
       Vector3Fields: []
       Vector2Fields: []
       StringFields: []
@@ -81,10 +84,13 @@ MonoBehaviour:
         Value: 0
         tobeRemoved: 0
       - Name: percentageIncrease
-        Value: 10
+        Value: 0.15
         tobeRemoved: 0
       - Name: duration
         Value: 4
+        tobeRemoved: 0
+      - Name: delay
+        Value: 0.01
         tobeRemoved: 0
       Vector3Fields: []
       Vector2Fields: []
@@ -108,6 +114,28 @@ MonoBehaviour:
       Vector3Fields: []
       Vector2Fields: []
       StringFields: []
+      BoolFields: []
+      showInEditor: 0
+      tobeRemoved: 0
+      showCustomAttributes: 0
+    - Type: 0
+      Target: 0
+      MultipleTargets: 0
+      TypeStats: 2
+      IntFields: []
+      FloatFields:
+      - Name: delay
+        Value: 0
+        tobeRemoved: 0
+      Vector3Fields: []
+      Vector2Fields: []
+      StringFields:
+      - Name: soundPath1
+        Value: Sounds/Abilities/Oliver Ability Alpha (1)
+        tobeRemoved: 0
+      - Name: soundPath2
+        Value: Sounds/Abilities/Oliver Ability Alpha (2)
+        tobeRemoved: 0
       BoolFields: []
       showInEditor: 0
       tobeRemoved: 0

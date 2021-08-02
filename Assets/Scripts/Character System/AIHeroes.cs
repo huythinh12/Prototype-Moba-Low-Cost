@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 using System.Diagnostics;
+
+
+[DefaultExecutionOrder(1500)]
 public class AIHeroes : MonoBehaviour
 {
     [SerializeField]
@@ -26,7 +29,7 @@ public class AIHeroes : MonoBehaviour
         character = GetComponent<Character>();
 
         //test thu khi chon 1 tuong thi se ko gan AI vao
-        if (transform.name.StartsWith("Noah"))
+        if (GetComponent<PlayerController>())
         {
             isPlayer = true;
             return;
@@ -37,6 +40,12 @@ public class AIHeroes : MonoBehaviour
         aiPath = GetComponent<AIPath>();
         anim = GetComponent<Animator>();
 
+        //UnityEngine.Debug.Log(string.Format("AIHero: {0}", character));
+
+        aiPath.endReachedDistance = character.Stats.RangeAttack.Value;
+        //UnityEngine.Debug.Log(aiPath.endReachedDistance);
+        print(aiPath.endReachedDistance);
+
 
         //khoi tao chien thuat tu 2 phe khac nhau 
         StrategyMainTarget();
@@ -46,7 +55,7 @@ public class AIHeroes : MonoBehaviour
     {
         if (transform.parent.CompareTag("PosEnemy")) // cac string can cau truc lai qua scriptable 
         {
-            var objTower = GameObject.Find("TowerAlpha");
+            var objTower = GameObject.Find("TowerRed");
             if (objTower != null)
             {
                 foreach (Transform child in objTower.transform)
@@ -58,7 +67,7 @@ public class AIHeroes : MonoBehaviour
         }
         else
         {
-            var objTower = GameObject.Find("TowerBeta");
+            var objTower = GameObject.Find("TowerBlue");
             if (objTower != null)
             {
                 foreach (Transform child in objTower.transform)
@@ -80,7 +89,7 @@ public class AIHeroes : MonoBehaviour
             CheckAreaToAttack(transform.position, radiusCollider);
         else
         {
-            anim.SetBool("isMoving", false);
+            anim.SetBool("isMove", false);
             anim.SetBool("isAttack", false);
         }
     }
@@ -104,7 +113,7 @@ public class AIHeroes : MonoBehaviour
             isRunning = true;
             StartCoroutine(ChasingPlayerInTime());
         }
-        
+
         //kiem tra ke dich xa hay gan cho animation
         AnimationBaseOnConditional();
 
@@ -115,14 +124,16 @@ public class AIHeroes : MonoBehaviour
     {
         if (aiPath.reachedEndOfPath == false)
         {
+            character.Attack();
+
             anim.SetBool("isAttack", false);
-            anim.SetBool("isMoving", true);
+            anim.SetBool("isMove", true);
         }
         else
         {
             //character.Attack();
             anim.SetBool("isAttack", true);
-            anim.SetBool("isMoving", false);
+            anim.SetBool("isMove", false);
         }
     }
 
@@ -130,8 +141,10 @@ public class AIHeroes : MonoBehaviour
     {
         foreach (var hitCollider in listCollider)
         {
-            //kiem tra va cham neu khong phai la dong minh 
-            if (hitCollider.tag != transform.tag) //TeamCharacter
+            Character characterHitCollider = hitCollider.GetComponent<Character>();
+            //print(characterHitCollider);
+
+            if (Character.IsTarget(characterHitCollider, character))
             {
                 if (hitCollider.transform.name.StartsWith("TowerChild"))//TypeCharacter
                 {
@@ -142,7 +155,7 @@ public class AIHeroes : MonoBehaviour
                     isTargetHere = true;
                     objectTargetCharacter = hitCollider.transform;
                     if (isChasing == false)
-                        objectTarget = objectTargetCharacter;
+                        objectTarget = hitCollider.transform;
                 }
 
 
@@ -152,6 +165,13 @@ public class AIHeroes : MonoBehaviour
                     objectTarget = objectTargetCharacter;
                 }
             }
+
+
+            //kiem tra va cham neu khong phai la dong minh 
+            //if (hitCollider.tag != transform.tag) //TeamCharacter
+            //{
+
+            //}
         }
 
         if (isTargetHere == false && isTowerHere == false)
@@ -165,7 +185,7 @@ public class AIHeroes : MonoBehaviour
         Collider[] hitColliders = Physics.OverlapSphere(center, radius);
         foreach (var collider in hitColliders)
         {
-            if (collider.CompareTag("Tower") || collider.CompareTag("Ally") || collider.CompareTag("Enemy")|| collider.CompareTag("Creep"))
+            if (collider.GetComponent<Character>())//collider.CompareTag("Tower") || collider.CompareTag("Ally") || collider.CompareTag("Enemy") || collider.CompareTag("Creep"))
             {
                 listCollider.Add(collider);
             }
@@ -186,12 +206,12 @@ public class AIHeroes : MonoBehaviour
                 timer.Restart();
                 aiSetter.target = objectTarget;
                 anim.SetBool("isAttack", true);
-                anim.SetBool("isMoving", false);
+                anim.SetBool("isMove", false);
             }
             else
             {
                 anim.SetBool("isAttack", false);
-                anim.SetBool("isMoving", true);
+                anim.SetBool("isMove", true);
             }
         }
         timer.Stop();
