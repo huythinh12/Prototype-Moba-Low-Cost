@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
 
     private void Movement(MovementJoystick movementJoystick)
     {
-        character.MovementController.Move(JoystickMath.OxzIndicatorNormalized(JoystickMath.ConvertToOxzIndicator(movementJoystick.LatePoint)));
+        //character.MovementController.Move(JoystickMath.OxzIndicatorNormalized(JoystickMath.ConvertToOxzIndicator(movementJoystick.latePoint)));
     }
 
     private void Stop(MovementJoystick movementJoystick)
