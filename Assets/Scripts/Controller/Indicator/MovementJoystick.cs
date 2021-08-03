@@ -7,7 +7,7 @@ using System;
 public class MovementJoystick : Joystick
 {
     public float MoveThreshold { get { return moveThreshold; } set { moveThreshold = Mathf.Abs(value); } }
-    public Vector3 LatePoint;
+    private Vector3 latePoint;
 
     [SerializeField] private float moveThreshold = 1;
     [SerializeField] private JoystickType joystickType = JoystickType.Fixed;
@@ -27,6 +27,8 @@ public class MovementJoystick : Joystick
         else
             background.gameObject.SetActive(false);
     }
+
+    public Vector3 GetDirectionXZ => new Vector3(latePoint.x, 0, latePoint.y).normalized;
 
     protected override void Start()
     {
@@ -52,12 +54,14 @@ public class MovementJoystick : Joystick
 
         base.OnPointerUp(eventData);
         OnIndicationDone?.Invoke(this);
+
+        latePoint = Vector3.zero;
     }
 
     public override void OnDrag(PointerEventData eventData)
     {
         base.OnDrag(eventData);
-        LatePoint = Direction;
+        latePoint = Direction;
 
         OnIndicationDrag?.Invoke(this);
     }

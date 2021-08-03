@@ -5,6 +5,7 @@ using System;
 using System.Diagnostics;
 using UnityEngine.UI;
 using TMPro;
+using CharacterMechanism.System;
 
 public class GameManager : MonoBehaviour
 {
@@ -19,6 +20,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI ScoreBlueText;
     [SerializeField] TextMeshProUGUI ScoreRedText;
     [HideInInspector] public KDAUI kdaPlayerUI;
+
+    public List<CharacterSystem> RedTowers;
+    public List<CharacterSystem> BlueTowers;
+
 
     void Awake()
     {
