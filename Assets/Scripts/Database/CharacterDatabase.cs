@@ -37,4 +37,6 @@ public class CharacterDatabase : MonoBehaviour
 
         throw new System.Exception("Character: " + characterName + " doesn't exist");
     }
+
+ 
 }
