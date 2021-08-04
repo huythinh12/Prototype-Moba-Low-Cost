@@ -14,7 +14,7 @@ namespace CharacterMechanism.ScriptableObject
         ////////// Attribute //////////
         ///////////////////////////////
 
-        [SerializeField] private ActionTransition[] actionTransitions = null;
+        [SerializeField] public ActionTransition[] actionTransitions = null;
 
         ////////////////////////////
         ////////// Method //////////

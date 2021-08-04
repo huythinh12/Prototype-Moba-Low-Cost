@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using CharacterMechanism.DataBase;
 
+
 namespace CharacterMechanism.System
 {
     /// <summary>
@@ -22,7 +23,7 @@ namespace CharacterMechanism.System
         private Sprite iconNormal;
         private Sprite iconMinimap;
 
-        private TypeCharacter type;
+        private TypeCharacter typeCharacter;
         private HeroClass mainClass;
         private HeroClass subClass;
 
@@ -73,8 +74,48 @@ namespace CharacterMechanism.System
         ////////// Property //////////
         //////////////////////////////
 
+
+
+        public int Level
+        {
+            get
+            {
+                return level;
+            }
+
+            set
+            {
+                level = Mathf.Clamp(value, MinLevel, MaxLevel);
+            }
+        }
+
+        public float HealthCurrent
+        {
+            get
+            {
+                return healthCurrent;
+            }
+
+            set
+            {
+                healthCurrent = Mathf.Clamp(value, 0, HealthMax.Value);
+            }
+        }
+        public float ManaCurrent
+        {
+            get
+            {
+                return manaCurrent;
+            }
+
+            set
+            {
+                manaCurrent = Mathf.Clamp(value, 0, ManaMax.Value);
+            }
+        }
+
         public TeamCharacter GetTeamCharacter { get => team; }
-        public TypeCharacter GetTypeCharacter { get => type; }
+        public TypeCharacter GetTypeCharacter { get => typeCharacter; }
         public CharacterStat HealthMax { get => healthMax; }
         public CharacterStat ManaMax { get => manaMax; }
         public CharacterStat PhysicalDamage { get => physicalDamage; }
@@ -94,6 +135,11 @@ namespace CharacterMechanism.System
         public CharacterStat HealingFactor { get => healingFactor; }
         public CharacterStat RangeAttack { get => rangeAttack; }
 
+        public string Name { get => name; set => name = value; }
+        public string Description { get => description; set => description = value; }
+        public Sprite IconNormal { get => iconNormal; set => iconNormal = value; }
+        public Sprite IconMinimap { get => iconMinimap; set => iconMinimap = value; }
+
         public Profile(ProfileData profileData)
         {
             this.name = profileData.Name;
@@ -106,6 +152,7 @@ namespace CharacterMechanism.System
             this.alphaAbilityName = profileData.AlphaAbilityName;
             this.betaAbilityName = profileData.BetaAbilityName;
             this.ultimateAbilityName = profileData.UltimateAbilityName;
+            this.typeCharacter = profileData.TypeCharacter;
 
             this.healthMax = new CharacterStat(profileData.HealthMax.BaseValue, profileData.HealthMax.PerLevelValue);
             this.manaMax = new CharacterStat(profileData.ManaMax.BaseValue, profileData.ManaMax.PerLevelValue);
@@ -130,6 +177,68 @@ namespace CharacterMechanism.System
         public void SetTeam(TeamCharacter team)
         {
             this.team = team;
+        }
+
+        public void ResetHealthCurrent()
+        {
+            HealthCurrent = HealthMax.Value;
+        }
+
+        public void ResetManaCurrent()
+        {
+            ManaCurrent = ManaMax.Value;
+        }
+
+        //public static float GetFinalPercentDamageTaken(DamageType damageType, CharacterSystem characterDealDamage, CharacterSystem characterTakeDamage)
+        //{
+        //float beginPercent = 1f;
+
+        //float defense = 0f;
+        //float pierce = 0f;
+
+        ////switch (damageType)
+        ////{
+        ////    //case DamageType.Physical:
+        ////    //    {
+        ////    //        defense = characterTakeDamage.Stats.PhysicalDefense.Value;
+        ////    //        pierce = characterDealDamage.Stats.PhysicalPierce.Value;
+        ////    //        break;
+        ////    //    }
+        ////    //case DamageType.Magic:
+        ////    //    {
+        ////    //        defense = characterTakeDamage.Stats.MagicDefense.Value;
+        ////    //        pierce = characterDealDamage.Stats.MagicPierce.Value;
+        ////    //        break;
+        ////    //    }
+        ////}
+
+        //float defenseAffterPierce = defense - pierce;
+        //defenseAffterPierce = defenseAffterPierce < MinDefenseAffterPierce ? MinDefenseAffterPierce : defenseAffterPierce;
+        //float defensePercent = defenseAffterPierce / (defenseAffterPierce + DefenseConstant);
+
+        //float takenDamageFactor = characterTakeDamage.Stats.DamageTakenFactor.Value;
+        //float dealDamageFactor = characterDealDamage.Stats.DamageDealFactor.Value;
+        //float reduceDamagePercent = takenDamageFactor / dealDamageFactor;
+
+        //float finalPercentDamageTaken = (beginPercent - (defensePercent)) * reduceDamagePercent;
+        //finalPercentDamageTaken = finalPercentDamageTaken < MinFinalPercentDamageTaken ? MinFinalPercentDamageTaken : finalPercentDamageTaken;
+
+        //return finalPercentDamageTaken;
+        //}
+
+        public float GetPercentHealth(float percentMaxHealth, StatPercentType statPercentType)
+        {
+            switch (statPercentType)
+            {
+                case StatPercentType.Max:
+                    return percentMaxHealth * HealthMax.Value;
+                case StatPercentType.Current:
+                    return percentMaxHealth * HealthCurrent;
+                case StatPercentType.Lost:
+                    return percentMaxHealth * (HealthMax.Value - HealthCurrent);
+                default:
+                    return 0f;
+            }
         }
     }
 }

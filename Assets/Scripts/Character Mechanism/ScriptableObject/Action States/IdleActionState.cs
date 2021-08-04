@@ -14,7 +14,7 @@ namespace CharacterMechanism.ScriptableObject
     {
         public override void BeginAction(CharacterSystem characterSystem, InputInformation inputInformation)
         {
-            
+            characterSystem.GetAnimator.SetBool("isMove", false);
         }
 
         public override void EndAction(CharacterSystem characterSystem, InputInformation inputInformation)

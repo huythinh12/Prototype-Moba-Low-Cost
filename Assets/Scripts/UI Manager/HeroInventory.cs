@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using CharacterMechanism.System;
 
 public class HeroInventory : MonoBehaviour
 {
     public HeroSlot heroSlot;
-
 
     // Start is called before the first frame update
     void Start()
@@ -14,8 +14,8 @@ public class HeroInventory : MonoBehaviour
 
     private void AddCharacterToListUI()
     {
-        List<Character> allCharacters = new List<Character>();
-        foreach (var character in CharacterDatabase.Instance.Database)
+        List<CharacterSystem> allCharacters = new List<CharacterSystem>();
+        foreach (var character in CharacterSystemDatabase.Instance.Database)
         {
             allCharacters.Add(character.Value);
         }

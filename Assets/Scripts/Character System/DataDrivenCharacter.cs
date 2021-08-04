@@ -1,30 +1,36 @@
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEditor;
+//using System.Collections.Generic;
+//using UnityEngine;
+//using CharacterMechanism.DataBase;
+//using CharacterMechanism.System;
+//using UnityEditor;
 
-[CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/SpawnManagerScriptableObject", order = 1)]
-public class DataDrivenCharacter : ScriptableObject
-{
-    //[MenuItem("Battle/Character/Create New")]
-    //public static void CreateCharacter()
-    //{
-    //    AssetUtility.CreateAsset<DataDrivenCharacter>("Characters");
-    //}
+//[CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/SpawnManagerScriptableObject", order = 1)]
+//public class DataDrivenCharacter : ScriptableObject
+//{
+//    //[MenuItem("Battle/Character/Create New")]
+//    //public static void CreateCharacter()
+//    //{
+//    //    AssetUtility.CreateAsset<DataDrivenCharacter>("Characters");
+//    //}
 
-    [SerializeField]
-    CharacterInformation characterInformation;
-    [SerializeField]
-    CharacterStats characterStats;
-    [SerializeField]
-    CharacterSound characterSound;
+//    [SerializeField]
+//    ProfileData profileData;
+//    [SerializeField]
+//    CharacterSound characterSound;
 
-    public DataDrivenCharacter()
-    {
-    }
+//    public DataDrivenCharacter()
+//    {
+//    }
 
-    public static Character Parse(DataDrivenCharacter rawCharacter)
-    {
-        Character character = new Character(rawCharacter.characterInformation, rawCharacter.characterStats,rawCharacter.characterSound);
-        return character;
-    }
-}
+//    //public static Character Parse(DataDrivenCharacter rawCharacter)
+//    //{
+//    //    Character character = new Character(rawCharacter.characterInformation, rawCharacter.characterStats,rawCharacter.characterSound);
+//    //    return character;
+//    //}
+
+//    //public static CharacterSystem Parse(DataDrivenCharacter rawCharacterSystem)
+//    //{
+//    //    CharacterSystem characterSystem = new CharacterSystem(rawCharacterSystem.profileData);
+//    //    return characterSystem;
+//    //}
+//}

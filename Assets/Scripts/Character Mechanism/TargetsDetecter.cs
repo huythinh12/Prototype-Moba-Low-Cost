@@ -149,7 +149,7 @@ namespace CharacterMechanism.System
             if (charactersInDetectRange.Count == 0)
             {
                 //return GameManager.Instance.BlueTowers[0].transform;
-                return GameObject.Find("Roker Player").transform;
+                return GameObject.Find("Oliver (Red)").transform;
             }
             else
             {

@@ -1,14 +1,15 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.UI;
+using CharacterMechanism.System;
 
 public class HeroSlot : MonoBehaviour
 {
     public bool hasCharacter = false;
     private Button btnSelectHero;
-    public Character character;
+    public CharacterSystem characterSystem;
     public static event Action<string> OnHeroNameSelected;
-    public static event Action<GameObject,Character> OnHeroSelected;
+    public static event Action<GameObject, CharacterSystem> OnHeroSelected;
     private Image icon;
     // Start is called before the first frame update
     void Start()
@@ -20,17 +21,14 @@ public class HeroSlot : MonoBehaviour
     //Todo : when choose hero do stuff
     public void SelectHero()
     {
-        OnHeroNameSelected?.Invoke(character.information.name);
-        OnHeroSelected?.Invoke(gameObject,character);
+        OnHeroNameSelected?.Invoke(characterSystem.GetProfile.Name);
+        OnHeroSelected?.Invoke(gameObject, characterSystem);
     }
-    public void AddHero(Character character)
+    public void AddHero(CharacterSystem characterSystem)
     {
-        if (true)
-        {
-            this.character = character;
-            icon = GetComponent<Image>();
-            icon.sprite = character.information.icon;
-        }
+        this.characterSystem = characterSystem;
+        icon = GetComponent<Image>();
+        icon.sprite = characterSystem.GetProfile.IconNormal;
     }
 
     public void Clear()

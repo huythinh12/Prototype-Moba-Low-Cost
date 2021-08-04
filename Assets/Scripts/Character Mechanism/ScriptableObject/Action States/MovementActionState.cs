@@ -14,6 +14,8 @@ namespace CharacterMechanism.ScriptableObject
     [CreateAssetMenu(menuName = "CharacterMechanism/Example/ActionState/Movement")]
     public sealed class MovementActionState : AActionState
     {
+        static readonly float BaseValueMultiplierAnimationMove = 3.5f;
+
         public override void BeginAction(CharacterSystem characterSystem, InputInformation inputInformation)
         {
         }
@@ -22,8 +24,10 @@ namespace CharacterMechanism.ScriptableObject
         {
             characterSystem.GetRigidbody.velocity = Vector3.zero;
 
-            characterSystem.GetAnimator.SetBool("isMove", false);
-            characterSystem.GetAnimator.SetFloat("movementSpeed", 0f);
+            //characterSystem.GetAnimator.SetBool("isMove", false);
+            //characterSystem.GetAnimator.SetFloat("movementSpeed", 0f);
+            //characterSystem.GetAnimator.SetBool("isMove", false);
+
         }
 
         public override void UpdateAction(CharacterSystem characterSystem, InputInformation inputInformation)
@@ -31,16 +35,8 @@ namespace CharacterMechanism.ScriptableObject
             characterSystem.transform.LookAt(characterSystem.transform.position + inputInformation.MovementDirection);
             characterSystem.GetRigidbody.velocity = inputInformation.MovementDirection * characterSystem.GetProfile.MovementSpeed.Value;
 
-
-            if (characterSystem.GetRigidbody.velocity == Vector3.zero)
-            {
-                characterSystem.GetAnimator.SetBool("isMove", false);
-            }
-            else
-            {
-                characterSystem.GetAnimator.SetBool("isMove", true);
-                characterSystem.GetAnimator.SetFloat("movementSpeed", characterSystem.GetProfile.MovementSpeed.Value / 3f);
-            }
+            characterSystem.GetAnimator.SetBool("isMove", true);
+            characterSystem.GetAnimator.SetFloat("movementSpeed", characterSystem.GetProfile.MovementSpeed.Value / BaseValueMultiplierAnimationMove);
         }
     }
 }

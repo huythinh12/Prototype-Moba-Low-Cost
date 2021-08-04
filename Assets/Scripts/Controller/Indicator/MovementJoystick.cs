@@ -2,10 +2,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System;
+using CharacterMechanism.System;
 
 [DefaultExecutionOrder(1000)]
 public class MovementJoystick : Joystick
 {
+    static string joystickPrefabPath = "Prefabs/Controller/Movement Joystick";
+
     public float MoveThreshold { get { return moveThreshold; } set { moveThreshold = Mathf.Abs(value); } }
     private Vector3 latePoint;
 
@@ -15,6 +18,13 @@ public class MovementJoystick : Joystick
     private Vector2 fixedPosition = Vector2.zero;
     public event Action<MovementJoystick> OnIndicationDrag;
     public event Action<MovementJoystick> OnIndicationDone;
+
+    static public MovementJoystick Create(CharacterSystem characterSystem, Canvas canvasParent)
+    {
+        MovementJoystick movementJoystick = Instantiate(Resources.Load<MovementJoystick>(joystickPrefabPath), canvasParent.transform);
+        return movementJoystick;
+    }
+
 
     public void SetMode(JoystickType joystickType)
     {

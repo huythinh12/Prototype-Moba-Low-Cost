@@ -20,7 +20,7 @@ namespace CharacterMechanism.ScriptableObject
 
         public override void UpdateAction(CharacterSystem characterSystem, InputInformation inputInformation)
         {
-            Debug.Log("Attack Ation State");
+            characterSystem.transform.LookAt(characterSystem.GetTargetsDetecter.GetNextTransformTarget());
         }
     }
 }

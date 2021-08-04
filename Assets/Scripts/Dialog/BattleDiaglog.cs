@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using CharacterMechanism.System;
 using DG.Tweening;
 
 [RequireComponent(typeof(AudioSource))]
@@ -51,153 +52,155 @@ public class BattleDiaglog : MonoBehaviour
     }
 
 
-    public static string GetTextKill(Character characterKiller, Character characterWasKilled, int sumKill)
+    public static string GetTextKill(CharacterSystem characterKiller, CharacterSystem characterWasKilled, int sumKill)
     {
-        if (sumKill == 1)
-        {
-            return FristBlood;
-        }
-        else if (characterKiller.History.AmountHeroKilledContinual >= 2)
-        {
-            switch (characterKiller.History.AmountHeroKilledContinual)
-            {
-                case 2:
-                    return DoubleKill;
-                case 3:
-                    return TripleKill;
-                case 4:
-                    return QuadraKill;
-                default:
-                    return PentaKill;
-            }
-        }
-        else if (characterWasKilled.History.AmountHeroKilledDiscontinuity >= 3)
-        {
-            return ShutDown;
+        //if (sumKill == 1)
+        //{
+        //    return FristBlood;
+        //}
+        //else if (characterKiller.History.AmountHeroKilledContinual >= 2)
+        //{
+        //    switch (characterKiller.History.AmountHeroKilledContinual)
+        //    {
+        //        case 2:
+        //            return DoubleKill;
+        //        case 3:
+        //            return TripleKill;
+        //        case 4:
+        //            return QuadraKill;
+        //        default:
+        //            return PentaKill;
+        //    }
+        //}
+        //else if (characterWasKilled.History.AmountHeroKilledDiscontinuity >= 3)
+        //{
+        //    return ShutDown;
 
-        }
-        else if (characterKiller.History.AmountHeroKilledDiscontinuity <= 2)
-        {
-            return Kill;
-        }
-        else if (characterKiller.History.AmountHeroKilledDiscontinuity >= 2)
-        {
-            switch (characterKiller.History.AmountHeroKilledDiscontinuity)
-            {
-                case 3:
-                    return KillingSpree;
-                case 4:
-                    return Rampage;
-                case 5:
-                    return Unstoppable;
-                case 6:
-                    return Dominating;
-                case 7:
-                    return Godlike;
-                default:
-                    return Legendary;
-            }
-        }
-        else
-        {
-            return "ERROR!";
-        }
+        //}
+        //else if (characterKiller.History.AmountHeroKilledDiscontinuity <= 2)
+        //{
+        //    return Kill;
+        //}
+        //else if (characterKiller.History.AmountHeroKilledDiscontinuity >= 2)
+        //{
+        //    switch (characterKiller.History.AmountHeroKilledDiscontinuity)
+        //    {
+        //        case 3:
+        //            return KillingSpree;
+        //        case 4:
+        //            return Rampage;
+        //        case 5:
+        //            return Unstoppable;
+        //        case 6:
+        //            return Dominating;
+        //        case 7:
+        //            return Godlike;
+        //        default:
+        //            return Legendary;
+        //    }
+        //}
+        //else
+        //{
+        //    return "ERROR!";
+        //}
+
+        return "Tam thoi!";
     }
 
 
-    public void ShowKillDialog(Character characterWasKilled)
+    public void ShowKillDialog(CharacterSystem characterWasKilled)
     {
-        if (characterWasKilled.information.typeCharacter == TypeCharacter.Hero)
-        {
-            gameObject.SetActive(true);
+        //if (characterWasKilled.information.typeCharacter == TypeCharacter.Hero)
+        //{
+        //    gameObject.SetActive(true);
 
 
-            Character characterKiller = characterWasKilled.History.GetCharacterKill();
+        //    Character characterKiller = characterWasKilled.History.GetCharacterKill();
 
-            iconKiller.sprite = characterKiller.information.icon;
-            iconDeadman.sprite = characterWasKilled.information.icon;
+        //    iconKiller.sprite = characterKiller.information.icon;
+        //    iconDeadman.sprite = characterWasKilled.information.icon;
 
-            switch (characterWasKilled.team)
-            {
-                case TeamCharacter.Blue:
-                    background.sprite = Resources.Load<Sprite>(imagePathBackgroundRed);
-                    borderDeadman.sprite = Resources.Load<Sprite>(imagePathBorderBlue);
-                    borderKiller.sprite = Resources.Load<Sprite>(imagePathBorderRed);
-                    break;
-                case TeamCharacter.Natural:
-                case TeamCharacter.Red:
-                    background.sprite = Resources.Load<Sprite>(imagePathBackgroundBlue);
-                    borderDeadman.sprite = Resources.Load<Sprite>(imagePathBorderRed);
-                    borderKiller.sprite = Resources.Load<Sprite>(imagePathBorderBlue);
-                    break;
-            }
+        //    switch (characterWasKilled.team)
+        //    {
+        //        case TeamCharacter.Blue:
+        //            background.sprite = Resources.Load<Sprite>(imagePathBackgroundRed);
+        //            borderDeadman.sprite = Resources.Load<Sprite>(imagePathBorderBlue);
+        //            borderKiller.sprite = Resources.Load<Sprite>(imagePathBorderRed);
+        //            break;
+        //        case TeamCharacter.Natural:
+        //        case TeamCharacter.Red:
+        //            background.sprite = Resources.Load<Sprite>(imagePathBackgroundBlue);
+        //            borderDeadman.sprite = Resources.Load<Sprite>(imagePathBorderRed);
+        //            borderKiller.sprite = Resources.Load<Sprite>(imagePathBorderBlue);
+        //            break;
+        //    }
 
-            sumKill++;
+        //    sumKill++;
 
-            string textDialog = BattleDiaglog.GetTextKill(characterKiller, characterWasKilled, sumKill);
-
-
-            textKill.text = textDialog;
-            AlignPosX(iconKiller, -GetAllainBasedOnTextKill(textDialog));
-            AlignPosX(iconDeadman, GetAllainBasedOnTextKill(textDialog));
-
-            PlaySoundDialogKill(textDialog, characterKiller.team);
+        //    string textDialog = BattleDiaglog.GetTextKill(characterKiller, characterWasKilled, sumKill);
 
 
+        //    textKill.text = textDialog;
+        //    AlignPosX(iconKiller, -GetAllainBasedOnTextKill(textDialog));
+        //    AlignPosX(iconDeadman, GetAllainBasedOnTextKill(textDialog));
 
-            timeHide = (float)GameManager.Instance.BattleTime.Elapsed.TotalSeconds + 2.85f;
+        //    PlaySoundDialogKill(textDialog, characterKiller.team);
 
-            StartCoroutine(HideKillDialog());
-        }
+
+
+        //    timeHide = (float)GameManager.Instance.BattleTime.Elapsed.TotalSeconds + 2.85f;
+
+        //    StartCoroutine(HideKillDialog());
+
     }
 
     public IEnumerator HideKillDialog()
     {
         yield return new WaitForSeconds(3f);
 
-        if (timeHide <= (float)GameManager.Instance.BattleTime.Elapsed.TotalSeconds)
-        {
-            gameObject.SetActive(false);
-        }
+        //if (timeHide <= (float)GameManager.Instance.BattleTime.Elapsed.TotalSeconds)
+        //{
+        //    gameObject.SetActive(false);
+        //}
     }
 
-    private void PlaySoundDialogKill(string textKill, TeamCharacter teamCharacterWasKiller)
-    {
-        string pathSound = GetSoundKillPath(textKill, teamCharacterWasKiller);
-        audioSource.PlayOneShot(Resources.Load<AudioClip>(pathSound));
-    }
+    //private void PlaySoundDialogKill(string textKill, TeamCharacter teamCharacterWasKiller)
+    //{
+    //    string pathSound = GetSoundKillPath(textKill, teamCharacterWasKiller);
+    //    audioSource.PlayOneShot(Resources.Load<AudioClip>(pathSound));
+    //}
 
     private float GetAllainBasedOnTextKill(string textKill)
     {
-        switch (textKill)
-        {
-            case FristBlood:
-                return 92f;
-            case DoubleKill:
-                return 95f;
-            case TripleKill:
-                return 89f;
-            case QuadraKill:
-                return 98.5f;
-            case PentaKill:
-                return 89f;
-            case ShutDown:
-                return 97f;
-            case Kill:
-                return 56f;
-            case KillingSpree:
-                return 105f;
-            case Rampage:
-                return 89f;
-            case Unstoppable:
-                return 105;
-            case Dominating:
-                return 98.5f;
-            case Godlike:
-                return 80f;
-            case Legendary:
-                return 97f;
-        }
+        //switch (textKill)
+        //{
+        //    case FristBlood:
+        //        return 92f;
+        //    case DoubleKill:
+        //        return 95f;
+        //    case TripleKill:
+        //        return 89f;
+        //    case QuadraKill:
+        //        return 98.5f;
+        //    case PentaKill:
+        //        return 89f;
+        //    case ShutDown:
+        //        return 97f;
+        //    case Kill:
+        //        return 56f;
+        //    case KillingSpree:
+        //        return 105f;
+        //    case Rampage:
+        //        return 89f;
+        //    case Unstoppable:
+        //        return 105;
+        //    case Dominating:
+        //        return 98.5f;
+        //    case Godlike:
+        //        return 80f;
+        //    case Legendary:
+        //        return 97f;
+        //}
 
         return 0;
     }

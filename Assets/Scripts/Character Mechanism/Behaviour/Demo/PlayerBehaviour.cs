@@ -54,5 +54,10 @@ namespace CharacterMechanism.Behaviour
         {
             inputInformation.MovementDirection = movementJoystick.GetDirectionXZ;
         }
+
+        public void SetMovementJoystick(MovementJoystick movementJoystick)
+        {
+            this.movementJoystick = movementJoystick;
+        }
     }
 }

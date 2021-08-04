@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
+using CharacterMechanism.System;
 
 public class PickHeroHandler : MonoBehaviour
 {
@@ -38,24 +39,24 @@ public class PickHeroHandler : MonoBehaviour
 
     }
 
-    private void HandleSelectedHero(GameObject iconUI, Character character)
+    private void HandleSelectedHero(GameObject iconUI, CharacterSystem characterSystem)
     {
         informationBackground[0].SetActive(true);
-        SetMainCharacterToUI(character, 0);
+        SetMainCharacterToUI(characterSystem, 0);
     }
 
-    private void SetMainCharacterToUI(Character character, int index)
+    private void SetMainCharacterToUI(CharacterSystem characterSystem, int index)
     {
         foreach (Transform item in informationBackground[index].transform)
         {
             if (item.GetComponent<TextMeshProUGUI>())
             {
-                DataSelected.Instance.nameHero.Add(character.information.name);
-                item.GetComponent<TextMeshProUGUI>().text = character.information.name;
+                DataSelected.Instance.nameHero.Add(characterSystem.GetProfile.Name);
+                item.GetComponent<TextMeshProUGUI>().text = characterSystem.GetProfile.Name;
             }
             else if (item.transform.name.StartsWith("Avatar"))
             {
-                item.GetComponent<Image>().sprite = character.information.icon;
+                item.GetComponent<Image>().sprite = characterSystem.GetProfile.IconNormal;
             }
         }
     }
@@ -69,8 +70,8 @@ public class PickHeroHandler : MonoBehaviour
     private void HandleReadyButton()
     {
         //add list character data
-        List<Character> allCharacters = new List<Character>();
-        foreach (var character in CharacterDatabase.Instance.Database)
+        List<CharacterSystem> allCharacters = new List<CharacterSystem>();
+        foreach (var character in CharacterSystemDatabase.Instance.Database)
         {
             allCharacters.Add(character.Value);
         }
@@ -89,9 +90,9 @@ public class PickHeroHandler : MonoBehaviour
 
     }
 
-    private void RandomPickHeroAI(List<Character> allCharacters,int index)
+    private void RandomPickHeroAI(List<CharacterSystem> allCharacters,int index)
     {
-        var random = Random.RandomRange(0, 6);
+        var random = Random.Range(0, 6);
         for (int i = 0; i < allCharacters.Count; i++)
         {
             if (random == i)

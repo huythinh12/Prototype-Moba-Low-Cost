@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using CharacterMechanism.Information;
 using CharacterMechanism.ScriptableObject;
 using CharacterMechanism.Attribute;
 using CharacterMechanism.DataBase;
+using CharacterMechanism.Behaviour;
 using System;
 
 namespace CharacterMechanism.System
@@ -13,7 +15,10 @@ namespace CharacterMechanism.System
     /// <summary>
     /// Class to create a character system
     /// </summary>
-    [DisallowMultipleComponent, RequireComponent(typeof(Rigidbody))]
+    [DisallowMultipleComponent]
+    [RequireComponent(typeof(Rigidbody), typeof(BoxCollider))]
+    [RequireComponent(typeof(Animator), typeof(AudioSource))]
+    [DefaultExecutionOrder(200)]
     public class CharacterSystem : MonoBehaviour
     {
         ///////////////////////////////
@@ -23,9 +28,15 @@ namespace CharacterMechanism.System
         ///////////////////////////////
         ////////// Component //////////
 
+        ////////// In Object //////////
+
         private Animator animator = null;
-        new private Collider collider = null;
+        new private BoxCollider collider = null;
         new private Rigidbody rigidbody = null;
+
+        //////// In Child Object ////////
+
+        //Add StatBar
         private TargetsDetecter targetsDetecter = null;
 
         /////////////////////////////
@@ -33,11 +44,12 @@ namespace CharacterMechanism.System
 
         [Header("Profile")]
         [SerializeField] private Profile profile = null;
+        private ProfileData profileData;
 
         ////////////////////////////////////////////////
         ////////// Action State Configuration //////////
 
-        [SerializeField] private AActionState startActionState = null;
+        [SerializeField] private AActionState startActionState;
 
         //////////////////////////////////////////////
         ////////// Action State Information //////////
@@ -67,9 +79,14 @@ namespace CharacterMechanism.System
         ///////////////////////////////
         ////////// Component //////////
 
+        ////////// In Object //////////
+
         public Animator GetAnimator => animator;
-        public Collider GetCollider => collider;
+        public BoxCollider GetCollider => collider;
         public Rigidbody GetRigidbody => rigidbody;
+
+        //////// In Child Object ////////
+
         public TargetsDetecter GetTargetsDetecter => targetsDetecter;
 
         /////////////////////////////
@@ -105,9 +122,16 @@ namespace CharacterMechanism.System
         /////// Constructor ////////
         ////////////////////////////
 
+        public CharacterSystem()
+        {
+            this.profileData = new ProfileData();
+            profile = new Profile(this.profileData);
+        }
+
         public CharacterSystem(ProfileData profileData)
         {
-            profile = new Profile(profileData);
+            this.profileData = profileData;
+            profile = new Profile(this.profileData);
         }
 
         ///////////////////////////////
@@ -131,6 +155,13 @@ namespace CharacterMechanism.System
         //////////////////////////////
         ////////// Callback //////////
 
+
+        protected void LoadDataFromDataBase(string nameID)
+        {
+            CharacterSystem characterSystemFormDataBase = CharacterSystemDatabase.Instance.GetCharacter(nameID);
+            this.profile = characterSystemFormDataBase.GetProfile;
+        }
+
         /// <summary>
         /// Load all the components to drive the action
         /// </summary>
@@ -140,10 +171,12 @@ namespace CharacterMechanism.System
         protected void LoadComponents()
         {
             this.animator = GetComponent<Animator>();
-            this.collider = GetComponent<Collider>();
+            this.collider = GetComponent<BoxCollider>();
             this.rigidbody = GetComponent<Rigidbody>();
 
             this.targetsDetecter = TargetsDetecter.Create(this);
+
+            this.profile = new Profile(new ProfileData());
         }
 
         /// <summary>
@@ -155,6 +188,8 @@ namespace CharacterMechanism.System
         protected void InitializeComponents()
         {
             this.collider.isTrigger = true;
+            this.collider.center = new Vector3(0f, 0.8989141f, 0f);
+            this.collider.size = new Vector3(1f, 1.791575f, 1f);
 
             this.rigidbody.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionY;
             this.rigidbody.useGravity = false;
@@ -165,9 +200,10 @@ namespace CharacterMechanism.System
 
         protected virtual void Awake()
         {
-            this.AttemptToLoadStartActionState();
             this.LoadComponents();
             this.InitializeComponents();
+
+            this.AttemptToLoadStartActionState();
         }
 
         protected virtual void FixedUpdate()
@@ -199,12 +235,10 @@ namespace CharacterMechanism.System
         /// </remarks>
         private void AttemptToLoadStartActionState()
         {
+            this.startActionState = Resources.Load<AActionState>("Character Behaviors/Action States/IdleState");
             this.currentActionState = this.startActionState;
-            if (this.currentActionState == null)
-            {
-                Debug.LogError("There is no start action state!", gameObject);
-                enabled = false;
-            }
+
+            //this.triggerActionTransitions = startActionState.actionTransitions;
         }
 
         /// <summary>
@@ -231,16 +265,20 @@ namespace CharacterMechanism.System
         /// </remarks>
         private bool AttemptToTriggerActionTransition()
         {
-            foreach (var triggerActionTransition in this.triggerActionTransitions)
+            if (this.triggerActionTransitions != null)
             {
-                var nextActionState = triggerActionTransition.Simulate(this, this.inputInformation);
-
-                if (nextActionState)
+                foreach (var triggerActionTransition in this.triggerActionTransitions)
                 {
-                    this.TransitToNextActionState(nextActionState);
-                    return (true);
+                    var nextActionState = triggerActionTransition.Simulate(this, this.inputInformation);
+
+                    if (nextActionState)
+                    {
+                        this.TransitToNextActionState(nextActionState);
+                        return (true);
+                    }
                 }
             }
+
             return (false);
         }
 
@@ -258,6 +296,57 @@ namespace CharacterMechanism.System
             {
                 Debug.Log(this.previousActionState.GetType().Name + " --> " + this.currentActionState.GetType().Name, gameObject);
             }
+        }
+
+        static public CharacterSystem Create(string nameID, TeamCharacter teamCharacter, TypeBehavior typeBehavior)
+        {
+            CharacterSystem characterSystem = Instantiate(Resources.Load<CharacterSystem>("Character Models/" + nameID));
+            characterSystem.LoadDataFromDataBase(nameID);
+            characterSystem.GetProfile.SetTeam(teamCharacter);
+            characterSystem.gameObject.name = string.Format("{0} ({1})", nameID, teamCharacter.ToString());
+            characterSystem.AddBehaviorBasedOnType(typeBehavior);
+
+            return characterSystem;
+        }
+
+        private void AddBehaviorBasedOnType(TypeBehavior typeBehavior)
+        {
+            switch (typeBehavior)
+            {
+                case TypeBehavior.Player:
+                    StartCoroutine(AddPlayerBehaviorAffterSeconds(1f));
+                    break;
+                case TypeBehavior.Computer:
+                    StartCoroutine(AddAIBehaviorAffterSeconds(1f));
+                    break;
+            }
+        }
+
+        private IEnumerator AddPlayerBehaviorAffterSeconds(float seconds)
+        {
+            CameraFollow.Create(this);
+
+            yield return new WaitForSeconds(seconds);
+
+            GameObject controlPanel = new GameObject(string.Format("Control Panel - {0}", this.gameObject.name),
+                typeof(Canvas), typeof(CanvasScaler), typeof(GraphicRaycaster));
+            controlPanel.GetComponent<Canvas>().renderMode = RenderMode.ScreenSpaceOverlay;
+            controlPanel.GetComponent<CanvasScaler>().uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
+            MovementJoystick movementJoystick = MovementJoystick.Create(this, controlPanel.GetComponent<Canvas>());
+
+            this.gameObject.AddComponent<PlayerBehaviour>().SetMovementJoystick(movementJoystick);
+        }
+
+        private IEnumerator AddAIBehaviorAffterSeconds(float seconds)
+        {
+            yield return new WaitForSeconds(seconds);
+            this.gameObject.AddComponent<FollowAIBehaviour>();
+        }
+
+        public CharacterSystem Clone()
+        {
+            var characterSystem = new CharacterSystem(this.profileData);
+            return characterSystem;
         }
     }
 }

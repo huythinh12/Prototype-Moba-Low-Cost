@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using UnityEngine;
+using CharacterMechanism.System;
 
 [Serializable]
 public class CharacterStat
@@ -162,15 +163,15 @@ public class CharacterStat
         return Value * percent;
     }
 
-    public void SubscribeOnLevelChange(Character character)
+    public void SubscribeOnLevelChange(CharacterSystem characterSystem)
     {
-        character.OnLevelChanged += SetLevel;
+        characterSystem.OnLevelChange += SetLevel;
     }
 
-    public void SetLevel(int level)
+    public void SetLevel(CharacterSystem characterSystem)
     {
         isModified = true;
-        this.Level = level;
+        this.Level = characterSystem.GetProfile.Level;
     }
 
 }
