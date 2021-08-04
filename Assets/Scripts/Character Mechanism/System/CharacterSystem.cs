@@ -4,6 +4,7 @@ using UnityEngine;
 using CharacterMechanism.Information;
 using CharacterMechanism.ScriptableObject;
 using CharacterMechanism.Attribute;
+using CharacterMechanism.DataBase;
 using System;
 
 namespace CharacterMechanism.System
@@ -98,6 +99,16 @@ namespace CharacterMechanism.System
         /// Return the input information of the system to control the action
         /// </summary>
         public InputInformation InputInformation => inputInformation;
+
+
+        ////////////////////////////
+        /////// Constructor ////////
+        ////////////////////////////
+
+        public CharacterSystem(ProfileData profileData)
+        {
+            profile = new Profile(profileData);
+        }
 
         ///////////////////////////////
         /////////// Event /////////////

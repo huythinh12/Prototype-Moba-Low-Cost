@@ -54,7 +54,7 @@ namespace CharacterMechanism.Behaviour
         protected override void ConfigureNavMeshAgent()
         {
             base.ConfigureNavMeshAgent();
-            this.navMeshAgent.stoppingDistance = characterSystem.GetProfile.RangeAttack;
+            this.navMeshAgent.stoppingDistance = characterSystem.GetProfile.RangeAttack.Value;
         }
 
         protected override void InitializeInformation()

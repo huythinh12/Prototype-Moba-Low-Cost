@@ -13,7 +13,7 @@ namespace CharacterMechanism.ScriptableObject
         {
             foreach (var characterTarget in characterSystem.GetTargetsDetecter.CharactersInDetectRange)
             {
-                if (Vector3.Distance(characterSystem.transform.position, characterTarget.transform.position) <= characterSystem.GetProfile.RangeAttack)
+                if (Vector3.Distance(characterSystem.transform.position, characterTarget.transform.position) <= characterSystem.GetProfile.RangeAttack.Value)
                 {
                     return true;
                 }

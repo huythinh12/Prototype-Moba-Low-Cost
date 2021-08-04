@@ -29,7 +29,7 @@ namespace CharacterMechanism.ScriptableObject
         public override void UpdateAction(CharacterSystem characterSystem, InputInformation inputInformation)
         {
             characterSystem.transform.LookAt(characterSystem.transform.position + inputInformation.MovementDirection);
-            characterSystem.GetRigidbody.velocity = inputInformation.MovementDirection * characterSystem.GetProfile.MovementSpeed;
+            characterSystem.GetRigidbody.velocity = inputInformation.MovementDirection * characterSystem.GetProfile.MovementSpeed.Value;
 
 
             if (characterSystem.GetRigidbody.velocity == Vector3.zero)
@@ -39,7 +39,7 @@ namespace CharacterMechanism.ScriptableObject
             else
             {
                 characterSystem.GetAnimator.SetBool("isMove", true);
-                characterSystem.GetAnimator.SetFloat("movementSpeed", characterSystem.GetProfile.MovementSpeed / 3f);
+                characterSystem.GetAnimator.SetFloat("movementSpeed", characterSystem.GetProfile.MovementSpeed.Value / 3f);
             }
         }
     }
