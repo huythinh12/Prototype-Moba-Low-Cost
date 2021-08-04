@@ -10,8 +10,15 @@ public class CharacterDatabase : MonoBehaviour
 
     void Awake()
     {
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
 
         LoadCharacterData();
     }
@@ -38,5 +45,5 @@ public class CharacterDatabase : MonoBehaviour
         throw new System.Exception("Character: " + characterName + " doesn't exist");
     }
 
- 
+
 }

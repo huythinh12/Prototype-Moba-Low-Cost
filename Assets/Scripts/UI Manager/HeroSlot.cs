@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,36 +10,30 @@ public class HeroSlot : MonoBehaviour
     public bool hasCharacter = false;
     private Button btnSelectHero;
     public Character character;
+    public static event Action<string> OnHeroNameSelected;
+    public static event Action<GameObject,Character> OnHeroSelected;
     private Image icon;
     // Start is called before the first frame update
     void Start()
     {
-        icon = GetComponent<Image>();
-
-        //btnSelectHero.onClick.AddListener(SelectHero);
+        btnSelectHero = GetComponent<Button>();
+        btnSelectHero.onClick.AddListener(SelectHero);
     }
 
     //Todo : when choose hero do stuff
     public void SelectHero()
     {
-
-    }
-    //cái này để test thôi
-    public void UpdateUISlot()
-    {
-
-        icon.sprite = character.information.icon;
+        OnHeroNameSelected?.Invoke(character.information.name);
+        OnHeroSelected?.Invoke(gameObject,character);
     }
     public void AddHero(Character character)
     {
-        if (character)
+        if (true)
         {
             this.character = character;
-
-            this.character.information.name = character.information.name;
-            icon.sprite = character.information.icon as Sprite;
+            icon = GetComponent<Image>();
+            icon.sprite = character.information.icon;
         }
-
     }
 
     public void Clear()
