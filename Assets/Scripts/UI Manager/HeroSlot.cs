@@ -1,12 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System;
+﻿using System;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class HeroSlot : MonoBehaviour
 {
-    public int number = 0;
     public bool hasCharacter = false;
     private Button btnSelectHero;
     public Character character;
