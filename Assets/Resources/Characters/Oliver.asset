@@ -16,7 +16,7 @@ MonoBehaviour:
     Name: Oliver
     Description: 
     IconNormal: {fileID: 21300000, guid: 885bb26333b45554782589c6ac9e387b, type: 3}
-    IconMinimap: {fileID: 21300000, guid: 885bb26333b45554782589c6ac9e387b, type: 3}
+    IconMinimap: {fileID: 21300000, guid: db39aa38e243b0846ac70f79f7509c30, type: 3}
     TypeCharacter: 1
     MainClass: 4
     SubClass: 4

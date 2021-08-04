@@ -16,7 +16,7 @@ MonoBehaviour:
     Name: Deus
     Description: 
     IconNormal: {fileID: 21300000, guid: 4fa158f0a73e1824b8fe70de2b10bfcc, type: 3}
-    IconMinimap: {fileID: 21300000, guid: 4fa158f0a73e1824b8fe70de2b10bfcc, type: 3}
+    IconMinimap: {fileID: 21300000, guid: 3d914196e7093354384ad4786adb36b8, type: 3}
     TypeCharacter: 1
     MainClass: 0
     SubClass: 0
@@ -61,7 +61,7 @@ MonoBehaviour:
       BaseValue: 0
       PerLevelValue: 0
     MovementSpeed:
-      BaseValue: 0
+      BaseValue: 3.6
       PerLevelValue: 0
     EffectResistance:
       BaseValue: 0
@@ -76,7 +76,7 @@ MonoBehaviour:
       BaseValue: 0
       PerLevelValue: 0
     RangeAttack:
-      BaseValue: 0
+      BaseValue: 2.5
       PerLevelValue: 0
   characterSound:
     soundPathsMovement: []

@@ -314,10 +314,10 @@ namespace CharacterMechanism.System
             switch (typeBehavior)
             {
                 case TypeBehavior.Player:
-                    StartCoroutine(AddPlayerBehaviorAffterSeconds(1f));
+                    StartCoroutine(AddPlayerBehaviorAffterSeconds(3f));
                     break;
                 case TypeBehavior.Computer:
-                    StartCoroutine(AddAIBehaviorAffterSeconds(1f));
+                    StartCoroutine(AddAIBehaviorAffterSeconds(5f));
                     break;
             }
         }

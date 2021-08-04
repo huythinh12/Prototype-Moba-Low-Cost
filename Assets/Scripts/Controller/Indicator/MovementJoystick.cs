@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System;
 using CharacterMechanism.System;
+using DG.Tweening;
 
 [DefaultExecutionOrder(1000)]
 public class MovementJoystick : Joystick
@@ -45,6 +46,8 @@ public class MovementJoystick : Joystick
         base.Start();
         fixedPosition = background.anchoredPosition;
         SetMode(joystickType);
+
+        ShowStyleFade(1.5f);
     }
 
     public override void OnPointerDown(PointerEventData eventData)
@@ -84,5 +87,22 @@ public class MovementJoystick : Joystick
             background.anchoredPosition += difference;
         }
         base.HandleInput(magnitude, normalised, radius, cam);
+    }
+
+    void ShowStyleFade(float duration)
+    {
+        Image backgroundImage = background.GetComponent<Image>();
+        Image handlerImage = handle.GetComponent<Image>();
+
+        float backgroundImageAlphaStart = backgroundImage.color.a;
+        float handlerImageAlphaStart = handlerImage.color.a;
+        float factorAlpha = handlerImageAlphaStart / backgroundImageAlphaStart;
+
+        //Set color's alpha to transparent
+        backgroundImage.color = new Color(backgroundImage.color.r, backgroundImage.color.b, backgroundImage.color.g, 0);
+        handlerImage.color = new Color(handlerImage.color.r, handlerImage.color.b, handlerImage.color.g, 0);
+
+        backgroundImage.DOFade(backgroundImageAlphaStart, duration * factorAlpha).SetEase(Ease.InQuint);
+        handlerImage.DOFade(backgroundImageAlphaStart, duration).SetEase(Ease.InQuint);
     }
 }

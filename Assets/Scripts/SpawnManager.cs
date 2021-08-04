@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using CharacterMechanism.System;
@@ -16,26 +15,16 @@ public class SpawnManager : MonoBehaviour
 
     void Start()
     {
-        //foreach (var characterSpawner in characterSpawners)
-        //{
-        //    CharacterSystem characterSystemSpawned = CharacterSystem.Create(characterSpawner.nameID, characterSpawner.teamCharacter, characterSpawner.typeBehavior);
-        //    SetSpawnPoint(characterSystemSpawned);
-        //    characterSystemSpawned.transform.position = GetSpawnPoint(characterSystemSpawned);
-
-        //    Debug.Log(string.Format("{0} spawned in {1}", characterSystemSpawned.name, characterSystemSpawned.transform.position));
-        //}
+        SpawnHeroDefault();
     }
 
-    private void Update()
+    private void SpawnHeroDefault()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        foreach (var characterSpawner in characterSpawners)
         {
-            foreach (var characterSpawner in characterSpawners)
-            {
-                CharacterSystem characterSystemSpawned = CharacterSystem.Create(characterSpawner.nameID, characterSpawner.teamCharacter, characterSpawner.typeBehavior);
-                SetSpawnPoint(characterSystemSpawned);
-                characterSystemSpawned.transform.position = GetSpawnPoint(characterSystemSpawned);
-            }
+            CharacterSystem characterSystemSpawned = CharacterSystem.Create(characterSpawner.nameID, characterSpawner.teamCharacter, characterSpawner.typeBehavior);
+            SetSpawnPoint(characterSystemSpawned);
+            characterSystemSpawned.transform.position = GetSpawnPoint(characterSystemSpawned);
         }
     }
 
@@ -74,7 +63,7 @@ public class SpawnManager : MonoBehaviour
                 }
                 break;
             case TeamCharacter.Red:
-                if (spawnPointHeroRed == null)
+                if (spawnPointHeroRed != null)
                 {
                     spawnPointDontUse = spawnPointHeroRed[0].position;
                     spawnPointHeroRed.Remove(spawnPointHeroRed[0]);
