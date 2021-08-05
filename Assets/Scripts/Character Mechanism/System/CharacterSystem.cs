@@ -200,6 +200,8 @@ namespace CharacterMechanism.System
 
         protected virtual void Awake()
         {
+            gameObject.layer = LayerMask.NameToLayer("Character");
+
             this.LoadComponents();
             this.InitializeComponents();
 

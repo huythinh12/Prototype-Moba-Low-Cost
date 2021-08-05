@@ -76,7 +76,7 @@ MonoBehaviour:
       BaseValue: 0
       PerLevelValue: 0
     RangeAttack:
-      BaseValue: 3
+      BaseValue: 2
       PerLevelValue: 0
   characterSound:
     soundPathsMovement: []

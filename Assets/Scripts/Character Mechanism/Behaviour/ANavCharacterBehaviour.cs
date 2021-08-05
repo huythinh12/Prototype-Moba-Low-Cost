@@ -48,6 +48,7 @@ namespace CharacterMechanism.Behaviour
         {
             this.navMeshAgent.acceleration = 0.01f;
             this.navMeshAgent.angularSpeed = 0.01f;
+            this.navMeshAgent.radius = 0.01f;
             this.navMeshAgent.speed = 0.01f;
             this.navMeshAgent.stoppingDistance = 2f;
             this.navMeshAgent.updatePosition = true;
