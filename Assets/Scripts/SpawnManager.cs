@@ -8,9 +8,9 @@ public class SpawnManager : MonoBehaviour
 {
     public static SpawnManager Instance { get; private set; }
 
-    private static readonly int AmountLegionSpawnForTurn = 5;
+    private static readonly int AmountLegionSpawnForTurn = 3;
     private static readonly float WaitingTimeStartSpawnFirstLegionTurn = 5f;
-    private static readonly float SumTimeSpawnLegionForTurn = 5f;
+    private static readonly float SumTimeSpawnLegionForTurn = 6.5f;
     private static readonly float WaitingTimeNextTurn = 30f;
 
     [SerializeField] bool isSpawnDebug;

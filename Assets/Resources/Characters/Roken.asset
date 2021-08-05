@@ -17,7 +17,7 @@ MonoBehaviour:
     Description: 
     IconNormal: {fileID: 21300000, guid: 532931a754e1fed4db6367f160c9c804, type: 3}
     IconMinimap: {fileID: 21300000, guid: 01925749937a03c498f2265987d0b479, type: 3}
-    TypeCharacter: 1
+    TypeCharacter: 0
     MainClass: 2
     SubClass: 2
     AttackAbilityName: 

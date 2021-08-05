@@ -37,7 +37,7 @@ namespace CharacterMechanism.System
 
         //////// In Child Object ////////
 
-        //Add StatBar
+        private StatsBar statsBar = null;
         private TargetsDetecter targetsDetecter = null;
 
         /////////////////////////////
@@ -139,11 +139,12 @@ namespace CharacterMechanism.System
         /////////// Event /////////////
         ///////////////////////////////
 
+        public event Action<CharacterSystem> OnPositionChange;
         public event Action<CharacterSystem> OnSpawn;
         public event Action<CharacterSystem> OnRevival;
         public event Action<CharacterSystem> OnDie;
         public event Action<CharacterSystem> OnHealthChange;
-        public event Action<float> OnTakeDamage;
+        public event Action<float,DamageType,bool> OnTakeDamage;
         public event Action<float> OnHealHealth;
         public event Action<CharacterSystem> OnManaChange;
         public event Action<CharacterSystem> OnLevelChange;
@@ -174,8 +175,6 @@ namespace CharacterMechanism.System
             this.animator = GetComponent<Animator>();
             this.collider = GetComponent<BoxCollider>();
             this.rigidbody = GetComponent<Rigidbody>();
-
-            this.targetsDetecter = TargetsDetecter.Create(this);
 
             this.profile = new Profile(new ProfileData());
         }
@@ -214,6 +213,9 @@ namespace CharacterMechanism.System
 
         protected virtual void Start()
         {
+            this.statsBar = StatsBar.Create(this);
+            this.targetsDetecter = TargetsDetecter.Create(this);
+
             this.currentActionState.BeginAction(this, this.inputInformation);
             gameObjectClone = gameObject;
         }
@@ -397,6 +399,11 @@ namespace CharacterMechanism.System
         {
             var characterSystem = new CharacterSystem(this.profileData);
             return characterSystem;
+        }
+
+        public void HandleEventPositionChange()
+        {
+            this.OnPositionChange?.Invoke(this);
         }
     }
 }

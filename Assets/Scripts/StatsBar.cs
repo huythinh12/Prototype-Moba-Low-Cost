@@ -1,193 +1,181 @@
-//using UnityEngine;
-//using UnityEngine.UI;
+using UnityEngine;
+using UnityEngine.UI;
+using CharacterMechanism.System;
 
-//public class StatsBar : MonoBehaviour
-//{
-//    static readonly string pathHealthBarGreen = "Images/Stats Character/Health Bar Green";
-//    static readonly string pathHealthBarRed = "Images/Stats Character/Health Bar Red";
+public sealed class StatsBar : MonoBehaviour
+{
+    ////////////////////////////////
+    ////////// Attribute ///////////
+    ////////////////////////////////
 
-//    [Header("UI")]
-//    [SerializeField] Image healthBar;
-//    [SerializeField] Image divisionLineHealthBar;
-//    [SerializeField] Image manaBar;
+    /////////////////////////////////
+    ///////// Resource Paths ////////
 
-//    [SerializeField] Image effectDurationBar;
-//    [SerializeField] Image effectDurationBackground;
+    static readonly string PathStatBar = "Prefabs/Stats Bar/Stats Bar ";
+    static readonly string PathHealthBarGreen = "Images/Stats Character/Health Bar Green";
+    static readonly string PathHealthBarRed = "Images/Stats Character/Health Bar Red";
 
-//    [SerializeField] Text levelText;
-//    [SerializeField] Text nameText;
+    //////////////////////////////////
+    ///////// Name Convention ////////
 
-//    [SerializeField] Character character;
-
-//    [Header("Setting Use")]
-//    [SerializeField] bool isUseHealthBar = true;
-//    [SerializeField] bool isUseDivisionLineHealthBar = false;
-
-//    [SerializeField] bool isUseManaBar = false;
-//    [SerializeField] bool isUseEffectBar = false;
-//    [SerializeField] bool isUseLevelText = false;
-//    [SerializeField] bool isUseNameText = false;
-
-//    RectTransform rectTransform;
-//    Vector3 distanceToTarget;
-//    Quaternion startRotate;
-
-//    public static StatsBar AddFor(Character character, TypeCharacter typeCharacter, TeamCharacter teamCharacter)
-//    {
-//        string namePathStastBar = "Prefabs/Stats Bar/Stats Bar " + typeCharacter.ToString();
-
-//        StatsBar stastsBar = Instantiate(Resources.Load(namePathStastBar) as GameObject, character.transform).GetComponent<StatsBar>();
-
-//        stastsBar.ChangeImageHealthBar(teamCharacter);
-
-//        return stastsBar;
-//    }
+    static readonly string NameHealthBarChild = "Health Bar";
+    static readonly string NameManaBarChild = "Mana Bar";
+    static readonly string NameDivisionLineHealthBarChild = "Division Line Health Bar";
+    static readonly string NameLevelTextChild = "Level Text";
+    static readonly string NameNameTextChild = "Name Text";
 
 
-//    private void Reset()
-//    {
-//        character = GetComponentInParent<Character>();
+    /////////////////////////////////
+    //// Character System Parent ////
 
-//        // Don't change value when reset, #pragma use to hide warning when x = x
-//#pragma warning disable CS1717 
-//        isUseManaBar = isUseManaBar;
-//        isUseEffectBar = isUseEffectBar;
-//        isUseLevelText = isUseLevelText;
-//        isUseNameText = isUseNameText;
-//#pragma warning restore CS1717
+    [SerializeField] CharacterSystem characterSystem;
 
-//        if (isUseHealthBar)
-//        {
-//            healthBar = transform.Find("Health Bar").GetComponent<Image>();
+    //////////////////////////////
+    //////////// UI //////////////
 
-//            if (isUseDivisionLineHealthBar)
-//            {
-//                divisionLineHealthBar = transform.Find("Division Line Health Bar").GetComponent<Image>();
-//            }
-//        }
+    [Header("UI")]
+    [SerializeField] Image healthBar;
+    [SerializeField] Image divisionLineHealthBar;
+    [SerializeField] Image manaBar;
+    [SerializeField] Text levelText;
+    [SerializeField] Text nameText;
 
-//        if (isUseManaBar)
-//        {
-//            manaBar = transform.Find("Mana Bar").GetComponent<Image>();
-//        }
+    ///////////////////////////////
+    /////// Setting Use ///////////
 
-//        if (isUseEffectBar)
-//        {
-//            effectDurationBar = transform.Find("Effect Duration Bar").GetComponent<Image>();
-//            effectDurationBackground = transform.Find("Effect Duration Bar Background").GetComponent<Image>();
-//        }
+    [Header("Setting Use")]
+    [SerializeField] bool isUseHealthBar = true;
+    [SerializeField] bool isUseDivisionLineHealthBar = false;
 
-//        if (isUseLevelText)
-//        {
-//            levelText = transform.Find("Level Text").GetComponent<Text>();
-//        }
+    [SerializeField] bool isUseManaBar = false;
+    [SerializeField] bool isUseEffectBar = false;
+    [SerializeField] bool isUseLevelText = false;
+    [SerializeField] bool isUseNameText = false;
 
-//        if (isUseNameText)
-//        {
-//            nameText = transform.Find("Name Text").GetComponent<Text>();
-//        }
+    RectTransform rectTransform;
+    Vector3 distanceToTarget;
+    Quaternion startRotate;
 
-//        rectTransform = GetComponent<RectTransform>();
-//    }
+    ////////////////////////////
+    ////////// Method //////////
+    ////////////////////////////
 
+    //////////////////////////////
+    //////////// API /////////////
 
-//    private void Start()
-//    {
-//        distanceToTarget = this.transform.position - character.transform.position;
-//        startRotate = transform.rotation;
-//    }
+    /// <summary>
+    /// Create a Stat Bar for a Character System object based on Type and Team Character 
+    /// </summary>
+    static public StatsBar Create(CharacterSystem characterSystem)
+    {
+        string namePathStastBar = PathStatBar + characterSystem.GetProfile.GetTypeCharacter;
 
-//    void LateUpdate()
-//    {
-//        FlowTarget();
-//        DontRotate();
-//    }
+        StatsBar stastsBar = Instantiate(Resources.Load<StatsBar>(namePathStastBar), characterSystem.transform);
+        stastsBar.characterSystem = characterSystem;
+        stastsBar.EventRegistrationFormCharacterSystem(characterSystem);
 
-//    private void OnEnable()
-//    {
-//        Reset();
-
-//        if (isUseHealthBar)
-//        {
-//            character.OnHealthChanged += OnHealthChanged;
-//        }
-
-//        if (isUseManaBar)
-//        {
-//            character.OnManaChanged += OnManaChanged;
-//        }
-
-//        if (isUseLevelText)
-//        {
-//            character.OnLevelChanged += OnLevelChanged;
-//        }
-
-//    }
-
-//    private void OnDisable()
-//    {
-
-//        if (isUseHealthBar)
-//        {
-//            character.OnHealthChanged -= OnHealthChanged;
-//        }
-
-//        if (isUseManaBar)
-//        {
-//            character.OnManaChanged -= OnManaChanged;
-//        }
-
-//        if (isUseLevelText)
-//        {
-//            character.OnLevelChanged -= OnLevelChanged;
-//        }
-
-//    }
-
-//    void OnHealthChanged(CharacterStats stats)
-//    {
-//        float currentPercentage = stats.HealthCurrent / stats.HealthMax.Value;
-//        healthBar.fillAmount = currentPercentage;
-//    }
-
-//    void OnManaChanged(CharacterStats stats)
-//    {
-//        float currentPercentage = stats.ManaCurrent / stats.ManaMax.Value;
-//        manaBar.fillAmount = currentPercentage;
-//    }
-
-//    void OnLevelChanged(int level)
-//    {
-//        levelText.text = level.ToString();
-//    }
-
-//    void FlowTarget()
-//    {
-//        transform.position = character.transform.position + distanceToTarget;
-//    }
-
-//    void DontRotate()
-//    {
-//        transform.rotation = startRotate;
-//    }
+        return stastsBar;
+    }
 
 
-//    void ChangeImageHealthBar(TeamCharacter teamCharacter)
-//    {
-//        switch (teamCharacter)
-//        {
-//            case TeamCharacter.Blue:
-//                healthBar.sprite = Resources.Load<Sprite>(pathHealthBarGreen);
-//                break;
-//            case TeamCharacter.Red:
-//                healthBar.sprite = Resources.Load<Sprite>(pathHealthBarRed);
-//                break;
-//            case TeamCharacter.Natural:
-//                healthBar.sprite = Resources.Load<Sprite>(pathHealthBarRed);
-//                break;
-//            default:
-//                healthBar.sprite = null;
-//                break;
-//        }
-//    }
-//}
+    private void EventRegistrationFormCharacterSystem(CharacterSystem characterSystem)
+    {
+        if (isUseLevelText)
+            characterSystem.OnLevelChange += HandleLevelChangel;
+
+        if (isUseHealthBar)
+            characterSystem.OnHealthChange += HandleHealthChange;
+
+        if (isUseManaBar)
+            characterSystem.OnManaChange += HandleManaChange;
+    }
+
+    //////////////////////////////
+    ////////// Callback //////////
+
+    private void LoadComponents()
+    {
+        rectTransform = GetComponent<RectTransform>();
+    }
+
+    private void SetChildObjects()
+    {
+        healthBar = isUseHealthBar ? transform.Find(NameHealthBarChild).GetComponent<Image>() : null;
+        divisionLineHealthBar = isUseDivisionLineHealthBar ? transform.Find(NameDivisionLineHealthBarChild).GetComponent<Image>() : null;
+        manaBar = isUseManaBar ? transform.Find(NameManaBarChild).GetComponent<Image>() : null;
+        levelText = isUseLevelText ? transform.Find(NameLevelTextChild).GetComponent<Text>() : null;
+        nameText = isUseLevelText ? transform.Find(NameNameTextChild).GetComponent<Text>() : null;
+    }
+
+    ///////////////////////////////////////
+    //////////// Handle Event /////////////
+
+    private void HandleLevelChangel(CharacterSystem characterSystem)
+    {
+        levelText.text = characterSystem.GetProfile.Level.ToString();
+    }
+
+    private void HandleHealthChange(CharacterSystem characterSystem)
+    {
+        float currentPercentage = characterSystem.GetProfile.HealthCurrent / characterSystem.GetProfile.HealthMax.Value;
+        healthBar.fillAmount = currentPercentage;
+    }
+
+    private void HandleManaChange(CharacterSystem characterSystem)
+    {
+        float currentPercentage = characterSystem.GetProfile.ManaCurrent / characterSystem.GetProfile.ManaMax.Value;
+        healthBar.fillAmount = currentPercentage;
+    }
+
+    ///////////////////////////////////////
+    //////////// Handle Image /////////////
+
+    void ChangeImageHealthBar(TeamCharacter teamCharacter)
+    {
+        switch (teamCharacter)
+        {
+            case TeamCharacter.Blue:
+                healthBar.sprite = Resources.Load<Sprite>(PathHealthBarGreen);
+                break;
+            case TeamCharacter.Red:
+            case TeamCharacter.Natural:
+                healthBar.sprite = Resources.Load<Sprite>(PathHealthBarRed);
+                break;
+        }
+    }
+
+    ///////////////////////////////////////
+    //////////// Flow Target //////////////
+
+    private void FlowTarget()
+    {
+        transform.position = characterSystem.transform.position + distanceToTarget;
+    }
+
+    private void DontRotate()
+    {
+        transform.rotation = startRotate;
+    }
+
+    ////////////////////////////////////////////
+    ////////// MonoBehaviour Callback //////////
+
+    private void Awake()
+    {
+        SetChildObjects();
+    }
+
+    private void Start()
+    {
+        ChangeImageHealthBar(characterSystem.GetProfile.GetTeamCharacter);
+        distanceToTarget = this.transform.position - characterSystem.transform.position;
+        startRotate = transform.rotation;
+    }
+
+    private void LateUpdate()
+    {
+
+        FlowTarget();
+        DontRotate();
+    }
+}

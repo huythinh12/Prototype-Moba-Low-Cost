@@ -17,7 +17,7 @@ MonoBehaviour:
     Description: 
     IconNormal: {fileID: 21300000, guid: 9fc37b53ed1c07e418c577f2357c07f3, type: 3}
     IconMinimap: {fileID: 21300000, guid: 9fc37b53ed1c07e418c577f2357c07f3, type: 3}
-    TypeCharacter: 2
+    TypeCharacter: 1
     MainClass: 1
     SubClass: 0
     AttackAbilityName: 
@@ -76,7 +76,7 @@ MonoBehaviour:
       BaseValue: 0
       PerLevelValue: 0
     RangeAttack:
-      BaseValue: 2.5
+      BaseValue: 3
       PerLevelValue: 0
   characterSound:
     soundPathsMovement: []

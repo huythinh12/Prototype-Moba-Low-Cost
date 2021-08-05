@@ -73,13 +73,16 @@ namespace CharacterMechanism.Behaviour
 
         protected override void UpdateInputInformation(InputInformation inputInformation)
         {
+
             if (Vector3.Distance(this.destinationPosition, this.target.position) > this.navMeshAgent.stoppingDistance)
             {
                 this.navMeshAgent.SetDestination(this.target.position);
                 this.destinationPosition = this.navMeshAgent.destination;
             }
 
+
             inputInformation.MovementDirection = GetNextDirection.normalized;
+
         }
 
         private void SetTarget(Transform transform)

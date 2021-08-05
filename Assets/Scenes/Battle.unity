@@ -4376,7 +4376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9efed4b27a11d9b488777693cd1aee03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isSpawnDebug: 1
+  isSpawnDebug: 0
   spawnPointHeroBlue:
   - {fileID: 350769322}
   - {fileID: 893830185}
@@ -4387,7 +4387,10 @@ MonoBehaviour:
   - {fileID: 1035724036}
   positionUltimateTowerBlue: {fileID: 1693818516}
   positionUltimateTowerRed: {fileID: 1952901611}
-  characterSpawners: []
+  characterSpawners:
+  - nameID: Noah
+    teamCharacter: 1
+    typeBehavior: 0
 --- !u!1 &370830210
 GameObject:
   m_ObjectHideFlags: 0

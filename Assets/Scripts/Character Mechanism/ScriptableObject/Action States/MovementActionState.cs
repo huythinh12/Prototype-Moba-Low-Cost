@@ -4,6 +4,7 @@ using CharacterMechanism.Information;
 using CharacterMechanism.ScriptableObject;
 using CharacterMechanism.System;
 using UnityEngine;
+using DG.Tweening;
 
 namespace CharacterMechanism.ScriptableObject
 {
@@ -32,11 +33,13 @@ namespace CharacterMechanism.ScriptableObject
 
         public override void UpdateAction(CharacterSystem characterSystem, InputInformation inputInformation)
         {
-            characterSystem.transform.LookAt(characterSystem.transform.position + inputInformation.MovementDirection);
+            characterSystem.transform.DOLookAt(characterSystem.transform.position + inputInformation.MovementDirection, 0.1f);
             characterSystem.GetRigidbody.velocity = inputInformation.MovementDirection * characterSystem.GetProfile.MovementSpeed.Value;
 
             characterSystem.GetAnimator.SetBool("isMove", true);
             characterSystem.GetAnimator.SetFloat("movementSpeed", characterSystem.GetProfile.MovementSpeed.Value / BaseValueMultiplierAnimationMove);
+
+            characterSystem.HandleEventPositionChange();
         }
     }
 }
