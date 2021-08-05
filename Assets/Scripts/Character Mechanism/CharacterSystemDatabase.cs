@@ -34,7 +34,7 @@ public class CharacterSystemDatabase : MonoBehaviour
             CharacterSystem character = DataDrivenCharacterSystem.Parse(rawCharacterSystem);
             Database[character.GetProfile.Name] = character;
 
-            //Debug.Log(string.Format("Data Base: Loaded {0} -  Animtor {1}", character.GetProfile.Name, character.GetProfile.GetTypeAnimator));
+            Debug.Log(string.Format("Data Base: Loaded {0}", character.GetProfile.Name));
         }
     }
 

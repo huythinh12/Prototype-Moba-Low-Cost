@@ -306,9 +306,9 @@ namespace CharacterMechanism.System
             characterSystem.LoadDataFromDataBase(nameID);
             characterSystem.GetProfile.SetTeam(teamCharacter);
             characterSystem.gameObject.name = string.Format("{0} ({1})", nameID, teamCharacter.ToString());
-            characterSystem.AddBehaviorBasedOnType(typeBehavior);
-            
-          //  characterSystem.OnSpawn += HandleOnSpawn;// cái này lấy bên  minimap vd :Minimap.Instance.Turnoff
+            characterSystem.AddBehaviorBasedOnType(typeBehavior, characterSystem.GetProfile.GetTypeCharacter);
+
+            //  characterSystem.OnSpawn += HandleOnSpawn;// cái này lấy bên  minimap vd :Minimap.Instance.Turnoff
             characterSystem.OnDie += HandleOnDie;
             characterSystem.OnRevival += HandleOnRevival;// chỉ có cái này là static
 
@@ -317,6 +317,16 @@ namespace CharacterMechanism.System
             characterSystem.OnSpawn?.Invoke(characterSystem);
 
             return characterSystem;
+        }
+
+        static public bool IsAlly(CharacterSystem characterSystemA, CharacterSystem characterSystemB)
+        {
+            return characterSystemA.GetProfile.GetTeamCharacter == characterSystemB.GetProfile.GetTeamCharacter;
+        }
+
+        static public bool IsEnemy(CharacterSystem characterSystemA, CharacterSystem characterSystemB)
+        {
+            return IsAlly(characterSystemA, characterSystemB) == false;
         }
 
         private static void HandleOnRevival(CharacterSystem obj)
@@ -333,14 +343,14 @@ namespace CharacterMechanism.System
         {
             gameObject.SetActive(false);
         }
-        
-        private static void HandleOnSpawn(CharacterSystem characterSystem,Sprite iconminimap)
+
+        private static void HandleOnSpawn(CharacterSystem characterSystem, Sprite iconminimap)
         {
-       
+
             //MinimapManager.iconMinimaps.Add(characterSystem, iconminimap);
         }
 
-        private void AddBehaviorBasedOnType(TypeBehavior typeBehavior)
+        private void AddBehaviorBasedOnType(TypeBehavior typeBehavior, TypeCharacter typeCharacter)
         {
             switch (typeBehavior)
             {
@@ -348,7 +358,15 @@ namespace CharacterMechanism.System
                     StartCoroutine(AddPlayerBehaviorAffterSeconds(3f));
                     break;
                 case TypeBehavior.Computer:
-                    StartCoroutine(AddAIBehaviorAffterSeconds(5f));
+                    switch (typeCharacter)
+                    {
+                        case TypeCharacter.Hero:
+                            StartCoroutine(AddAIBehaviorAffterSeconds(5f));
+                            break;
+                        case TypeCharacter.Legion:
+                            StartCoroutine(AddAIBehaviorAffterSeconds(0.1f));
+                            break;
+                    }
                     break;
             }
         }
@@ -374,7 +392,7 @@ namespace CharacterMechanism.System
             this.gameObject.AddComponent<FollowAIBehaviour>();
         }
 
-     
+
         public CharacterSystem Clone()
         {
             var characterSystem = new CharacterSystem(this.profileData);

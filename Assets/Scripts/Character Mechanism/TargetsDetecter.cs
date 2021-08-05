@@ -80,12 +80,15 @@ namespace CharacterMechanism.System
                 // The TargetsDetectors do not interact with each other
                 if (other.GetComponent<TargetsDetecter>() == null)
                 {
-                    CharacterSystem characterSystem = other.GetComponent<CharacterSystem>();
+                    CharacterSystem characterSystemCollider = other.GetComponent<CharacterSystem>();
 
-                    if (characterSystem != null)
+                    if (characterSystemCollider != null)
                     {
-                        charactersInDetectRange.Add(characterSystem);
-                        OnTargetChange?.Invoke(GetNextTransformTarget());
+                        if (CharacterSystem.IsEnemy(characterSystem, characterSystemCollider))
+                        {
+                            charactersInDetectRange.Add(characterSystemCollider);
+                            OnTargetChange?.Invoke(GetNextTransformTarget());
+                        }
                     }
                 }
             }
@@ -96,12 +99,15 @@ namespace CharacterMechanism.System
             // The TargetsDetectors do not interact with each other
             if (other.GetComponent<TargetsDetecter>() == null)
             {
-                CharacterSystem characterSystem = other.GetComponent<CharacterSystem>();
+                CharacterSystem characterSystemCollider = other.GetComponent<CharacterSystem>();
 
-                if (characterSystem != null)
+                if (characterSystemCollider != null)
                 {
-                    charactersInDetectRange.Remove(characterSystem);
-                    OnTargetChange?.Invoke(GetNextTransformTarget());
+                    if (CharacterSystem.IsEnemy(characterSystem, characterSystemCollider))
+                    {
+                        charactersInDetectRange.Remove(characterSystemCollider);
+                        OnTargetChange?.Invoke(GetNextTransformTarget());
+                    }
                 }
             }
         }
@@ -148,8 +154,7 @@ namespace CharacterMechanism.System
         {
             if (charactersInDetectRange.Count == 0)
             {
-                //return GameManager.Instance.BlueTowers[0].transform;
-                return GameObject.Find("Oliver (Red)").transform;
+                return SpawnManager.Instance.GetTransformUltimateTowerTarget(characterSystem.GetProfile.GetTeamCharacter);
             }
             else
             {
