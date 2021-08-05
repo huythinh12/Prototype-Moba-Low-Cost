@@ -5,17 +5,23 @@ using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using CharacterMechanism.System;
 
+
 public class PickHeroHandler : MonoBehaviour
 {
-    float waitingTime = 60f;
+    //UI
+    [SerializeField] float waitingTime = 60f;
+    [SerializeField] float lastWaiting = 15f;
 
     [SerializeField] TextMeshProUGUI timeText;
     [SerializeField] TextMeshProUGUI nameHeroText;
     [SerializeField] Button readyButton;
+    // Data Reference from outside 
     [SerializeField] GameObject panelInformationTeam;
     [SerializeField] GameObject panelHeroInventory;
     [SerializeField] GameObject[] informationBackground;
     [SerializeField] GameObject backgroundMainPlayer;
+    // Data spawner for scene battle
+    private CharacterSpawner[] characterspawner = new CharacterSpawner[3];
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +42,6 @@ public class PickHeroHandler : MonoBehaviour
     {
         HeroSlot.OnHeroNameSelected += HandlePlayerSelected;
         HeroSlot.OnHeroSelected += HandleSelectedHero;
-
     }
 
     private void HandleSelectedHero(GameObject iconUI, CharacterSystem characterSystem)
@@ -49,9 +54,19 @@ public class PickHeroHandler : MonoBehaviour
     {
         foreach (Transform item in informationBackground[index].transform)
         {
+            //Add to character selected list base on condition
+            if (index == 0)
+            {
+                AddToDataSelected(characterSystem, TeamCharacter.Blue, TypeBehavior.Player,index);
+            }
+            else if (index > 0)
+            {
+                AddToDataSelected(characterSystem, TeamCharacter.Blue, TypeBehavior.Computer, index);
+            }
+
+            // set info to UI 
             if (item.GetComponent<TextMeshProUGUI>())
             {
-                DataSelected.Instance.nameHero.Add(characterSystem.GetProfile.Name);
                 item.GetComponent<TextMeshProUGUI>().text = characterSystem.GetProfile.Name;
             }
             else if (item.transform.name.StartsWith("Avatar"))
@@ -59,6 +74,14 @@ public class PickHeroHandler : MonoBehaviour
                 item.GetComponent<Image>().sprite = characterSystem.GetProfile.IconNormal;
             }
         }
+    }
+
+    private void AddToDataSelected(CharacterSystem characterSystem,TeamCharacter team, TypeBehavior typeBehavior,int index)
+    {
+        characterspawner[index] = new CharacterSpawner();
+        characterspawner[index].nameID = characterSystem.GetProfile.Name;
+        characterspawner[index].teamCharacter = team;
+        characterspawner[index].typeBehavior = typeBehavior;
     }
 
     private void OnDisable()
@@ -75,19 +98,26 @@ public class PickHeroHandler : MonoBehaviour
         {
             allCharacters.Add(character.Value);
         }
-       
-        RandomPickHeroAI(allCharacters,1);
-        RandomPickHeroAI(allCharacters, 2);
 
-        // set interactable UI false when tap ready button
+        // pick HeroAI Random
+        RandomPickHeroAI(allCharacters,1);
+        RandomPickHeroAI(allCharacters,2);
+
+        // set inter-able UI false when tap ready button
         foreach (Transform item in panelHeroInventory.transform)
         {
             item.gameObject.GetComponent<Button>().interactable = false;
         }
 
-        waitingTime = 11;
-        readyButton.interactable = false;
+        //add characterData into list DataSelected when hit ready button
+        foreach (var item in characterspawner)
+        {
+            DataSelected.Instance.characterDataPersistence.Add(item);
+        } 
 
+        // set variable when hit ready button
+        waitingTime = lastWaiting;
+        readyButton.interactable = false;
     }
 
     private void RandomPickHeroAI(List<CharacterSystem> allCharacters,int index)

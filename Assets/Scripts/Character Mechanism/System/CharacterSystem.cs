@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -33,6 +33,7 @@ namespace CharacterMechanism.System
         private Animator animator = null;
         new private BoxCollider collider = null;
         new private Rigidbody rigidbody = null;
+        private GameObject gameObjectClone;
 
         //////// In Child Object ////////
 
@@ -214,6 +215,7 @@ namespace CharacterMechanism.System
         protected virtual void Start()
         {
             this.currentActionState.BeginAction(this, this.inputInformation);
+            gameObjectClone = gameObject;
         }
 
         protected virtual void Update()
@@ -305,8 +307,37 @@ namespace CharacterMechanism.System
             characterSystem.GetProfile.SetTeam(teamCharacter);
             characterSystem.gameObject.name = string.Format("{0} ({1})", nameID, teamCharacter.ToString());
             characterSystem.AddBehaviorBasedOnType(typeBehavior);
+            
+          //  characterSystem.OnSpawn += HandleOnSpawn;// cái này lấy bên  minimap vd :Minimap.Instance.Turnoff
+            characterSystem.OnDie += HandleOnDie;
+            characterSystem.OnRevival += HandleOnRevival;// chỉ có cái này là static
+
+            var iconMinimap = characterSystem.GetProfile.IconMinimap;
+            //kích hoạt on spawn trước khi return 
+            characterSystem.OnSpawn?.Invoke(characterSystem);
 
             return characterSystem;
+        }
+
+        private static void HandleOnRevival(CharacterSystem obj)
+        {
+            //MinimapManager.iconMinimaps.Add(characterSystem, iconminimap);
+
+        }
+
+        private static void HandleOnDie(CharacterSystem obj)
+        {
+            throw new NotImplementedException();
+        }
+        private void SetGameObjectActive()
+        {
+            gameObject.SetActive(false);
+        }
+        
+        private static void HandleOnSpawn(CharacterSystem characterSystem,Sprite iconminimap)
+        {
+       
+            //MinimapManager.iconMinimaps.Add(characterSystem, iconminimap);
         }
 
         private void AddBehaviorBasedOnType(TypeBehavior typeBehavior)
@@ -343,6 +374,7 @@ namespace CharacterMechanism.System
             this.gameObject.AddComponent<FollowAIBehaviour>();
         }
 
+     
         public CharacterSystem Clone()
         {
             var characterSystem = new CharacterSystem(this.profileData);

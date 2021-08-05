@@ -4,10 +4,6 @@ public class ListCharacterSelection : MonoBehaviour
 {
     public GameObject[] heroes;
 
-    private void Start()
-    {
-       
-    }
     private void OnEnable()
     {
         HeroSlot.OnHeroNameSelected += HandleSelectedHero;

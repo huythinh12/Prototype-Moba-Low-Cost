@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using CharacterMechanism.System;
+using System;
 
 public class SpawnManager : MonoBehaviour
 {
@@ -8,26 +9,32 @@ public class SpawnManager : MonoBehaviour
     private List<Transform> spawnPointHeroBlue;
     [SerializeField]
     private List<Transform> spawnPointHeroRed;
-
+    private DataSelected dataSelected;
+    private CharacterSystem characterSystem;
     [SerializeField]
     List<CharacterSpawner> characterSpawners = new List<CharacterSpawner>();
     Dictionary<CharacterSystem, Vector3> spawnPointOfCharacters = new Dictionary<CharacterSystem, Vector3>();
 
     void Start()
     {
-        SpawnHeroDefault();
+        dataSelected = FindObjectOfType<DataSelected>();
+        if(dataSelected)
+            SpawnHeroDefault();
+
     }
 
     private void SpawnHeroDefault()
     {
-        foreach (var characterSpawner in characterSpawners)
+        foreach (var characterSpawner in dataSelected.characterDataPersistence)
         {
             CharacterSystem characterSystemSpawned = CharacterSystem.Create(characterSpawner.nameID, characterSpawner.teamCharacter, characterSpawner.typeBehavior);
             SetSpawnPoint(characterSystemSpawned);
             characterSystemSpawned.transform.position = GetSpawnPoint(characterSystemSpawned);
-        }
+         
+        } 
     }
 
+  
     private void SetSpawnPoint(CharacterSystem characterSystem)
     {
         spawnPointOfCharacters.Add(characterSystem, GetSpawnPointDontUse(characterSystem.GetProfile.GetTeamCharacter));

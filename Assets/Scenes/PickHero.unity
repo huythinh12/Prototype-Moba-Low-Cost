@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1442661073}
-  m_IndirectSpecularColor: {r: 0.53096515, g: 0.6538291, b: 0.8595494, a: 1}
+  m_IndirectSpecularColor: {r: 0.5258792, g: 0.6489269, b: 0.8544917, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -970,7 +970,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 134583782aa76df4e8eae124b363ce39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameHero: []
+  characterDataPersistence: []
 --- !u!4 &836420420 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4980933847062180, guid: 9d82f3b2ca39dd343a8597cd28e9e60b, type: 3}
@@ -1606,7 +1606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12d3e206433f733409894155f4d7c7e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 0}
+  character: {fileID: 1280537298}
 --- !u!114 &1121846714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2414,6 +2414,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29502668e4d90f7499cf666b3acc44f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waitingTime: 60
+  lastWaiting: 5
   timeText: {fileID: 279819693}
   nameHeroText: {fileID: 0}
   readyButton: {fileID: 1010419134}
@@ -8380,7 +8382,7 @@ GameObject:
   - component: {fileID: 785667364519466386}
   - component: {fileID: 839323142213237086}
   m_Layer: 6
-  m_Name: Rorken
+  m_Name: Roken
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

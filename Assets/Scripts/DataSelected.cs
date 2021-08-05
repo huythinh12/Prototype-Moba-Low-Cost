@@ -4,7 +4,7 @@ using UnityEngine;
 public class DataSelected : MonoBehaviour
 {
     public static DataSelected Instance { get; private set; }
-    public List<string> nameHero = new List<string>();
+    public List<CharacterSpawner> characterDataPersistence = new List<CharacterSpawner>();
 
     void Awake()
     {

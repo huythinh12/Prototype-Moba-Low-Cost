@@ -17,6 +17,7 @@ public class HeroInventory : MonoBehaviour
         List<CharacterSystem> allCharacters = new List<CharacterSystem>();
         foreach (var character in CharacterSystemDatabase.Instance.Database)
         {
+            if(character.Value.GetProfile.GetTypeCharacter == TypeCharacter.Hero)
             allCharacters.Add(character.Value);
         }
 
