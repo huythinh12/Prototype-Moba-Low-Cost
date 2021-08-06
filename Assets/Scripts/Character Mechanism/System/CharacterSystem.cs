@@ -8,6 +8,7 @@ using CharacterMechanism.Attribute;
 using CharacterMechanism.DataBase;
 using CharacterMechanism.Behaviour;
 using System;
+using CharacterMechanism.History;
 
 namespace CharacterMechanism.System
 {
@@ -44,6 +45,7 @@ namespace CharacterMechanism.System
         ////////// Profile //////////
 
         [Header("Profile")]
+        [SerializeField] private CharacterHistory history;
         [SerializeField] private Profile profile = null;
         private ProfileData profileData;
 
@@ -93,6 +95,7 @@ namespace CharacterMechanism.System
         /////////////////////////////
         ////////// Profile //////////
 
+        public CharacterHistory GetHistory => history;
         public Profile GetProfile => profile;
 
         //////////////////////////////////////////////
@@ -144,7 +147,7 @@ namespace CharacterMechanism.System
         public event Action<CharacterSystem> OnRevival;
         public event Action<CharacterSystem> OnDie;
         public event Action<CharacterSystem> OnHealthChange;
-        public event Action<float,DamageType,bool> OnTakeDamage;
+        public event Action<float, DamageType, bool> OnTakeDamage;
         public event Action<float> OnHealHealth;
         public event Action<CharacterSystem> OnManaChange;
         public event Action<CharacterSystem> OnLevelChange;
@@ -317,10 +320,8 @@ namespace CharacterMechanism.System
             characterSystem.OnRevival += MinimapManager.Instance.TurnOnIcon;
             characterSystem.OnPositionChange += MinimapManager.Instance.UpdatePosition;
 
-            characterSystem.OnSpawn?.Invoke(characterSystem);
-            characterSystem.OnPositionChange?.Invoke(characterSystem);
-
-            //HandleEventOnSpawn(characterSystem);
+            characterSystem.HandleEventSpawn();
+            characterSystem.HandleEventPositionChange();
 
             return characterSystem;
         }
@@ -333,27 +334,6 @@ namespace CharacterMechanism.System
         static public bool IsEnemy(CharacterSystem characterSystemA, CharacterSystem characterSystemB)
         {
             return IsAlly(characterSystemA, characterSystemB) == false;
-        }
-
-        private static void HandleOnRevival(CharacterSystem obj)
-        {
-            //MinimapManager.iconMinimaps.Add(characterSystem, iconminimap);
-
-        }
-
-        private static void HandleOnDie(CharacterSystem obj)
-        {
-            throw new NotImplementedException();
-        }
-        private void SetGameObjectActive()
-        {
-            gameObject.SetActive(false);
-        }
-
-        private static void HandleEventOnSpawn(CharacterSystem characterSystem)
-        {
-
-            //MinimapManager.iconMinimaps.Add(characterSystem);
         }
 
         private void AddBehaviorBasedOnType(TypeBehavior typeBehavior, TypeCharacter typeCharacter)
@@ -405,9 +385,61 @@ namespace CharacterMechanism.System
             return characterSystem;
         }
 
+        public void HandleEventSpawn()
+        {
+            this.OnSpawn?.Invoke(this);
+
+            this.profile.HealthCurrent = this.profile.HealthMax.Value;
+            this.profile.ManaCurrent = this.profile.ManaMax.Value;
+        }
+
         public void HandleEventPositionChange()
         {
             this.OnPositionChange?.Invoke(this);
         }
+
+        public void HandleEventDie()
+        {
+            //BattleDiaglog.
+
+            this.OnDie?.Invoke(this);
+        }
+
+        public void HandleEventRevival()
+        {
+            history.Reset();
+
+            this.OnRevival?.Invoke(this);
+        }
+
+        public void Attack()
+        {
+            Collider[] colliders = Physics.OverlapSphere(this.transform.position, GetProfile.RangeAttack.Value);
+            List<CharacterSystem> characterSystemEnemyColliders = new List<CharacterSystem>();
+
+            foreach (var collider in colliders)
+            {
+                CharacterSystem characterSystemEnemyCollider = collider.GetComponent<CharacterSystem>();
+
+                if (characterSystemEnemyCollider != null)
+                {
+                    if (IsEnemy(this, characterSystemEnemyCollider))
+                    {
+                        characterSystemEnemyColliders.Add(characterSystemEnemyCollider);
+                        characterSystemEnemyCollider.TakeDame(this, 300f);
+                        Debug.Log(characterSystemEnemyCollider.name);
+                    }
+                }
+            }
+        }
+
+        public void TakeDame(CharacterSystem characterHit, float amountDamage)
+        {
+            this.profile.HealthCurrent -= amountDamage;
+            this.history.AddCharacterHit(characterHit);
+
+            this.OnHealthChange?.Invoke(this);
+        }
+
     }
 }

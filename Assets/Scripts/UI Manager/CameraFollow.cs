@@ -10,7 +10,7 @@ public class CameraFollow : MonoBehaviour
     static readonly Vector3 CameraOffset = new Vector3(0f, 14.94f, -8.4f);
     static readonly Vector3 RotationEuler = new Vector3(57.051f, -1.262f, 0.003f);
     static readonly float FieldOfViewDefault = 40f;
-    static readonly float FieldOfViewWhenStart = 60f;
+    static readonly float FieldOfViewWhenStart = 70f;
 
     new private Camera camera;
     private Transform player;
@@ -20,7 +20,7 @@ public class CameraFollow : MonoBehaviour
     {
         camera = GetComponent<Camera>();
         camera.fieldOfView = FieldOfViewWhenStart;
-        camera.DOFieldOfView(FieldOfViewDefault, 2.5f);
+        camera.DOFieldOfView(FieldOfViewDefault, 5f);
 
         transform.position = CameraOffset + player.position;
         transform.rotation = Quaternion.Euler(RotationEuler);

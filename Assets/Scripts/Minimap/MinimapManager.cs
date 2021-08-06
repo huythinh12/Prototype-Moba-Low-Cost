@@ -8,7 +8,9 @@ using CharacterMechanism.System;
 public class MinimapManager : MonoBehaviour
 {
     static readonly float SizeIconHero = 12f;
+    static readonly float SizeIconLegion = 8f;
     static readonly float SizeIconHeroBorder = 21f;
+
     public static MinimapManager Instance { get; private set; }
 
     [SerializeField] Sprite iconBorderRed;
@@ -75,11 +77,13 @@ public class MinimapManager : MonoBehaviour
                 iconborderRectrasnfom.localScale = Vector3.one;
 
                 iconRectrasnfom.sizeDelta = new Vector2(SizeIconHero, SizeIconHero);
+                iconRectrasnfom.SetSiblingIndex(100);
                 iconborderRectrasnfom.sizeDelta = new Vector2(SizeIconHeroBorder, SizeIconHeroBorder);
 
                 break;
             case TypeCharacter.Legion:
-                iconRectrasnfom.sizeDelta = new Vector2(5, 5);
+                iconRectrasnfom.sizeDelta = new Vector2(SizeIconLegion, SizeIconLegion);
+                iconRectrasnfom.SetSiblingIndex(1);
 
                 break;
             case TypeCharacter.Tower:
@@ -131,13 +135,5 @@ public class MinimapManager : MonoBehaviour
         RectTransform iconRectTransform;
         iconMinimaps.TryGetValue(characterSystem, out iconRectTransform);
         return iconRectTransform;
-    }
- 
- 
-
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        
     }
 }

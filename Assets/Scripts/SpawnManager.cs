@@ -11,7 +11,7 @@ public class SpawnManager : MonoBehaviour
 
     private static readonly int AmountLegionSpawnForTurn = 3;
     private static readonly float WaitingTimeStartSpawnFirstLegionTurn = 5f;
-    private static readonly float SumTimeSpawnLegionForTurn = 6.5f;
+    private static readonly float SumTimeSpawnLegionForTurn = 10f;
     private static readonly float WaitingTimeNextTurn = 30f;
 
     [SerializeField] bool isSpawnDebug;
