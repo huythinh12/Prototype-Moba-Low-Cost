@@ -18,7 +18,6 @@ public class HeroSlot : MonoBehaviour
         btnSelectHero.onClick.AddListener(SelectHero);
     }
 
-    //Todo : when choose hero do stuff
     public void SelectHero()
     {
         OnHeroNameSelected?.Invoke(characterSystem.GetProfile.Name);
