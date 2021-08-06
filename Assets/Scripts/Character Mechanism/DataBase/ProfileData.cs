@@ -32,6 +32,7 @@ namespace CharacterMechanism.DataBase
         public string Description;
         public Sprite IconNormal;
         public Sprite IconMinimap;
+        public Sprite ImageLoading;
 
         public TypeCharacter TypeCharacter;
         public HeroClass MainClass;

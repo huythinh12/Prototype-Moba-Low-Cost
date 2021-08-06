@@ -17,6 +17,7 @@ MonoBehaviour:
     Description: 
     IconNormal: {fileID: 21300000, guid: 9e3cba800c19ebc48b26c157659c14b0, type: 3}
     IconMinimap: {fileID: 21300000, guid: e72b169b38e99e440a0fcccc423552b6, type: 3}
+    ImageLoading: {fileID: 21300000, guid: c2df14444f20c5a4ca61225ac77338c5, type: 3}
     TypeCharacter: 0
     MainClass: 0
     SubClass: 1

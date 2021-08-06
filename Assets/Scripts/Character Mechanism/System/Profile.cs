@@ -22,6 +22,7 @@ namespace CharacterMechanism.System
         private string description;
         private Sprite iconNormal;
         private Sprite iconMinimap;
+        private Sprite imageLoading;
 
         private TypeCharacter typeCharacter;
         private HeroClass mainClass;
@@ -139,6 +140,7 @@ namespace CharacterMechanism.System
         public string Description { get => description; set => description = value; }
         public Sprite IconNormal { get => iconNormal; set => iconNormal = value; }
         public Sprite IconMinimap { get => iconMinimap; set => iconMinimap = value; }
+        public Sprite ImageLoading { get => imageLoading; set => imageLoading = value; }
 
         public Profile(ProfileData profileData)
         {
@@ -146,6 +148,7 @@ namespace CharacterMechanism.System
             this.description = profileData.Description;
             this.iconNormal = profileData.IconNormal;
             this.iconMinimap = profileData.IconMinimap;
+            this.imageLoading = profileData.ImageLoading;
             this.mainClass = profileData.MainClass;
             this.subClass = profileData.SubClass;
             this.attackAbilityName = profileData.AttackAbilityName;
