@@ -53,6 +53,19 @@ namespace CharacterMechanism.Behaviour
         protected override void UpdateInputInformation(InputInformation inputInformation)
         {
             inputInformation.MovementDirection = movementJoystick.GetDirectionXZ;
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                characterSystem.Attack();
+                StartCoroutine(PlayAnimationAttack());
+            }
+        }
+
+        IEnumerator PlayAnimationAttack()
+        {
+            characterSystem.GetAnimator.SetBool("isAttack", true);
+            yield return new WaitForSeconds(0.66f);
+            characterSystem.GetAnimator.SetBool("isAttack", false);
         }
 
         public void SetMovementJoystick(MovementJoystick movementJoystick)
