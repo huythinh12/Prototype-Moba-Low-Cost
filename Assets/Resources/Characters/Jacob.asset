@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   profileData:
     Name: Jacob
-    Description: 
+    Description: Initiator
     IconNormal: {fileID: 21300000, guid: f617d3e0be4db8b4c85629f55922cfd3, type: 3}
     IconMinimap: {fileID: 21300000, guid: a2e69cbbf696d37448400aee9e5d8b53, type: 3}
     ImageLoading: {fileID: 21300000, guid: 33bc8b96d6bf83b4ea5a769ddc1c7155, type: 3}
@@ -26,23 +26,23 @@ MonoBehaviour:
     BetaAbilityName: 
     UltimateAbilityName: 
     HealthMax:
-      BaseValue: 0
-      PerLevelValue: 0
+      BaseValue: 3229
+      PerLevelValue: 185.5
     ManaMax:
-      BaseValue: 0
-      PerLevelValue: 0
+      BaseValue: 490
+      PerLevelValue: 109
     PhysicalDamage:
-      BaseValue: 0
-      PerLevelValue: 0
+      BaseValue: 170
+      PerLevelValue: 20.5
     MagicDamage:
       BaseValue: 0
       PerLevelValue: 0
     PhysicalDefense:
-      BaseValue: 0
-      PerLevelValue: 0
+      BaseValue: 170
+      PerLevelValue: 11
     MagicDefense:
-      BaseValue: 0
-      PerLevelValue: 0
+      BaseValue: 12.5
+      PerLevelValue: 11
     PhysicalPierce:
       BaseValue: 0
       PerLevelValue: 0
@@ -51,7 +51,7 @@ MonoBehaviour:
       PerLevelValue: 0
     CooldownAttackk:
       BaseValue: 0
-      PerLevelValue: 0
+      PerLevelValue: 0.01
     CooldownAbility:
       BaseValue: 0
       PerLevelValue: 0
@@ -59,26 +59,24 @@ MonoBehaviour:
       BaseValue: 0
       PerLevelValue: 0
     CriticalDamage:
-      BaseValue: 0
+      BaseValue: 2
       PerLevelValue: 0
     MovementSpeed:
-      BaseValue: 3.5
+      BaseValue: 3.6
       PerLevelValue: 0
     EffectResistance:
       BaseValue: 0
       PerLevelValue: 0
     DamageDealFactor:
-      BaseValue: 0
+      BaseValue: 1
       PerLevelValue: 0
     DamageTakenFactor:
-      BaseValue: 0
+      BaseValue: 1
       PerLevelValue: 0
     HealingFactor:
-      BaseValue: 0
+      BaseValue: 1
       PerLevelValue: 0
     RangeAttack:
       BaseValue: 6
       PerLevelValue: 0
-  characterSound:
-    soundPathsMovement: []
-    soundPathsDie: []
+  characterSound: {fileID: 0}

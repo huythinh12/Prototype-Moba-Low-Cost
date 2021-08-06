@@ -47,16 +47,16 @@ namespace CharacterMechanism.History
         ///////////////////////////////
         /////////// KDA Stat //////////
 
-        [ReadOnly] int kill;
-        [ReadOnly] int deadth;
-        [ReadOnly] int assist;
+        int kill = 0;
+        int death = 0;
+        int assist = 0;
 
         ///////////////////////////////
         ////////// Kill Stat //////////
 
-        [ReadOnly] int amountHeroKilledDiscontinuity = 0;
-        [ReadOnly] int amountHeroKilledContinual = 0;
-        [ReadOnly] DateTime LastTimeKillHero;
+        int amountHeroKilledDiscontinuity = 0;
+        int amountHeroKilledContinual = 0;
+        DateTime LastTimeKillHero;
 
         ////////////////////////////
         ///////// Property /////////
@@ -71,8 +71,8 @@ namespace CharacterMechanism.History
         /////////// KDA Stat //////////
 
         public int Kill { get => kill; set => kill = value; }
-        public int Deadth { get => deadth; set => deadth = value; }
-        public int Assit { get => assist; set => assist = value; }
+        public int Death { get => death; set => death = value; }
+        public int Assist { get => assist; set => assist = value; }
 
         ///////////////////////////////
         ////////// Kill Stat //////////
@@ -124,15 +124,24 @@ namespace CharacterMechanism.History
         /// </summary>
         static public void HandleKDAWhenDie(CharacterSystem characterSystem)
         {
-            characterSystem.GetHistory.Deadth++;
-
-            CharacterSystem characterLastHit = characterSystem.GetHistory.GetCharacterLastHit();
-            List<CharacterSystem> assitCharacters = characterSystem.GetHistory.GetCharacterAssit();
-
-            characterLastHit.GetHistory.AddCharacterKilled(characterSystem);
-            foreach (var character in assitCharacters)
+            if (characterSystem.GetProfile.GetTypeCharacter == TypeCharacter.Hero)
             {
-                character.GetHistory.Assit++;
+                characterSystem.GetHistory.Death++;
+                characterSystem.HandleEventKDAChange();
+
+                CharacterSystem characterLastHit = characterSystem.GetHistory.GetCharacterLastHit();
+                List<CharacterSystem> assitCharacters = characterSystem.GetHistory.GetCharacterAssit();
+
+                Debug.Log(characterLastHit + " killed " + characterSystem);
+
+                characterLastHit.GetHistory.AddCharacterKilled(characterSystem);
+                characterLastHit.HandleEventKDAChange();
+
+                foreach (var character in assitCharacters)
+                {
+                    character.GetHistory.Assist++;
+                    character.HandleEventKDAChange();
+                }
             }
         }
 
@@ -160,6 +169,7 @@ namespace CharacterMechanism.History
         public void AddCharacterHit(CharacterSystem characterSystem)
         {
             HistoryCharactersHit.Add(new InformationCharacterHit(characterSystem));
+            Debug.Log(characterSystem + "added in history!");
         }
 
         /// <summary>

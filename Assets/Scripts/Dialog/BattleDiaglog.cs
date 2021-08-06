@@ -44,6 +44,13 @@ public class BattleDiaglog : MonoBehaviour
 
     private AudioSource audioSource;
 
+    static public BattleDiaglog Instance;
+
+    public void Awake()
+    {
+        Instance = this;
+    }
+
     public void Start()
     {
         audioSource = GetComponent<AudioSource>();

@@ -22,6 +22,8 @@ namespace CharacterMechanism.System
     [DefaultExecutionOrder(200)]
     public class CharacterSystem : MonoBehaviour
     {
+        private bool isAlive = true;
+
         ///////////////////////////////
         ////////// Attribute //////////
         ///////////////////////////////
@@ -38,6 +40,9 @@ namespace CharacterMechanism.System
 
         //////// In Child Object ////////
 
+        private Canvas controlPanel = null;
+
+        private KDAUI kdaUI = null;
         private StatsBar statsBar = null;
         private TargetsDetecter targetsDetecter = null;
 
@@ -45,7 +50,7 @@ namespace CharacterMechanism.System
         ////////// Profile //////////
 
         [Header("Profile")]
-        [SerializeField] private CharacterHistory history;
+        [SerializeField] private CharacterHistory history = new CharacterHistory();
         [SerializeField] private Profile profile = null;
         private ProfileData profileData;
 
@@ -78,6 +83,8 @@ namespace CharacterMechanism.System
         //////////////////////////////
         ////////// Property //////////
         //////////////////////////////
+
+        public bool IsAlive => isAlive;
 
         ///////////////////////////////
         ////////// Component //////////
@@ -151,6 +158,7 @@ namespace CharacterMechanism.System
         public event Action<float> OnHealHealth;
         public event Action<CharacterSystem> OnManaChange;
         public event Action<CharacterSystem> OnLevelChange;
+        public event Action<CharacterSystem> OnKDAChange;
 
 
         ////////////////////////////
@@ -368,6 +376,7 @@ namespace CharacterMechanism.System
             controlPanel.GetComponent<Canvas>().renderMode = RenderMode.ScreenSpaceOverlay;
             controlPanel.GetComponent<CanvasScaler>().uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
             MovementJoystick movementJoystick = MovementJoystick.Create(this, controlPanel.GetComponent<Canvas>());
+            KDAUI.Create(this, controlPanel.GetComponent<Canvas>());
 
             this.gameObject.AddComponent<PlayerBehaviour>().SetMovementJoystick(movementJoystick);
         }
@@ -385,12 +394,16 @@ namespace CharacterMechanism.System
             return characterSystem;
         }
 
+        //////////////////////////////////
+        ////////// Handle Event //////////
+
         public void HandleEventSpawn()
         {
-            this.OnSpawn?.Invoke(this);
-
+            this.isAlive = true;
             this.profile.HealthCurrent = this.profile.HealthMax.Value;
             this.profile.ManaCurrent = this.profile.ManaMax.Value;
+
+            this.OnSpawn?.Invoke(this);
         }
 
         public void HandleEventPositionChange()
@@ -401,15 +414,47 @@ namespace CharacterMechanism.System
         public void HandleEventDie()
         {
             //BattleDiaglog.
+            CharacterHistory.HandleKDAWhenDie(this);
+            BattleDiaglog.Instance.ShowKillDialog(this);
 
+            this.isAlive = false;
+
+            this.enabled = false;
+            this.statsBar.gameObject.SetActive(false);
+            this.collider.enabled = false;
+
+            this.animator.SetTrigger("Die");
             this.OnDie?.Invoke(this);
         }
 
         public void HandleEventRevival()
         {
-            history.Reset();
-
+            this.history.Reset();
             this.OnRevival?.Invoke(this);
+        }
+
+        public void HandleHealthChange()
+        {
+            this.CheckDie();
+            this.OnHealthChange?.Invoke(this);
+        }
+
+        public void HandleEventTakeDame()
+        {
+           
+        }
+
+        public void HandleEventKDAChange()
+        {
+            this.OnKDAChange?.Invoke(this);
+        }
+
+        private void CheckDie()
+        {
+            if (this.profile.HealthCurrent <= 0)
+            {
+                HandleEventDie();
+            }
         }
 
         public void Attack()
@@ -427,7 +472,6 @@ namespace CharacterMechanism.System
                     {
                         characterSystemEnemyColliders.Add(characterSystemEnemyCollider);
                         characterSystemEnemyCollider.TakeDame(this, 300f);
-                        Debug.Log(characterSystemEnemyCollider.name);
                     }
                 }
             }
@@ -438,7 +482,7 @@ namespace CharacterMechanism.System
             this.profile.HealthCurrent -= amountDamage;
             this.history.AddCharacterHit(characterHit);
 
-            this.OnHealthChange?.Invoke(this);
+            this.HandleHealthChange();
         }
 
     }

@@ -84,9 +84,10 @@ namespace CharacterMechanism.System
 
                     if (characterSystemCollider != null)
                     {
-                        if (CharacterSystem.IsEnemy(characterSystem, characterSystemCollider))
+                        if (characterSystemCollider.IsAlive && CharacterSystem.IsEnemy(characterSystem, characterSystemCollider))
                         {
                             charactersInDetectRange.Add(characterSystemCollider);
+                            characterSystemCollider.OnDie += ClearTargetFormListTarget;
                             OnTargetChange?.Invoke(GetNextTransformTarget());
                         }
                     }
@@ -106,6 +107,7 @@ namespace CharacterMechanism.System
                     if (CharacterSystem.IsEnemy(characterSystem, characterSystemCollider))
                     {
                         charactersInDetectRange.Remove(characterSystemCollider);
+                        characterSystemCollider.OnDie -= ClearTargetFormListTarget;
                         OnTargetChange?.Invoke(GetNextTransformTarget());
                     }
                 }
@@ -148,7 +150,7 @@ namespace CharacterMechanism.System
         }
 
         public event Action<Transform> OnTargetChange;
-
+        public event Action<CharacterSystem> OnTargetDie;
 
         public Transform GetNextTransformTarget()
         {
@@ -171,6 +173,12 @@ namespace CharacterMechanism.System
                 return charactersPrioritized.transform;
             }
 
+        }
+
+        private void ClearTargetFormListTarget(CharacterSystem characterSystem)
+        {
+            charactersInDetectRange.Remove(characterSystem);
+            OnTargetChange?.Invoke(GetNextTransformTarget());
         }
     }
 }
