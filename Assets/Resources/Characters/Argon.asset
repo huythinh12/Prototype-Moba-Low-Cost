@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   profileData:
     Name: Argon
-    Description: 
+    Description: Control/Healer
     IconNormal: {fileID: 21300000, guid: 82331f51de8f95646939f259f3e44d1e, type: 3}
     IconMinimap: {fileID: 21300000, guid: 66ac7b4e44fe6a74686cf93e6ed03e0b, type: 3}
     ImageLoading: {fileID: 21300000, guid: d5100148305d4c347b7475056858999f, type: 3}
@@ -26,23 +26,23 @@ MonoBehaviour:
     BetaAbilityName: 
     UltimateAbilityName: 
     HealthMax:
-      BaseValue: 0
-      PerLevelValue: 0
+      BaseValue: 3369
+      PerLevelValue: 336
     ManaMax:
-      BaseValue: 0
-      PerLevelValue: 0
+      BaseValue: 470
+      PerLevelValue: 105
     PhysicalDamage:
-      BaseValue: 0
-      PerLevelValue: 0
+      BaseValue: 158
+      PerLevelValue: 10.3
     MagicDamage:
       BaseValue: 0
       PerLevelValue: 0
     PhysicalDefense:
-      BaseValue: 0
-      PerLevelValue: 0
+      BaseValue: 113
+      PerLevelValue: 27
     MagicDefense:
-      BaseValue: 0
-      PerLevelValue: 0
+      BaseValue: 50
+      PerLevelValue: 8.5
     PhysicalPierce:
       BaseValue: 0
       PerLevelValue: 0
@@ -51,7 +51,7 @@ MonoBehaviour:
       PerLevelValue: 0
     CooldownAttackk:
       BaseValue: 0
-      PerLevelValue: 0
+      PerLevelValue: 0.03
     CooldownAbility:
       BaseValue: 0
       PerLevelValue: 0
@@ -59,26 +59,24 @@ MonoBehaviour:
       BaseValue: 0
       PerLevelValue: 0
     CriticalDamage:
-      BaseValue: 0
+      BaseValue: 2
       PerLevelValue: 0
     MovementSpeed:
-      BaseValue: 3.6
+      BaseValue: 3.8
       PerLevelValue: 0
     EffectResistance:
       BaseValue: 0
       PerLevelValue: 0
     DamageDealFactor:
-      BaseValue: 0
+      BaseValue: 1
       PerLevelValue: 0
     DamageTakenFactor:
-      BaseValue: 0
+      BaseValue: 1
       PerLevelValue: 0
     HealingFactor:
-      BaseValue: 0
+      BaseValue: 1
       PerLevelValue: 0
     RangeAttack:
-      BaseValue: 3
+      BaseValue: 2
       PerLevelValue: 0
-  characterSound:
-    soundPathsMovement: []
-    soundPathsDie: []
+  characterSound: {fileID: 0}
