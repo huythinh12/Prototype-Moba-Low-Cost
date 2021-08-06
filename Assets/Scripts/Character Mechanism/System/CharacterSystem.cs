@@ -312,13 +312,15 @@ namespace CharacterMechanism.System
             characterSystem.gameObject.name = string.Format("{0} ({1})", nameID, teamCharacter.ToString());
             characterSystem.AddBehaviorBasedOnType(typeBehavior, characterSystem.GetProfile.GetTypeCharacter);
 
-            //  characterSystem.OnSpawn += HandleOnSpawn;// cái này lấy bên  minimap vd :Minimap.Instance.Turnoff
-            characterSystem.OnDie += HandleOnDie;
-            characterSystem.OnRevival += HandleOnRevival;// chỉ có cái này là static
+            characterSystem.OnSpawn += MinimapManager.Instance.InitializeIcon;
+            characterSystem.OnDie += MinimapManager.Instance.TurnOffIcon;
+            characterSystem.OnRevival += MinimapManager.Instance.TurnOnIcon;
+            characterSystem.OnPositionChange += MinimapManager.Instance.UpdatePosition;
 
-            var iconMinimap = characterSystem.GetProfile.IconMinimap;
-            //kích hoạt on spawn trước khi return 
             characterSystem.OnSpawn?.Invoke(characterSystem);
+            characterSystem.OnPositionChange?.Invoke(characterSystem);
+
+            //HandleEventOnSpawn(characterSystem);
 
             return characterSystem;
         }
@@ -348,10 +350,10 @@ namespace CharacterMechanism.System
             gameObject.SetActive(false);
         }
 
-        private static void HandleOnSpawn(CharacterSystem characterSystem, Sprite iconminimap)
+        private static void HandleEventOnSpawn(CharacterSystem characterSystem)
         {
 
-            //MinimapManager.iconMinimaps.Add(characterSystem, iconminimap);
+            //MinimapManager.iconMinimaps.Add(characterSystem);
         }
 
         private void AddBehaviorBasedOnType(TypeBehavior typeBehavior, TypeCharacter typeCharacter)

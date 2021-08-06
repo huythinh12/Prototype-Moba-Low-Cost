@@ -16,7 +16,7 @@ MonoBehaviour:
     Name: Footman Red
     Description: 
     IconNormal: {fileID: 21300000, guid: 9fc37b53ed1c07e418c577f2357c07f3, type: 3}
-    IconMinimap: {fileID: 21300000, guid: 9fc37b53ed1c07e418c577f2357c07f3, type: 3}
+    IconMinimap: {fileID: 21300000, guid: 1a2eddb765de7d146ad1c7667c525933, type: 3}
     TypeCharacter: 1
     MainClass: 1
     SubClass: 0

@@ -4,6 +4,7 @@ using UnityEngine;
 using CharacterMechanism.System;
 using System;
 
+[DefaultExecutionOrder(150)]
 public class SpawnManager : MonoBehaviour
 {
     public static SpawnManager Instance { get; private set; }

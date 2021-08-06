@@ -21,7 +21,7 @@ public class PickHeroHandler : MonoBehaviour
     [SerializeField] GameObject[] informationBackground;
     [SerializeField] GameObject backgroundMainPlayer;
     // Data spawner for scene battle
-    private CharacterSpawner[] characterspawner = new CharacterSpawner[3];
+    private CharacterSpawner[] characterspawner = new CharacterSpawner[6];
 
     // Start is called before the first frame update
     void Start()
@@ -96,12 +96,18 @@ public class PickHeroHandler : MonoBehaviour
         List<CharacterSystem> allCharacters = new List<CharacterSystem>();
         foreach (var character in CharacterSystemDatabase.Instance.Database)
         {
-            allCharacters.Add(character.Value);
+            if (character.Value.GetProfile.GetTypeCharacter == TypeCharacter.Hero)
+                allCharacters.Add(character.Value);
         }
 
         // pick HeroAI Random
         RandomPickHeroAI(allCharacters,1);
         RandomPickHeroAI(allCharacters,2);
+
+        //pick HeroAi Enemy Random
+        RandomPickHeroAiEnemy(allCharacters,3);
+        RandomPickHeroAiEnemy(allCharacters,4);
+        RandomPickHeroAiEnemy(allCharacters,5);
 
         // set inter-able UI false when tap ready button
         foreach (Transform item in panelHeroInventory.transform)
@@ -119,9 +125,21 @@ public class PickHeroHandler : MonoBehaviour
         waitingTime = lastWaiting;
         readyButton.interactable = false;
     }
-
+    private void RandomPickHeroAiEnemy(List<CharacterSystem> allCharacters,int index)
+    {
+        var random = Random.Range(0, 6);
+        for (int i = 0; i < allCharacters.Count; i++)
+        {
+            if (random == i)
+            {
+                AddToDataSelected(allCharacters[i], TeamCharacter.Red, TypeBehavior.Computer, index);
+                break;
+            }
+        }
+    }
     private void RandomPickHeroAI(List<CharacterSystem> allCharacters,int index)
     {
+
         var random = Random.Range(0, 6);
         for (int i = 0; i < allCharacters.Count; i++)
         {
