@@ -41,7 +41,7 @@ public class MinimapManager : MonoBehaviour
 
     void Start()
     {
-        factorZoom = positionZoomRealMap.transform.localPosition.sqrMagnitude / positionZoomMiniMap.localPosition.sqrMagnitude;
+        factorZoom = positionZoomRealMap.transform.localPosition.magnitude / positionZoomMiniMap.localPosition.magnitude;
 
     }
     RectTransform CreateMinimapIcon(CharacterSystem characterSystem)
