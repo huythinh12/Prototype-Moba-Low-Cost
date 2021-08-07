@@ -114,7 +114,7 @@ public class SpawnManager : MonoBehaviour
     {
         foreach (var characterSpawner in characterSpawners)
         {
-            print(characterSpawner.nameID + " nameId");
+            //print(characterSpawner.nameID + " nameId");
             CharacterSystem characterSystemSpawned = CharacterSystem.Create(characterSpawner.nameID, characterSpawner.teamCharacter, characterSpawner.typeBehavior);
             SetSpawnPoint(characterSystemSpawned);
             characterSystemSpawned.transform.position = GetSpawnPoint(characterSystemSpawned);
