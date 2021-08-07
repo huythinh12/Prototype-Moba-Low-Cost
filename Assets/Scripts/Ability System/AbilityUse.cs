@@ -4,6 +4,7 @@
 //using UnityEngine.UI;
 //using System.Diagnostics;
 //using DG.Tweening;
+//using CharacterMechanism.System;
 
 //[DefaultExecutionOrder(1000)]
 //public class AbilityUse : MonoBehaviour
@@ -15,7 +16,7 @@
 //    public static readonly float ScaleFactorWhenIndicatorHandle = 0.85f;
 
 //    public Ability ability;
-//    public Character self;
+//    public CharacterSystem self;
 
 //    public AbilityIndicatorJoystick abilityIndicatorJoystick;
 //    public AbilityIndicatorUI abilityIndicatorUI;
@@ -113,7 +114,7 @@
 //        Vector3 indicatorXZ = JoystickMath.ConvertToOxzIndicator(indicatorXY);
 //        abilityIndicatorUI.gameObject.SetActive(false);
 
-        
+
 
 //        self.StartCoroutine(ability.Excecute(self, indicatorXZ));
 

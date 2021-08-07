@@ -177,6 +177,7 @@ namespace CharacterMechanism.History
         /// </summary>
         public void AddCharacterKilled(CharacterSystem characterSystem)
         {
+            Kill++;
             AmountHeroKilledDiscontinuity++;
             AmountHeroKilledContinual++;
         }

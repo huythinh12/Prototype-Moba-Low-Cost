@@ -22,6 +22,8 @@ public class KDAUI : MonoBehaviour
 
     public void UpdateKDAText(CharacterSystem characterSystem)
     {
+        Debug.Log("Update KDA Text!");
+
         killText.text = characterSystem.GetHistory.Kill.ToString();
         deathText.text = characterSystem.GetHistory.Death.ToString();
         assistText.text = characterSystem.GetHistory.Assist.ToString();

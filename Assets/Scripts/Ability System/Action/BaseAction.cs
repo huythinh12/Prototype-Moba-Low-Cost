@@ -1,40 +1,55 @@
-//using UnityEngine;
-//using System.Collections;
-//using System.Collections.Generic;
-//using System;
+using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using System;
+using CharacterMechanism.System;
 
-//public abstract class BaseAction
-//{
-//    public AbilityActionData data;
-//    protected string effectPath;
-//    protected string sfxPath;
-//    protected List<GameObject> effectObjects = new List<GameObject>();
-//    protected Character targetCharacter;
+public enum Action
+{
+    PlaySound,
+    PlayEffect,
+    AttachEffect,
+    ImpactWithStat,
+    ImpactWithCamera,
+    Roll,
 
-//    public BaseAction(AbilityActionData data)
-//    {
-//        this.data = data;
-//    }
+    //[Description("Takes maxDistance:Int, effectPath:Str")]
+    //Blink,
+    //[Description("Takes force:Int")]
+    //Knockback,
+    //[Description("Takes effectPath:Str, speed:Int, origin:Str(cast_point||target_point)")]
+    //LinearProjectile,
+    //[Description("Takes effectPath:Str, speed:Int")]
+    //TrackingProjectile,
+    //[Description("Takes duration:Float")]
+    //Stun,
+}
 
-//    public abstract IEnumerator Excecute(Ability owner, Vector3 indicator, Character selfCharacter, Character targetCharacter);
+public abstract class BaseAction
+{
+    public AbilityActionData data;
+    protected List<GameObject> effectObjects = new List<GameObject>();
+    protected CharacterSystem targetCharacter;
 
-//    //public virtual IEnumerator Reset()
-//    //{
-//    //    for (int i = 0; i < effectObjs.Count; i++)
-//    //    {
-//    //        PhotonNetwork.Destroy(effectObjs[i]);
-//    //    }
-//    //    effectObjs.Clear();
-//    //    yield return null;
-//    //}
+    public BaseAction(AbilityActionData data)
+    {
+        this.data = data;
+    }
 
-//    //protected GameObject CreateEffect(Vector3 position)
-//    //{
-//    //    var obj = PhotonNetwork.Instantiate(effectPath, position, Quaternion.identity, 0) as GameObject;
-//    //    obj.AddComponent<SelfDestoryParticle>();
-//    //    return obj;
-//    //}
+    public abstract IEnumerator Excecute(Ability owner, Vector3 indicator, CharacterSystem selfCharacter, CharacterSystem targetCharacter);
 
-//    public abstract BaseAction Clone();
+    public virtual IEnumerator Reset()
+    {
+        yield return null;
+    }
 
-//}
+    //protected GameObject CreateEffect(Vector3 position)
+    //{
+    //    var obj = PhotonNetwork.Instantiate(effectPath, position, Quaternion.identity, 0) as GameObject;
+    //    obj.AddComponent<SelfDestoryParticle>();
+    //    return obj;
+    //}
+
+    public abstract BaseAction Clone();
+
+}
