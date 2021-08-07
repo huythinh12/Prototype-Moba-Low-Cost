@@ -11,6 +11,12 @@ public class MinimapManager : MonoBehaviour
     static readonly float SizeIconLegion = 8f;
     static readonly float SizeIconHeroBorder = 21f;
 
+    static readonly float SizeIconSmallCreep = 10f;
+    static readonly float SizeIconMediumCreep = 12f;
+    static readonly float SizeIconLargeCreep = 14f;
+
+    static readonly float SizeIconTower = 12f;
+
     public static MinimapManager Instance { get; private set; }
 
     [SerializeField] Sprite iconBorderRed;
@@ -36,7 +42,6 @@ public class MinimapManager : MonoBehaviour
         else
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
         }
 
     }
@@ -87,12 +92,16 @@ public class MinimapManager : MonoBehaviour
 
                 break;
             case TypeCharacter.Tower:
+                iconRectrasnfom.sizeDelta = new Vector2(SizeIconTower, SizeIconTower);
                 break;
             case TypeCharacter.SmallCreep:
+                iconRectrasnfom.sizeDelta = new Vector2(SizeIconSmallCreep, SizeIconSmallCreep);
                 break;
             case TypeCharacter.MediumCreep:
+                iconRectrasnfom.sizeDelta = new Vector2(SizeIconMediumCreep, SizeIconMediumCreep);
                 break;
             case TypeCharacter.LargeCreep:
+                iconRectrasnfom.sizeDelta = new Vector2(SizeIconLargeCreep, SizeIconLargeCreep);
                 break;
             default:
                 break;

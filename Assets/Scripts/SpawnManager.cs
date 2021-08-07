@@ -23,7 +23,27 @@ public class SpawnManager : MonoBehaviour
     [SerializeField]
     private Transform positionUltimateTowerBlue;
     [SerializeField]
-    private Transform positionUltimateTowerRed;
+    private Transform positionUltimateTowerRed;   
+    [SerializeField]
+    private Transform positionTowerBlueAlpha;
+    [SerializeField]
+    private Transform positionTowerBlueBeta;
+    [SerializeField]
+    private Transform positionTowerRedAlpha;
+    [SerializeField]
+    private Transform positionTowerRedBeta;
+
+    // Position Creep
+    [SerializeField]
+    private Transform positionDueLeft;
+    [SerializeField]
+    private Transform positionDueRight;
+    [SerializeField]
+    private Transform positionGolemLeft;
+    [SerializeField]
+    private Transform positionGolemRight;
+    [SerializeField]
+    private Transform positionChest;
 
     private DataSelected dataSelected;
     private CharacterSystem characterSystem;
@@ -94,6 +114,7 @@ public class SpawnManager : MonoBehaviour
     {
         foreach (var characterSpawner in characterSpawners)
         {
+            print(characterSpawner.nameID + " nameId");
             CharacterSystem characterSystemSpawned = CharacterSystem.Create(characterSpawner.nameID, characterSpawner.teamCharacter, characterSpawner.typeBehavior);
             SetSpawnPoint(characterSystemSpawned);
             characterSystemSpawned.transform.position = GetSpawnPoint(characterSystemSpawned);
@@ -123,10 +144,63 @@ public class SpawnManager : MonoBehaviour
                     break;
                 }
             case TypeCharacter.Tower:
+                switch (characterSystem.GetProfile.GetTeamCharacter)
+                {
+                    case TeamCharacter.Blue:
+                        switch (characterSystem.GetProfile.Name)
+                        {
+                            case "Tower Alpha":
+                                spawnPointOfCharacters.Add(characterSystem, positionTowerBlueAlpha.transform.position);
+                                break;
+                            case "Tower Beta":
+                                spawnPointOfCharacters.Add(characterSystem, positionTowerBlueBeta.transform.position);
+                                break;
+                            case "Tower Ultimate":
+                                spawnPointOfCharacters.Add(characterSystem, positionUltimateTowerBlue.transform.position);
+                                break;
+                        }
+                        break;
+                    case TeamCharacter.Red:
+                        switch (characterSystem.GetProfile.Name)
+                        {
+                            case "Tower Alpha":
+                                spawnPointOfCharacters.Add(characterSystem, positionTowerRedAlpha.transform.position);
+                                break;
+                            case "Tower Beta":
+                                spawnPointOfCharacters.Add(characterSystem, positionTowerRedBeta.transform.position);
+                                break;
+                            case "Tower Ultimate":
+                                spawnPointOfCharacters.Add(characterSystem, positionUltimateTowerRed.transform.position);
+                                break;
+                        }
+                        break;
+             
+                }
                 break;
             case TypeCharacter.SmallCreep:
+                switch (characterSystem.GetProfile.Name)
+                {
+                    case "Duo Blue":
+                        spawnPointOfCharacters.Add(characterSystem, positionDueRight.transform.position);
+                        break;
+                    case "Duo Red":
+                        spawnPointOfCharacters.Add(characterSystem, positionDueLeft.transform.position);
+                        break;
+                    case "Chest Monster":
+                        spawnPointOfCharacters.Add(characterSystem, positionChest.transform.position);
+                        break;
+                }
                 break;
             case TypeCharacter.MediumCreep:
+                switch (characterSystem.GetProfile.Name)
+                {
+                    case "Golem Blue":
+                        spawnPointOfCharacters.Add(characterSystem, positionGolemRight.transform.position);
+                        break;
+                    case "Golem Red":
+                        spawnPointOfCharacters.Add(characterSystem, positionGolemLeft.transform.position);
+                        break;
+                }
                 break;
             case TypeCharacter.LargeCreep:
                 break;
@@ -175,7 +249,7 @@ public class SpawnManager : MonoBehaviour
                 spawnPointDontUse = Vector3.zero;
                 break;
         }
-
+     
         return spawnPointDontUse;
     }
 

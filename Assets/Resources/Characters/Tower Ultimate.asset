@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ce16d4f3b884e34cbe04feb3770f7af, type: 3}
+  m_Name: Tower Ultimate
+  m_EditorClassIdentifier: 
+  profileData:
+    Name: Tower Ultimate
+    Description: 
+    IconNormal: {fileID: 0}
+    IconMinimap: {fileID: 21300000, guid: bc48bc55350ba094c824fdac953a6ba0, type: 3}
+    ImageLoading: {fileID: 0}
+    TypeCharacter: 2
+    MainClass: 0
+    SubClass: 0
+    AttackAbilityName: 
+    AlphaAbilityName: 
+    BetaAbilityName: 
+    UltimateAbilityName: 
+    HealthMax:
+      BaseValue: 15000
+      PerLevelValue: 0
+    ManaMax:
+      BaseValue: 0
+      PerLevelValue: 0
+    PhysicalDamage:
+      BaseValue: 250
+      PerLevelValue: 0
+    MagicDamage:
+      BaseValue: 0
+      PerLevelValue: 0
+    PhysicalDefense:
+      BaseValue: 0
+      PerLevelValue: 0
+    MagicDefense:
+      BaseValue: 0
+      PerLevelValue: 0
+    PhysicalPierce:
+      BaseValue: 0
+      PerLevelValue: 0
+    MagicPierce:
+      BaseValue: 0
+      PerLevelValue: 0
+    CooldownAttackk:
+      BaseValue: 0
+      PerLevelValue: 0
+    CooldownAbility:
+      BaseValue: 0
+      PerLevelValue: 0
+    CriticalRate:
+      BaseValue: 0
+      PerLevelValue: 0
+    CriticalDamage:
+      BaseValue: 2
+      PerLevelValue: 0
+    MovementSpeed:
+      BaseValue: 0
+      PerLevelValue: 0
+    EffectResistance:
+      BaseValue: 0
+      PerLevelValue: 0
+    DamageDealFactor:
+      BaseValue: 1
+      PerLevelValue: 0
+    DamageTakenFactor:
+      BaseValue: 1
+      PerLevelValue: 0
+    HealingFactor:
+      BaseValue: 1
+      PerLevelValue: 0
+    RangeAttack:
+      BaseValue: 2
+      PerLevelValue: 0
+  characterSound: {fileID: 0}

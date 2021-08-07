@@ -552,12 +552,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8683543554149356350}
   - component: {fileID: 8683543554139782362}
-  - component: {fileID: 2449544771976221130}
   - component: {fileID: 15494015}
   - component: {fileID: 5901969661039592980}
-  - component: {fileID: 5086095377437772652}
+  - component: {fileID: -3605774766866172504}
   m_Layer: 6
-  m_Name: ChestMonster
+  m_Name: a
   m_TagString: Creep
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -598,20 +597,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2449544771976221130
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8683543554149256990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9395ee3105990b14aa52ae3af1b1dcfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTransformLeft: {fileID: 7262730475974782604, guid: b88ae8a6eeb41c544baa2b4879a48033, type: 3}
-  targetTransformRight: {fileID: 3849439334445470959, guid: 92076f0ca14568e4c96613631e0eeeb1, type: 3}
 --- !u!54 &15494015
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -641,97 +626,102 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.4104853, z: 1}
   m_Center: {x: 0, y: 0.7097702, z: 0}
---- !u!114 &5086095377437772652
-MonoBehaviour:
+--- !u!82 &-3605774766866172504
+AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8683543554149256990}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 039381eb0bfe9e9438fb65c887271b16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  typeCharacter: 2
-  team: 0
-  information:
-    name: 
-    description: 
-    id: 
-    mainClass: 0
-    subClass: 0
-    icon: {fileID: 0}
-    AlphaAbilityName: 
-    BetaAbilityName: 
-    UltimateAbilityName: 
-  Stats:
-    level: 1
-    healthMax:
-      baseValue: 3000
-      perLevel: 0
-    manaMax:
-      baseValue: 1000
-      perLevel: 0
-    physicalDamage:
-      baseValue: 500
-      perLevel: 0
-    magicDamage:
-      baseValue: 0
-      perLevel: 0
-    physicalDefense:
-      baseValue: 0
-      perLevel: 0
-    magicDefense:
-      baseValue: 0
-      perLevel: 0
-    physicalPierce:
-      baseValue: 0
-      perLevel: 0
-    magicPierce:
-      baseValue: 0
-      perLevel: 0
-    cooldownAttackk:
-      baseValue: 0
-      perLevel: 0
-    cooldownAbility:
-      baseValue: 0
-      perLevel: 0
-    criticalRate:
-      baseValue: 0
-      perLevel: 0
-    criticalDamage:
-      baseValue: 0
-      perLevel: 0
-    movementSpeed:
-      baseValue: 3
-      perLevel: 0
-    effectResistance:
-      baseValue: 0
-      perLevel: 0
-    damageDealFactor:
-      baseValue: 1
-      perLevel: 0
-    damageTakenFactor:
-      baseValue: 1
-      perLevel: 0
-    heaingFactor:
-      baseValue: 1
-      perLevel: 0
-    rangeAttack:
-      baseValue: 2
-      perLevel: 0
-  AttachPoint:
-    Overhead: {fileID: 0}
-    Head: {fileID: 0}
-    Chest: {fileID: 0}
-    LeftHand: {fileID: 0}
-    RightHand: {fileID: 0}
-    LeftLeg: {fileID: 0}
-    RightLeg: {fileID: 0}
-    UnderFoot: {fileID: 0}
-    Weapon: {fileID: 0}
-  rigidbody: {fileID: 0}
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &8683543554149257072
 GameObject:
   m_ObjectHideFlags: 0
