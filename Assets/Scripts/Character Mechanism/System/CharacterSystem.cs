@@ -154,7 +154,7 @@ namespace CharacterMechanism.System
         public event Action<CharacterSystem> OnRevival;
         public event Action<CharacterSystem> OnDie;
         public event Action<CharacterSystem> OnHealthChange;
-        public event Action<float, DamageType, bool> OnTakeDamage;
+        public event Action<Vector3, float, DamageType, bool> OnTakeDamage;
         public event Action<float> OnHealHealth;
         public event Action<CharacterSystem> OnManaChange;
         public event Action<CharacterSystem> OnLevelChange;
@@ -441,7 +441,7 @@ namespace CharacterMechanism.System
 
         public void HandleEventTakeDame()
         {
-           
+
         }
 
         public void HandleEventKDAChange()
