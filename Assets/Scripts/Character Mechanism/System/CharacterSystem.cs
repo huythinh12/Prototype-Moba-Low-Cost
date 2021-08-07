@@ -226,6 +226,10 @@ namespace CharacterMechanism.System
 
         protected virtual void Start()
         {
+            if (profile.Name == "Tower Ultimate")
+            {
+                this.OnDie += BattleManager.Instance.EndGame;
+            }
             this.statsBar = StatsBar.Create(this);
             this.targetsDetecter = TargetsDetecter.Create(this);
 
