@@ -22,9 +22,9 @@ MonoBehaviour:
     MainClass: 2
     SubClass: 2
     AttackAbilityName: 
-    AlphaAbilityName: 
-    BetaAbilityName: 
-    UltimateAbilityName: 
+    AlphaAbilityName: Roken Ability Alpha
+    BetaAbilityName: Roken Ability Beta
+    UltimateAbilityName: Roken Ability Ultimate
     HealthMax:
       BaseValue: 2968
       PerLevelValue: 180

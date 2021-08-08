@@ -47,8 +47,8 @@ public class AbilityIndicatorUI : MonoBehaviour
         indicatorUI.shapeIndicatorImage.transform.SetParent(indicatorUI.shapeIndicatorUI);
         indicatorUI.shapeIndicatorImage.sprite = Resources.Load<Sprite>("Images/Controller/Rectangle Indicator");
         RectTransform shapeIndicatorImageRectTransform = indicatorUI.shapeIndicatorImage.GetComponent<RectTransform>();
-        shapeIndicatorImageRectTransform.localPosition = Vector3.zero;
-        shapeIndicatorImageRectTransform.localRotation = Quaternion.Euler(Vector3.zero);
+        shapeIndicatorImageRectTransform.localPosition = new Vector3(0f, 0.1f, 0f);
+        shapeIndicatorImageRectTransform.localRotation = Quaternion.Euler(new Vector3(90f, 0f));
         shapeIndicatorImageRectTransform.sizeDelta = new Vector2(1f, 5f);
 
         return indicatorUI;

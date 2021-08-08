@@ -141,6 +141,10 @@ namespace CharacterMechanism.System
         public Sprite IconNormal { get => iconNormal; set => iconNormal = value; }
         public Sprite IconMinimap { get => iconMinimap; set => iconMinimap = value; }
         public Sprite ImageLoading { get => imageLoading; set => imageLoading = value; }
+        public string AttackAbilityName { get => attackAbilityName; set => attackAbilityName = value; }
+        public string AlphaAbilityName { get => alphaAbilityName; set => alphaAbilityName = value; }
+        public string BetaAbilityName { get => betaAbilityName; set => betaAbilityName = value; }
+        public string UltimateAbilityName { get => ultimateAbilityName; set => ultimateAbilityName = value; }
 
         public Profile(ProfileData profileData)
         {
@@ -152,9 +156,9 @@ namespace CharacterMechanism.System
             this.mainClass = profileData.MainClass;
             this.subClass = profileData.SubClass;
             this.attackAbilityName = profileData.AttackAbilityName;
-            this.alphaAbilityName = profileData.AlphaAbilityName;
-            this.betaAbilityName = profileData.BetaAbilityName;
-            this.ultimateAbilityName = profileData.UltimateAbilityName;
+            this.AlphaAbilityName = profileData.AlphaAbilityName;
+            this.BetaAbilityName = profileData.BetaAbilityName;
+            this.UltimateAbilityName = profileData.UltimateAbilityName;
             this.typeCharacter = profileData.TypeCharacter;
 
             this.healthMax = new CharacterStat(profileData.HealthMax.BaseValue, profileData.HealthMax.PerLevelValue);

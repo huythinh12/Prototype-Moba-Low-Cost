@@ -50,6 +50,7 @@ namespace CharacterMechanism.System
         ////////// Profile //////////
 
         [Header("Profile")]
+        [SerializeField] private CharacterBattleController battleController;
         [SerializeField] private CharacterHistory history = new CharacterHistory();
         [SerializeField] private Profile profile = null;
         private ProfileData profileData;
@@ -230,6 +231,8 @@ namespace CharacterMechanism.System
             {
                 this.OnDie += BattleManager.Instance.EndGame;
             }
+            this.battleController = gameObject.AddComponent<CharacterBattleController>();
+
             this.statsBar = StatsBar.Create(this);
             this.targetsDetecter = TargetsDetecter.Create(this);
 

@@ -34,7 +34,6 @@
 
 //    public void Reset()
 //    {
-//        self = GameObject.FindObjectOfType<PlayerController>().GetComponent<Character>();
 //        SkillUI = transform.Find("Skill UI").GetComponent<RectTransform>() as RectTransform;
 //        skillImage = SkillUI.transform.Find("Skill Image").GetComponent<Image>();
 //        cooldownImage = SkillUI.transform.Find("Cooldown Image").GetComponent<Image>();
@@ -64,7 +63,7 @@
 //    {
 //        cooldownImage.gameObject.SetActive(false);
 //        abilityIndicatorUI.gameObject.SetActive(false);
-//        //abilityIndicatorUI.gameObject.SetActive(false);
+//        abilityIndicatorUI.gameObject.SetActive(false);
 
 //        switch (classifyAbility)
 //        {
@@ -119,10 +118,10 @@
 //        self.StartCoroutine(ability.Excecute(self, indicatorXZ));
 
 
-//        //if (ability.UseAblity(self, indicatorXZ))
-//        //{
-//        StartCoroutine(StartCooldown());
-//        //}
+//        if (ability.UseAblity(self, indicatorXZ))
+//        {
+//            StartCoroutine(StartCooldown());
+//        }
 //    }
 
 //    public IEnumerator StartCooldown()
