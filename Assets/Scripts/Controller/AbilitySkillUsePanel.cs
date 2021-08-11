@@ -31,9 +31,26 @@ public class AbilitySkillButton : MonoBehaviour
 [RequireComponent(typeof(Canvas), typeof(CanvasScaler), typeof(GraphicRaycaster))]
 public class AbilitySkillUsePanel : MonoBehaviour
 {
+    //enum ButtonAbility
+    //{
+    //    AlphaSkill,
+    //    BetaSkill,
+    //    UltimateSkill,
+    //}
+
+
+    //readonly Dictionary<ButtonAbility, Vector3> buttonPositions = new Dictionary<ButtonAbility, Vector3>();
+    //Hashtable hashtable = new Hashtable();
+
+    //void Awake()
+    //{
+    //    buttonPositions.Add(ButtonAbility.AlphaSkill, Vector3.zero);
+    //}
+
     static readonly Vector3 PositionAlphaSkillButton = new Vector3(196.6f, -170.8f);
     static readonly Vector3 PositionBetaSkillButton = new Vector3(245f, -87.9f);
     static readonly Vector3 PositionUltimateSkillButton = new Vector3(326.5f, -38.9f);
+
     static readonly string NameAlphaSkillButton = "Skill Alpha Button";
     static readonly string NameBetaSkillButton = "Skill Beta Button";
     static readonly string NameUltimateSkillButton = "Skill Ultimate Button";

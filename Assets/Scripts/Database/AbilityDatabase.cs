@@ -18,8 +18,6 @@ public class AbilityDatabase : MonoBehaviour
 
     void LoadAbilityData()
     {
-        Debug.Log("Hi!");
-
         var abilities = Resources.LoadAll<DataDrivenAbility>("Abilities") as DataDrivenAbility[];
 
         for (int i = 0; i < abilities.Length; i++)

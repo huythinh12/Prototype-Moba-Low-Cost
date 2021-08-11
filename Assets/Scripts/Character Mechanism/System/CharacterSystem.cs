@@ -451,6 +451,11 @@ namespace CharacterMechanism.System
 
         }
 
+        public void HandleEventHealthHeal()
+        {
+
+        }
+
         public void HandleEventKDAChange()
         {
             this.OnKDAChange?.Invoke(this);

@@ -77,7 +77,6 @@ public sealed class StatsBar : MonoBehaviour
         return stastsBar;
     }
 
-
     private void EventRegistrationFormCharacterSystem(CharacterSystem characterSystem)
     {
         if (isUseLevelText)

@@ -14,42 +14,42 @@ public class Ability
     {
         get
         {
-            return true;//((abilityData.BehaviorFlags & DataDrivenAbility.BehaviorFlag.POINT_TARGET) != 0);
+            return abilityData.BehaviorFlags.HasFlag(BehaviorFlag.PointTarget);
         }
     }
     public bool UnitTarget
     {
         get
         {
-            return true;//((abilityData.BehaviorFlags & DataDrivenAbility.BehaviorFlag.UNIT_TARGET) != 0);
+            return abilityData.BehaviorFlags.HasFlag(BehaviorFlag.UnitTarget);
         }
     }
     public bool NoTarget
     {
         get
         {
-            return true;//((abilityData.BehaviorFlags & DataDrivenAbility.BehaviorFlag.NO_TARGET) != 0);
+            return abilityData.BehaviorFlags.HasFlag(BehaviorFlag.NoTarget);
         }
     }
     public bool AOE
     {
         get
         {
-            return true;//((abilityData.BehaviorFlags & DataDrivenAbility.BehaviorFlag.AOE) != 0);
+            return abilityData.BehaviorFlags.HasFlag(BehaviorFlag.AOE);
         }
     }
     public bool Channelled
     {
         get
         {
-            return true;//((abilityData.BehaviorFlags & DataDrivenAbility.BehaviorFlag.CHANNELLED) != 0);
+            return abilityData.BehaviorFlags.HasFlag(BehaviorFlag.Channelled);
         }
     }
     public bool Hidden
     {
         get
         {
-            return true;//((abilityData.BehaviorFlags & DataDrivenAbility.BehaviorFlag.HIDDEN) != 0);
+            return abilityData.BehaviorFlags.HasFlag(BehaviorFlag.Hidden);
         }
     }
 
@@ -57,14 +57,14 @@ public class Ability
     {
         get
         {
-            return true;//((abilityData.BehaviorFlags & DataDrivenAbility.BehaviorFlag.IMMEDIATE) != 0);
+            return abilityData.BehaviorFlags.HasFlag(BehaviorFlag.Immediate);
         }
     }
     public bool DontCancelMovement
     {
         get
         {
-            return true;//((abilityData.BehaviorFlags & DataDrivenAbility.BehaviorFlag.DONT_CANCEL_MOVEMENT) != 0);
+            return abilityData.BehaviorFlags.HasFlag(BehaviorFlag.DontCancleMovement);
         }
     }
 
@@ -72,7 +72,7 @@ public class Ability
     {
         get
         {
-            return true;//((abilityData.BehaviorFlags & DataDrivenAbility.BehaviorFlag.DIRECTIONAL) != 0);
+            return abilityData.BehaviorFlags.HasFlag(BehaviorFlag.Directional);
         }
     }
 
@@ -156,11 +156,11 @@ public class Ability
 
             // TODO: refactor
             if (string.IsNullOrEmpty(abilityData.Animation) == false)
-                {
-                    //yield return new WaitForEndOfFrame();  // Buffer for sync
-                    //ownerProfile.fsm.SetTrigger(abilityData.Animation);
-                    //yield return new WaitForSeconds(abilityData.AnimCastPoint);
-                }
+            {
+                //yield return new WaitForEndOfFrame();  // Buffer for sync
+                //ownerProfile.fsm.SetTrigger(abilityData.Animation);
+                //yield return new WaitForSeconds(abilityData.AnimCastPoint);
+            }
 
             if (Channelled)
             {
@@ -192,7 +192,7 @@ public class Ability
                 //casterCharacter.photonView.RPC("PlayVoice", GameManager.Instance.PlayerRegistry[owner.name], ResourceManager.MOVE);
             }
         }
-    //REFACTOR: either combine move and others
+        //REFACTOR: either combine move and others
         else
         {
             if (UnityEngine.Random.Range(0, 5) < 2)
